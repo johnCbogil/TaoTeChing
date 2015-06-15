@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,7 +27,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 //    self.dataLabel.text = [self.dataObject description];
+    self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
 }
 
+- (IBAction)homeButtonPressed:(id)sender {
+}
 @end
