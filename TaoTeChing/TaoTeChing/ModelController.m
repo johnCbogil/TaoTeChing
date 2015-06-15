@@ -29,9 +29,14 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // Create the data model.
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        _pageData = [[dateFormatter monthSymbols] copy];
+
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"TaoTeChing - Gia"
+                                                         ofType:@"txt"];
+        NSString *content = [NSString stringWithContentsOfFile:path
+                                                      encoding:NSUTF8StringEncoding
+                                                         error:NULL];
+        NSArray *lines = [content componentsSeparatedByString:@"#"];
+        _pageData = lines;
     }
     return self;
 }

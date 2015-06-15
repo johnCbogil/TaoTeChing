@@ -16,6 +16,7 @@
 		527C751A1B2F5D6A006E64B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527C75191B2F5D6A006E64B3 /* Images.xcassets */; };
 		527C751D1B2F5D6A006E64B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527C751B1B2F5D6A006E64B3 /* LaunchScreen.xib */; };
 		527C75291B2F5D6B006E64B3 /* TaoTeChingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C75281B2F5D6B006E64B3 /* TaoTeChingTests.m */; };
+		527C75371B2F6028006E64B3 /* TaoTeChing - Gia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 527C75361B2F6028006E64B3 /* TaoTeChing - Gia.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		527C75221B2F5D6B006E64B3 /* TaoTeChingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaoTeChingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		527C75271B2F5D6B006E64B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527C75281B2F5D6B006E64B3 /* TaoTeChingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaoTeChingTests.m; sourceTree = "<group>"; };
+		527C75361B2F6028006E64B3 /* TaoTeChing - Gia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TaoTeChing - Gia.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		527C75061B2F5D6A006E64B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				527C75361B2F6028006E64B3 /* TaoTeChing - Gia.txt */,
 				527C75071B2F5D6A006E64B3 /* Info.plist */,
 				527C75081B2F5D6A006E64B3 /* main.m */,
 			);
@@ -211,6 +214,7 @@
 			files = (
 				527C75181B2F5D6A006E64B3 /* Main.storyboard in Resources */,
 				527C751D1B2F5D6A006E64B3 /* LaunchScreen.xib in Resources */,
+				527C75371B2F6028006E64B3 /* TaoTeChing - Gia.txt in Resources */,
 				527C751A1B2F5D6A006E64B3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
