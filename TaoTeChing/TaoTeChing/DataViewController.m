@@ -29,6 +29,23 @@
 //    self.dataLabel.text = [self.dataObject description];
     self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
+    
+    NSLog(@"%@ frame in viewLoadAppear: %p", NSStringFromCGRect(self.textView.frame), self.dataObject);
+    
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    NSLog(@"%@ frame in layoutSub: %p", NSStringFromCGRect(self.textView.frame), self.dataObject);
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@" ");
+    NSLog(@"%@ frame in viewDidAppear: %p", NSStringFromCGRect(self.textView.frame), self.dataObject);
 }
 
 - (IBAction)homeButtonPressed:(id)sender {
