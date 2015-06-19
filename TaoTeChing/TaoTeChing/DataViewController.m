@@ -30,7 +30,7 @@
     self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
     
-    NSLog(@"%@ frame in viewLoadAppear: %p", NSStringFromCGRect(self.textView.frame), self.dataObject);
+    NSLog(@"%@ frame in viewWillAppear: %p", NSStringFromCGRect(self.textView.frame), self.dataObject);
     
 }
 
