@@ -15,5 +15,8 @@
 - (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController;
 
++(ModelController *)modelController;
++(ModelController *)instantiateModelController;
+
 @end
 

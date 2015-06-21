@@ -17,6 +17,7 @@
 		527C751D1B2F5D6A006E64B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527C751B1B2F5D6A006E64B3 /* LaunchScreen.xib */; };
 		527C75291B2F5D6B006E64B3 /* TaoTeChingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C75281B2F5D6B006E64B3 /* TaoTeChingTests.m */; };
 		527C75371B2F6028006E64B3 /* TaoTeChing - Gia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 527C75361B2F6028006E64B3 /* TaoTeChing - Gia.txt */; };
+		52FC59B41B3664230004A278 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FC59B31B3664230004A278 /* PageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		527C75271B2F5D6B006E64B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527C75281B2F5D6B006E64B3 /* TaoTeChingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaoTeChingTests.m; sourceTree = "<group>"; };
 		527C75361B2F6028006E64B3 /* TaoTeChing - Gia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TaoTeChing - Gia.txt"; sourceTree = "<group>"; };
+		52FC59B21B3664230004A278 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		52FC59B31B3664230004A278 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				527C75111B2F5D6A006E64B3 /* DataViewController.m */,
 				527C75131B2F5D6A006E64B3 /* ModelController.h */,
 				527C75141B2F5D6A006E64B3 /* ModelController.m */,
+				52FC59B21B3664230004A278 /* PageViewController.h */,
+				52FC59B31B3664230004A278 /* PageViewController.m */,
 				527C75161B2F5D6A006E64B3 /* Main.storyboard */,
 				527C75191B2F5D6A006E64B3 /* Images.xcassets */,
 				527C751B1B2F5D6A006E64B3 /* LaunchScreen.xib */,
@@ -238,6 +243,7 @@
 				527C75151B2F5D6A006E64B3 /* ModelController.m in Sources */,
 				527C75091B2F5D6A006E64B3 /* main.m in Sources */,
 				527C750F1B2F5D6A006E64B3 /* RootViewController.m in Sources */,
+				52FC59B41B3664230004A278 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +440,7 @@
 				527C752E1B2F5D6B006E64B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		527C752F1B2F5D6B006E64B3 /* Build configuration list for PBXNativeTarget "TaoTeChingTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +449,7 @@
 				527C75311B2F5D6B006E64B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

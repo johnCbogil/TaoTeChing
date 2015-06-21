@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface PageViewController : NSObject
+
++ (PageViewController *)pageViewController;
++ (PageViewController *)instantiatePageViewController;
+
+@property (strong, nonatomic) UIPageViewController *pageViewController;
+
 
 @end

@@ -26,6 +26,26 @@
 
 @implementation ModelController
 
+static ModelController *sharedInstance = nil;
+
++ (ModelController *)instantiateModelController
+{
+    @synchronized(self) {
+        if (sharedInstance == nil) {
+            sharedInstance = [[ModelController alloc] init];
+        }
+        return sharedInstance;
+    }
+}
++ (ModelController *)modelController
+{
+    if (sharedInstance==nil)
+    {
+        [ModelController instantiateModelController];
+    }
+    return sharedInstance;
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -86,5 +106,6 @@
     }
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
+
 
 @end
