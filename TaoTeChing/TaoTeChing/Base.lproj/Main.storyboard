@@ -15,7 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="IfU-W1-Ew9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GyB-O3-IEm">
+                                <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GyB-O3-IEm" firstAttribute="top" secondItem="Bco-9B-KdY" secondAttribute="bottom" id="52e-fC-A3O"/>
+                            <constraint firstItem="GyB-O3-IEm" firstAttribute="leading" secondItem="IfU-W1-Ew9" secondAttribute="leading" id="deQ-Yc-K4M"/>
+                            <constraint firstItem="RDg-Ky-02R" firstAttribute="top" secondItem="GyB-O3-IEm" secondAttribute="bottom" constant="-69" id="fu5-b1-63L"/>
+                            <constraint firstAttribute="trailing" secondItem="GyB-O3-IEm" secondAttribute="trailing" id="kSf-e6-ChR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="UX6-ed-qQg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -66,17 +78,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccM-6Q-Bsu">
-                                <rect key="frame" x="16" y="284" width="51" height="31"/>
-                            </switch>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="duJ-AP-PRI">
+                                <rect key="frame" x="0.0" y="28" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="duJ-AP-PRI" firstAttribute="top" secondItem="JU1-gz-2s2" secondAttribute="bottom" constant="8" id="UDD-QT-eAk"/>
+                            <constraint firstItem="duJ-AP-PRI" firstAttribute="leading" secondItem="Gdv-xp-GQq" secondAttribute="leading" id="ZYe-sb-3bO"/>
+                            <constraint firstAttribute="trailing" secondItem="duJ-AP-PRI" secondAttribute="trailing" id="lhB-ko-rzE"/>
+                            <constraint firstItem="GQE-ti-eJl" firstAttribute="top" secondItem="duJ-AP-PRI" secondAttribute="bottom" constant="-77" id="zm5-lM-qpW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="N3A-pQ-e3P"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="colorSwitch" destination="ccM-6Q-Bsu" id="K9o-Le-LLC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SF-sf-jEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
