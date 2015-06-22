@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="703-4V-yAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B1q-Tc-MIf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="Dl5-P9-DXD">
+            <objects>
+                <viewController id="4jd-uu-z40" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bco-9B-KdY"/>
+                        <viewControllerLayoutGuide type="bottom" id="RDg-Ky-02R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IfU-W1-Ew9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="UX6-ed-qQg"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVI-2P-rrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="-889"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="clB-vc-fyl">
             <objects>
@@ -13,7 +33,7 @@
                         <viewControllerLayoutGuide type="bottom" id="IfR-02-kHw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="502-Ir-ELC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6en-GM-LUr">
@@ -25,11 +45,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="GC4-kk-Mst"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-121" y="-227"/>
+            <point key="canvasLocation" x="691" y="-227"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iGz-7f-JOX">
+            <objects>
+                <viewController id="7St-CY-95V" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JU1-gz-2s2"/>
+                        <viewControllerLayoutGuide type="bottom" id="GQE-ti-eJl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gdv-xp-GQq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="y5h-6W-141"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6SF-sf-jEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691" y="535"/>
         </scene>
         <!--Data View Controller-->
         <scene sceneID="snT-py-3hH">
@@ -43,40 +83,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-bN-Lfg">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-bN-Lfg">
                                 <rect key="frame" x="20" y="40" width="560" height="490"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oF2-dB-4B9">
-                                <rect key="frame" x="280" y="550" width="41" height="30"/>
-                                <state key="normal" title="Home">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="homeButtonPressed:" destination="S4R-Ja-viH" eventType="touchUpInside" id="zp9-yd-gjL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="oF2-dB-4B9" firstAttribute="top" secondItem="qhH-bN-Lfg" secondAttribute="bottom" constant="20" id="80z-3m-vPJ"/>
-                            <constraint firstItem="qhH-bN-Lfg" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="20" id="LdC-x9-hJZ"/>
-                            <constraint firstAttribute="centerX" secondItem="oF2-dB-4B9" secondAttribute="centerX" constant="-0.5" id="XNF-uc-I61"/>
-                            <constraint firstAttribute="height" secondItem="qhH-bN-Lfg" secondAttribute="height" constant="110" id="jA9-XZ-wJG"/>
-                            <constraint firstAttribute="trailing" secondItem="qhH-bN-Lfg" secondAttribute="trailing" constant="20" id="khh-fZ-vp3"/>
-                            <constraint firstItem="EPS-s9-h4K" firstAttribute="top" secondItem="oF2-dB-4B9" secondAttribute="bottom" constant="20" id="xtl-qe-3Yh"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="homeButton" destination="oF2-dB-4B9" id="bBh-8A-pkI"/>
                         <outlet property="textView" destination="qhH-bN-Lfg" id="fDy-Yo-6oj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="425" y="-243"/>
+            <point key="canvasLocation" x="1397" y="-227"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lcu-kI-ulh">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="B1q-Tc-MIf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="z4w-Nf-i0V">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4jd-uu-z40" kind="relationship" relationship="viewControllers" id="nEh-qF-m5e"/>
+                        <segue destination="703-4V-yAM" kind="relationship" relationship="viewControllers" id="a8h-Ns-8WX"/>
+                        <segue destination="7St-CY-95V" kind="relationship" relationship="viewControllers" id="oMX-MQ-87p"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lk3-Jm-qiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="-345"/>
         </scene>
     </scenes>
 </document>
