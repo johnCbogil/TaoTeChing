@@ -52,23 +52,9 @@
 
 - (IBAction)homeButtonPressed:(id)sender {
 
-//    DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:0 storyboard:self.storyboard];
-//    NSArray *viewControllers = @[zeroVC];
-//    
-//    
-//    
-//    __weak UIPageViewController* pvcw = [PageViewController pageViewController].pageViewController;
-//    [[PageViewController pageViewController].pageViewController setViewControllers:@[viewControllers]
-//                  direction:UIPageViewControllerNavigationDirectionForward
-//                   animated:YES completion:^(BOOL finished) {
-//                       UIPageViewController* pvcs = pvcw;
-//                       if (!pvcs) return;
-//                       dispatch_async(dispatch_get_main_queue(), ^{
-//                           [pvcs setViewControllers:@[viewControllers]
-//                                          direction:UIPageViewControllerNavigationDirectionForward
-//                                           animated:NO completion:nil];
-//                       });
-//                   }];
+    DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:0 storyboard:self.storyboard];
+    NSArray *viewControllers = @[zeroVC];
     
+    [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];    
 }
 @end
