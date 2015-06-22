@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52301D001B38BF6600DDC108 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301CFF1B38BF6600DDC108 /* MoreViewController.m */; };
+		52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301D061B38CBFB00DDC108 /* TabBarViewController.m */; };
 		527C75091B2F5D6A006E64B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C75081B2F5D6A006E64B3 /* main.m */; };
 		527C750C1B2F5D6A006E64B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C750B1B2F5D6A006E64B3 /* AppDelegate.m */; };
 		527C750F1B2F5D6A006E64B3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C750E1B2F5D6A006E64B3 /* RootViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52301CFE1B38BF6600DDC108 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		52301CFF1B38BF6600DDC108 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		52301D051B38CBFB00DDC108 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
+		52301D061B38CBFB00DDC108 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
 		527C75031B2F5D6A006E64B3 /* TaoTeChing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaoTeChing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527C75071B2F5D6A006E64B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527C75081B2F5D6A006E64B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +109,10 @@
 				52FC59B21B3664230004A278 /* PageViewController.h */,
 				52FC59B31B3664230004A278 /* PageViewController.m */,
 				527C75161B2F5D6A006E64B3 /* Main.storyboard */,
+				52301CFE1B38BF6600DDC108 /* MoreViewController.h */,
+				52301CFF1B38BF6600DDC108 /* MoreViewController.m */,
+				52301D051B38CBFB00DDC108 /* TabBarViewController.h */,
+				52301D061B38CBFB00DDC108 /* TabBarViewController.m */,
 				527C75191B2F5D6A006E64B3 /* Images.xcassets */,
 				527C751B1B2F5D6A006E64B3 /* LaunchScreen.xib */,
 				527C75061B2F5D6A006E64B3 /* Supporting Files */,
@@ -242,7 +252,9 @@
 				527C750C1B2F5D6A006E64B3 /* AppDelegate.m in Sources */,
 				527C75151B2F5D6A006E64B3 /* ModelController.m in Sources */,
 				527C75091B2F5D6A006E64B3 /* main.m in Sources */,
+				52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */,
 				527C750F1B2F5D6A006E64B3 /* RootViewController.m in Sources */,
+				52301D001B38BF6600DDC108 /* MoreViewController.m in Sources */,
 				52FC59B41B3664230004A278 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
