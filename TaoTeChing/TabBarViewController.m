@@ -26,6 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillLayoutSubviews {
+    CGRect tabFrame = self.tabBar.frame;
+    tabFrame.size.height = 40;
+    tabFrame.origin.y = self.view.frame.size.height - 40;
+    self.tabBar.frame = tabFrame;
+}
+
 /*
 #pragma mark - Navigation
 

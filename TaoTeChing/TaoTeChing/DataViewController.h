@@ -9,12 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DataViewController : UIViewController
-
-@property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-@property (weak, nonatomic) IBOutlet UIButton *homeButton;
-- (IBAction)homeButtonPressed:(id)sender;
-
 @end
 

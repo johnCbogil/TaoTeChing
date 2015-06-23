@@ -9,7 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface MoreViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UISwitch *colorSwitch;
-
 @end

@@ -17,10 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.colorSwitch addTarget:self
-                      action:@selector(stateChanged:) forControlEvents:UIControlEventValueChanged];
-
-    
+//    [self.colorSwitch addTarget:self
+//                      action:@selector(stateChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,14 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)stateChanged:(UISwitch *)switchState{
-    
-    if ([switchState isOn]) {
-        NSLog(@"The Switch is On");
-    } else {
-        NSLog(@"The Switch is Off");
-    }
-}
+//- (void)stateChanged:(UISwitch *)switchState{
+//    
+//    if ([switchState isOn]) {
+//        NSLog(@"The Switch is On");
+//    } else {
+//        NSLog(@"The Switch is Off");
+//    }
+//}
 
 /*
 #pragma mark - Navigation
