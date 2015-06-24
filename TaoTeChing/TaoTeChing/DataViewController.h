@@ -11,5 +11,8 @@
 @interface DataViewController : UIViewController
 @property (strong, nonatomic) id dataObject;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UILabel *chapterLabel;
+@property (weak, nonatomic) IBOutlet UIButton *bookmarkButton;
+- (IBAction)bookmarkButtonPressed:(id)sender;
 @end
 

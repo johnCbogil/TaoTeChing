@@ -28,8 +28,8 @@
 
 - (void)viewWillLayoutSubviews {
     CGRect tabFrame = self.tabBar.frame;
-    tabFrame.size.height = 40;
-    tabFrame.origin.y = self.view.frame.size.height - 40;
+    tabFrame.size.height = 44;
+    tabFrame.origin.y = self.view.frame.size.height - 44;
     self.tabBar.frame = tabFrame;
 }
 

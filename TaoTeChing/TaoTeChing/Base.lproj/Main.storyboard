@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B1q-Tc-MIf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -112,19 +113,46 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-bN-Lfg">
-                                <rect key="frame" x="20" y="28" width="560" height="535"/>
+                                <rect key="frame" x="20" y="72" width="560" height="491"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMy-DI-HQT">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="8dR-nq-DIm"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qhH-bN-Lfg" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="20" id="7YT-Cb-tYL"/>
-                            <constraint firstAttribute="centerY" secondItem="qhH-bN-Lfg" secondAttribute="centerY" constant="4.5" id="XCd-Iv-uc9"/>
-                            <constraint firstAttribute="height" secondItem="qhH-bN-Lfg" secondAttribute="height" constant="65" id="a18-re-prK"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="top" secondItem="fXf-Jd-eTc" secondAttribute="bottom" constant="8" id="Awz-7r-i50"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leadingMargin" constant="-16" id="DXb-Fx-vuX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OMy-DI-HQT" secondAttribute="trailing" constant="-16" id="HjE-40-YC9"/>
+                            <constraint firstItem="qhH-bN-Lfg" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" id="Jni-9w-EON"/>
+                            <constraint firstItem="qhH-bN-Lfg" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" id="SYB-Ek-wKe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OMy-DI-HQT" secondAttribute="trailing" constant="-16" id="U2A-iX-cyF"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="top" secondItem="fXf-Jd-eTc" secondAttribute="bottom" constant="8" id="V9o-DT-7Sf"/>
+                            <constraint firstAttribute="centerY" secondItem="qhH-bN-Lfg" secondAttribute="centerY" constant="-17.5" id="XCd-Iv-uc9"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leadingMargin" constant="-16" id="Y0C-mE-JKO"/>
+                            <constraint firstAttribute="height" secondItem="qhH-bN-Lfg" secondAttribute="height" constant="109" id="a18-re-prK"/>
+                            <constraint firstItem="qhH-bN-Lfg" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" id="hX7-PV-evi"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="top" secondItem="fXf-Jd-eTc" secondAttribute="bottom" constant="8" id="s4Q-us-9xJ"/>
                             <constraint firstAttribute="trailing" secondItem="qhH-bN-Lfg" secondAttribute="trailing" constant="20" id="sV3-mQ-nXV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Awz-7r-i50"/>
+                                <exclude reference="DXb-Fx-vuX"/>
+                                <exclude reference="HjE-40-YC9"/>
+                                <exclude reference="V9o-DT-7Sf"/>
+                                <exclude reference="s4Q-us-9xJ"/>
+                                <exclude reference="Jni-9w-EON"/>
+                                <exclude reference="hX7-PV-evi"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="textView" destination="qhH-bN-Lfg" id="fDy-Yo-6oj"/>

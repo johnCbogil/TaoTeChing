@@ -20,6 +20,7 @@
     [super viewDidLoad];
     [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
 //    self.navigationBar.topItem.title = @"hello";
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,5 +59,7 @@
     
     // Page direction depends on index number
     [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+}
+- (IBAction)bookmarkButtonPressed:(id)sender {
 }
 @end
