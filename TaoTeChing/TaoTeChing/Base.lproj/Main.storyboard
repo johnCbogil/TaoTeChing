@@ -123,7 +123,6 @@
                             <constraint firstItem="qhH-bN-Lfg" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="20" id="7YT-Cb-tYL"/>
                             <constraint firstAttribute="centerY" secondItem="qhH-bN-Lfg" secondAttribute="centerY" constant="4.5" id="XCd-Iv-uc9"/>
                             <constraint firstAttribute="height" secondItem="qhH-bN-Lfg" secondAttribute="height" constant="65" id="a18-re-prK"/>
-                            <constraint firstItem="EPS-s9-h4K" firstAttribute="top" secondItem="qhH-bN-Lfg" secondAttribute="bottom" constant="37" id="cCA-je-dGc"/>
                             <constraint firstAttribute="trailing" secondItem="qhH-bN-Lfg" secondAttribute="trailing" constant="20" id="sV3-mQ-nXV"/>
                         </constraints>
                     </view>
