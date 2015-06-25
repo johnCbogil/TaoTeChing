@@ -19,14 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
-//    self.navigationBar.topItem.title = @"hello";
     [self formatChapterLabel];
 
-    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    
-    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-    
-
+    // Hide navigationBar shadow
+//    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,15 +36,14 @@
 //    self.dataLabel.text = [self.dataObject description];
     self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
-    
-    
-    NSLog(@"%@ frame in viewWillAppear: %p", NSStringFromCGRect(self.textView.frame), self.dataObject);
+
+    NSLog(@"%@ frame in viewWillAppear: %p", NSStringFromCGRect(self.navigationBar.frame), self.dataObject);
 }
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    NSLog(@"%@ frame in layoutSub: %p", NSStringFromCGRect(self.textView.frame), self.dataObject);
+    NSLog(@"%@ frame in layoutSub: %p", NSStringFromCGRect(self.navigationBar.frame), self.dataObject);
 
 }
 
@@ -55,7 +51,7 @@
 {
     [super viewDidAppear:animated];
     NSLog(@" ");
-    NSLog(@"%@ frame in viewDidAppear: %p", NSStringFromCGRect(self.textView.frame), self.dataObject);
+    NSLog(@"%@ frame in viewDidAppear: %p", NSStringFromCGRect(self.navigationBar.frame), self.dataObject);
 }
 
 - (IBAction)homeButtonPressed:(id)sender {
@@ -67,6 +63,7 @@
     // Page direction depends on index number
     [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
 }
+
 - (void)formatChapterLabel{
 
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
@@ -79,6 +76,6 @@
     else{
         self.chapterLabel.text = numberString.capitalizedString;
     }
-    self.chapterLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];   
+    self.chapterLabel.font = [UIFont fontWithName:@"Avenir Next" size:20];
 }
 @end
