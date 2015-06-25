@@ -1,12 +1,10 @@
 The Tao Te Ching, Daodejing, or Dao De Jing, also simply referred to as the Laozi, is a Chinese classic text.
 
-According to tradition, it was written around 6th century BC by the sage Laozi (or Lao Tzu, literally meaning "Old Master"), a record-keeper at
-the Zhou dynasty court, by whose name the text is known in China.
+According to tradition, it was written around 6th century BC by the sage Laozi (or Lao Tzu, literally meaning "Old Master"), a record-keeper at the Zhou dynasty court, by whose name the text is known in China.
 
 The text's true authorship and date of composition or completion are still
 debated, although the oldest excavated text dates back to the late 4th century BC.
-#
-The Tao that can be told is not the eternal Tao.
+#The Tao that can be told is not the eternal Tao.
 
 The name that can be named is not the eternal name.
 
@@ -23,9 +21,7 @@ These two spring from the same source but differ in name; this appears as darkne
 Darkness within darkness.
 
 The gate to all mystery.
-#
-
-Under heaven all can see beauty as beauty only because there is ugliness.
+#Under heaven all can see beauty as beauty only because there is ugliness.
  
 All can know good as good only because there is evil.
  
@@ -48,9 +44,7 @@ Working, yet not taking credit.
 Work is done, then forgotten.
  
 Therefore it lasts forever.
-# 
-
-Not exalting the gifted prevents quarreling.
+#Not exalting the gifted prevents quarreling.
  
 Not collecting treasures prevents stealing.
  
@@ -61,9 +55,7 @@ The wise therefore rule by emptying hearts and stuffing bellies, by weakening am
 If men lack knowledge and desire, then clever people will not try to interfere.
  
 If nothing is done, then all will be well.
-#
- 
-The Tao is an empty vessel; it is used, but never filled.
+#The Tao is an empty vessel; it is used, but never filled.
  
 Oh, unfathomable source of ten thousand things! 
 Blunt the sharpness, 
@@ -75,9 +67,7 @@ Oh, hidden deep but ever present!
 I do not know from whence it comes.
  
 It is the forefather of the gods.
-#
- 
-Heaven and Earth are impartial; 
+#Heaven and Earth are impartial;
 They see the ten thousand things as straw dogs.
  
 The wise are impartial; 
@@ -91,9 +81,7 @@ The more it moves, the more it yields.
 More words count less.
  
 Hold fast to the center.
-# 
-
-The valley spirit never dies; 
+#The valley spirit never dies;
 It is the woman, primal mother.
  
 Her gateway is the root of heaven and Earth.
@@ -101,9 +89,7 @@ Her gateway is the root of heaven and Earth.
 It is like a veil barely seen.
  
 Use it; it will never fail.
-# 
-
-Heaven and Earth last forever.
+#Heaven and Earth last forever.
  
 Why do heaven and Earth last forever? 
 They are unborn, 
@@ -114,9 +100,7 @@ The sage stays behind, thus he is ahead.
 He is detached, thus at one with all.
  
 Through selfless action, he attains fulfillment.
-# 
-
-The highest good is like water.
+#The highest good is like water.
  
 Water give life to the ten thousand things and does not strive.
  
@@ -137,9 +121,7 @@ In daily life, be competent.
 In action, be aware of the time and the season.
 
 No fight: No blame.
-# 
-
-Better to stop short than fill to the brim.
+#Better to stop short than fill to the brim.
  
 Oversharpen the blade, and the edge will soon blunt.
  

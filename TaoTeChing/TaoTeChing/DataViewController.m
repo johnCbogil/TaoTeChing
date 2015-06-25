@@ -22,7 +22,9 @@
 //    self.navigationBar.topItem.title = @"hello";
     [self formatChapterLabel];
 
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
 
 }
