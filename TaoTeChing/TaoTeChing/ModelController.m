@@ -56,7 +56,7 @@ static ModelController *sharedInstance = nil;
                                                       encoding:NSUTF8StringEncoding
                                                          error:NULL];
         NSArray *lines = [content componentsSeparatedByString:@"#"];
-        _pageData = lines;
+        _pageData = lines;        
     }
     return self;
 }
@@ -70,6 +70,7 @@ static ModelController *sharedInstance = nil;
     // Create a new view controller and pass suitable data.
     DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
     dataViewController.dataObject = self.pageData[index];
+    dataViewController.currentChapter = (int)index;
     
     return dataViewController;
 }

@@ -20,6 +20,10 @@
     [super viewDidLoad];
     [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
 //    self.navigationBar.topItem.title = @"hello";
+    [self formatChapterLabel];
+
+    
+    
 
 }
 
@@ -33,6 +37,7 @@
 //    self.dataLabel.text = [self.dataObject description];
     self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
+    
     
     NSLog(@"%@ frame in viewWillAppear: %p", NSStringFromCGRect(self.textView.frame), self.dataObject);
 }
@@ -60,6 +65,18 @@
     // Page direction depends on index number
     [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
 }
-- (IBAction)bookmarkButtonPressed:(id)sender {
+- (void)formatChapterLabel{
+
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle: NSNumberFormatterSpellOutStyle];
+    NSString* numberString = [formatter stringFromNumber:[NSNumber numberWithInt: self.currentChapter]];
+    
+    if (self.currentChapter == 0) {
+        self.chapterLabel.text = @"About";
+    }
+    else{
+        self.chapterLabel.text = numberString.capitalizedString;
+    }
+    self.chapterLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];   
 }
 @end

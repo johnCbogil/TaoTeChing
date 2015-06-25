@@ -1,5 +1,3 @@
-About
-
 The Tao Te Ching, Daodejing, or Dao De Jing, also simply referred to as the Laozi, is a Chinese classic text.
 
 According to tradition, it was written around 6th century BC by the sage Laozi (or Lao Tzu, literally meaning "Old Master"), a record-keeper at
@@ -7,8 +5,7 @@ the Zhou dynasty court, by whose name the text is known in China.
 
 The text's true authorship and date of composition or completion are still
 debated, although the oldest excavated text dates back to the late 4th century BC.
-#One
-
+#
 The Tao that can be told is not the eternal Tao.
 
 The name that can be named is not the eternal name.
@@ -26,8 +23,7 @@ These two spring from the same source but differ in name; this appears as darkne
 Darkness within darkness.
 
 The gate to all mystery.
-
-#Two 
+#
 
 Under heaven all can see beauty as beauty only because there is ugliness.
  
@@ -52,8 +48,7 @@ Working, yet not taking credit.
 Work is done, then forgotten.
  
 Therefore it lasts forever.
-
-#Three 
+# 
 
 Not exalting the gifted prevents quarreling.
  
@@ -66,8 +61,7 @@ The wise therefore rule by emptying hearts and stuffing bellies, by weakening am
 If men lack knowledge and desire, then clever people will not try to interfere.
  
 If nothing is done, then all will be well.
-
-#Four
+#
  
 The Tao is an empty vessel; it is used, but never filled.
  
@@ -81,8 +75,7 @@ Oh, hidden deep but ever present!
 I do not know from whence it comes.
  
 It is the forefather of the gods.
-
-#Five
+#
  
 Heaven and Earth are impartial; 
 They see the ten thousand things as straw dogs.
@@ -98,8 +91,7 @@ The more it moves, the more it yields.
 More words count less.
  
 Hold fast to the center.
-
-#Six 
+# 
 
 The valley spirit never dies; 
 It is the woman, primal mother.
@@ -109,8 +101,7 @@ Her gateway is the root of heaven and Earth.
 It is like a veil barely seen.
  
 Use it; it will never fail.
-
-#Seven 
+# 
 
 Heaven and Earth last forever.
  
@@ -123,8 +114,7 @@ The sage stays behind, thus he is ahead.
 He is detached, thus at one with all.
  
 Through selfless action, he attains fulfillment.
-
-#Eight 
+# 
 
 The highest good is like water.
  
@@ -147,8 +137,7 @@ In daily life, be competent.
 In action, be aware of the time and the season.
 
 No fight: No blame.
-
-#Nine 
+# 
 
 Better to stop short than fill to the brim.
  
@@ -161,8 +150,7 @@ Claim wealth and titles, and disaster will follow.
 Retire when the work is done.
  
 This is the way of heaven.
-
-#Ten 
+# 
 
 Carrying body and soul and embracing the one, 
 Can you avoid separation? 
@@ -181,8 +169,7 @@ Bearing yet not possessing,
 Working yet not taking credit, 
 Leading yet not dominating, 
 This is the Primal Virtue.
-
-#Eleven 
+# 
 
 Thirty spokes share the wheel's hub; 
 It is the center hole that makes it useful.
@@ -195,8 +182,7 @@ It is the holes which make it useful.
  
 Therefore benefit comes from what is there; 
 Usefulness from what is not there.
-
-#Twelve 
+# 
 
 The five colors blind the eye.
  
@@ -211,8 +197,7 @@ Precious things lead one astray.
 Therefore the sage is guided by what he feels and not by what he sees.
  
 He lets go of that and chooses this.
-
-#Thirteen 
+# 
 
 Accept disgrace willingly.
  
@@ -232,8 +217,7 @@ Without a body, how could there be misfortune?
 Surrender yourself humbly; then you can be trusted to care for all things.
  
 Love the world as your own self; then you can truly care for all things.
-
-#Fourteen 
+# 
 
 Look, it cannot be seen - it is beyond form.
  
@@ -262,8 +246,7 @@ Stay with the ancient Tao,
 Move with the present.
 
 Knowing the ancient beginning is the essence of Tao.
-
-#Fifteen 
+# 
 
 The ancient masters were subtle, mysterious, profound, responsive.
  
@@ -291,8 +274,7 @@ Who can remain still until the moment of action?
 Observers of the Tao do not seek fulfillment.
  
 Not seeking fulfillment, they are not swayed by desire for change.
-
-#Sixteen 
+# 
 
 Empty yourself of everything.
  
@@ -323,8 +305,7 @@ Being divine, you will be at one with the Tao.
 Being at one with the Tao is eternal.
  
 And though the body dies, the Tao will never pass away.
-
-#Seventeen 
+# 
 
 The very highest if barely known.
  
@@ -338,7 +319,7 @@ Who does not trust enough will not be trusted.
 When actions are performed 
 Without unnecessary speech, 
 People say, "We did it!"
-#Eighteen 
+# 
 
 When the great Tao is forgotten, 
 Kindness and morality arise.
@@ -351,8 +332,7 @@ Filial piety and devotion arise.
  
 When the country is confused and in chaos, 
 Loyal ministers appear.
-
-#Nineteen 
+# 
 
 Give up sainthood, renounce wisdom, 
 And it will be a hundred times better for everyone.
@@ -370,8 +350,7 @@ To see the simplicity,
 To realize one's true nature, 
 To cast off selfishness 
 And temper desire.
-
-#Twenty 
+# 
 
 Give up learning, and put an end to your troubles.
  
@@ -406,8 +385,7 @@ But I alone am aimless and depressed.
 I am different.
  
 I am nourished by the great mother.
-
-#Twenty-one
+#
 
 The greatest Virtue is to follow Tao and Tao alone.
  
@@ -427,8 +405,7 @@ Thus I perceive the creation.
  
 How do I know the ways of creation? 
 Because of this.
-
-#Twenty-two
+#
 
 Yield and overcome; 
 Bend and be straight; 
@@ -460,8 +437,7 @@ Therefore the ancients say, "Yield and overcome.
 Is that an empty saying? 
 Be really whole, 
 And all things will come to you.
-
-#Twenty-three
+#
 
 To talk little is natural.
  
