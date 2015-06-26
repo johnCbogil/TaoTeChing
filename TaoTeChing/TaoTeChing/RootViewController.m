@@ -46,9 +46,8 @@
         
         // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
         self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
-        
+ 
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -96,4 +95,8 @@
 //    return UIPageViewControllerSpineLocationMid;
 //}
 
+- (IBAction)indexButtonPressed:(id)sender {
+    
+    NSLog(@"HELLO");
+}
 @end
