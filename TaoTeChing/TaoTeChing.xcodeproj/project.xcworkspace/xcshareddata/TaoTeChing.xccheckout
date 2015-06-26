@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B13F2582A2D2F967322757BEDBF004566E0C7AB6</key>
-		<string>https://github.com/johnCbogil/TaoTeChing.git</string>
+		<string>https://github.com/johnCbogil/TaoTeChing</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TaoTeChing/TaoTeChing.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/johnCbogil/TaoTeChing.git</string>
+	<string>https://github.com/johnCbogil/TaoTeChing</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

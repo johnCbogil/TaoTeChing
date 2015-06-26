@@ -20,46 +20,43 @@
 @synthesize modelController = _modelController;
 
 -(void)viewDidLoad{
-        
-        [super viewDidLoad];
-        // Do any additional setup after loading the view, typically from a nib.
-        // Configure the page view controller and add it as a child view controller.
-        [PageViewController pageViewController].pageViewController.delegate = self;
-        
-        DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
-        NSArray *viewControllers = @[startingViewController];
-        [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-        
-        [PageViewController pageViewController].pageViewController.dataSource = self.modelController;
-        
-        [self addChildViewController:[PageViewController pageViewController].pageViewController];
-        [self.containerView addSubview:[PageViewController pageViewController].pageViewController.view];
     
-//        NSDictionary *views = NSDictionaryOfVariableBindings([PageViewController pageViewController].pageViewController.view);
-//    
-//     [ [NSLayoutConstraint constraintsWithVisualFormat: @"V:|-0-[self]-0-|" options:0 metrics:nil views:views]
-//            arrayByAddingObjectsFromArray:
-//            [NSLayoutConstraint constraintsWithVisualFormat: @"H:|-0-[self]-0-|" options:0 metrics:nil views:views]];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    // Configure the page view controller and add it as a child view controller.
+    [PageViewController pageViewController].pageViewController.delegate = self;
+    
+    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    NSArray *viewControllers = @[startingViewController];
+    [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
+    [PageViewController pageViewController].pageViewController.dataSource = self.modelController;
+    
+    [self addChildViewController:[PageViewController pageViewController].pageViewController];
+    [self.containerView addSubview:[PageViewController pageViewController].pageViewController.view];
+    
     
     NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:[PageViewController pageViewController].pageViewController.view attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
-    
+    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:[PageViewController pageViewController].pageViewController.view attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeLeading multiplier:1 constant:0];
     NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:[PageViewController pageViewController].pageViewController.view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeTop multiplier:1 constant:0];
     NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:[PageViewController pageViewController].pageViewController.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
     
+    [[PageViewController pageViewController].pageViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
     [self.containerView addConstraints:@[bottom, top, left, right]];
     
-        // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
-        CGRect pageViewRect = self.view.bounds;
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-            pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
-        }
-        [PageViewController pageViewController].pageViewController.view.frame = pageViewRect;
-        
-        [[PageViewController pageViewController].pageViewController didMoveToParentViewController:self];
-        
-        // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
-        self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
- 
+    // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
+    CGRect pageViewRect = self.view.bounds;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
+    }
+    [PageViewController pageViewController].pageViewController.view.frame = pageViewRect;
+    
+    [[PageViewController pageViewController].pageViewController didMoveToParentViewController:self];
+    
+    // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
+    self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
+    
 }
 
 - (void)didReceiveMemoryWarning {
