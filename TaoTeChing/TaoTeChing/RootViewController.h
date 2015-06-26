@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *indexButton;
 @property (weak, nonatomic) IBOutlet UILabel *chapterLabel;
 - (IBAction)indexButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
 

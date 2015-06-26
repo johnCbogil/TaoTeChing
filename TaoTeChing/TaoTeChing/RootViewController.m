@@ -33,8 +33,21 @@
         [PageViewController pageViewController].pageViewController.dataSource = self.modelController;
         
         [self addChildViewController:[PageViewController pageViewController].pageViewController];
-        [self.view addSubview:[PageViewController pageViewController].pageViewController.view];
-        
+        [self.containerView addSubview:[PageViewController pageViewController].pageViewController.view];
+    
+//        NSDictionary *views = NSDictionaryOfVariableBindings([PageViewController pageViewController].pageViewController.view);
+//    
+//     [ [NSLayoutConstraint constraintsWithVisualFormat: @"V:|-0-[self]-0-|" options:0 metrics:nil views:views]
+//            arrayByAddingObjectsFromArray:
+//            [NSLayoutConstraint constraintsWithVisualFormat: @"H:|-0-[self]-0-|" options:0 metrics:nil views:views]];
+    
+    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:[PageViewController pageViewController].pageViewController.view attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0];
+    
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:[PageViewController pageViewController].pageViewController.view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:[PageViewController pageViewController].pageViewController.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    
+    [self.containerView addConstraints:@[bottom, top, left, right]];
+    
         // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
         CGRect pageViewRect = self.view.bounds;
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {

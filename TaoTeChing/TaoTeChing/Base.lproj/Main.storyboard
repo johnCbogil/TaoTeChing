@@ -51,10 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tem-fe-vbx">
-                                <rect key="frame" x="0.0" y="64" width="600" height="512"/>
-                                <connections>
-                                    <segue destination="S4R-Ja-viH" kind="embed" id="M6o-LF-qaW"/>
-                                </connections>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </containerView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMy-DI-HQT">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
@@ -85,14 +82,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tem-fe-vbx" secondAttribute="trailing" id="2BS-NK-OxI"/>
                             <constraint firstItem="OMy-DI-HQT" firstAttribute="top" secondItem="I7W-xW-C47" secondAttribute="bottom" id="2Ym-6p-QbQ"/>
+                            <constraint firstItem="tem-fe-vbx" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="97g-hO-U2v"/>
                             <constraint firstItem="OMy-DI-HQT" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="AAS-Y0-i09"/>
                             <constraint firstAttribute="trailing" secondItem="OMy-DI-HQT" secondAttribute="trailing" id="HCx-b5-WDJ"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="Nek-mY-gqN"/>
+                            <constraint firstItem="tem-fe-vbx" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" id="Opf-VF-uMA"/>
+                            <constraint firstItem="IfR-02-kHw" firstAttribute="top" secondItem="tem-fe-vbx" secondAttribute="bottom" id="Ufc-s3-6jv"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" id="nBS-cF-GPt"/>
                             <constraint firstItem="IfR-02-kHw" firstAttribute="top" secondItem="tem-fe-vbx" secondAttribute="bottom" constant="-25" id="oxP-Yp-4he"/>
+                            <constraint firstAttribute="trailing" secondItem="tem-fe-vbx" secondAttribute="trailing" id="q9T-EV-WHG"/>
                             <constraint firstAttribute="trailing" secondItem="tem-fe-vbx" secondAttribute="trailing" id="sx3-9i-Q5s"/>
+                            <constraint firstItem="tem-fe-vbx" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="tTn-GY-Z4l"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2BS-NK-OxI"/>
+                                <exclude reference="Nek-mY-gqN"/>
+                                <exclude reference="nBS-cF-GPt"/>
+                                <exclude reference="sx3-9i-Q5s"/>
+                                <exclude reference="tTn-GY-Z4l"/>
+                                <exclude reference="oxP-Yp-4he"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" image="bookIcon" id="GC4-kk-Mst">
                         <inset key="imageInsets" minX="3" minY="5" maxX="-3" maxY="-5"/>
@@ -100,6 +113,7 @@
                     <connections>
                         <outlet property="bookmarkButton" destination="Wwy-09-bPw" id="lcJ-zI-CpN"/>
                         <outlet property="chapterLabel" destination="6Lo-Nv-aJY" id="7hf-fY-PWD"/>
+                        <outlet property="containerView" destination="tem-fe-vbx" id="s71-C6-SE9"/>
                         <outlet property="homeTabBarItem" destination="GC4-kk-Mst" id="pnk-MW-gWS"/>
                         <outlet property="indexButton" destination="8He-TX-X94" id="kfH-qv-wwI"/>
                         <outlet property="navigationBar" destination="OMy-DI-HQT" id="qZe-Ny-hFG"/>
@@ -147,17 +161,18 @@
                         <viewControllerLayoutGuide type="bottom" id="EPS-s9-h4K"/>
                     </layoutGuides>
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ZwX-cT-FIQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-bN-Lfg">
-                                <rect key="frame" x="16" y="72" width="560" height="403"/>
+                                <rect key="frame" x="16" y="72" width="560" height="491"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
+                        <color key="backgroundColor" red="0.5450980392" green="0.0" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qhH-bN-Lfg" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="16" id="7YT-Cb-tYL"/>
                             <constraint firstAttribute="centerY" secondItem="qhH-bN-Lfg" secondAttribute="centerY" constant="-17.5" id="XCd-Iv-uc9"/>
