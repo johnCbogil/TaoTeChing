@@ -20,6 +20,7 @@
 		527C75291B2F5D6B006E64B3 /* TaoTeChingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C75281B2F5D6B006E64B3 /* TaoTeChingTests.m */; };
 		527C75371B2F6028006E64B3 /* TaoTeChing - Gia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 527C75361B2F6028006E64B3 /* TaoTeChing - Gia.txt */; };
 		52FC59B41B3664230004A278 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FC59B31B3664230004A278 /* PageViewController.m */; };
+		DDC7CBEE1B3DE807005C4861 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC7CBED1B3DE807005C4861 /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		527C75361B2F6028006E64B3 /* TaoTeChing - Gia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TaoTeChing - Gia.txt"; sourceTree = "<group>"; };
 		52FC59B21B3664230004A278 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		52FC59B31B3664230004A278 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		DDC7CBED1B3DE807005C4861 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC7CBEE1B3DE807005C4861 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				527C75051B2F5D6A006E64B3 /* TaoTeChing */,
 				527C75251B2F5D6B006E64B3 /* TaoTeChingTests */,
 				527C75041B2F5D6A006E64B3 /* Products */,
+				DDC7CBED1B3DE807005C4861 /* Reveal.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,8 +387,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TaoTeChing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"Reveal\"",
+					"-lz",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -393,8 +407,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TaoTeChing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"Reveal\"",
+					"-lz",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
