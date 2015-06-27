@@ -56,7 +56,6 @@
     
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -107,6 +106,14 @@
 
 - (IBAction)indexButtonPressed:(id)sender {
     
-    NSLog(@"HELLO");
+    NSLog(@"indexButtonPressed");
+}
+- (IBAction)bookmarkButtonPressed:(id)sender {
+    NSLog(@"bookmarkButtonPressed");
+
+    
+    // Get the current page number
+    // store that page number in a DAO
+    //
 }
 @end

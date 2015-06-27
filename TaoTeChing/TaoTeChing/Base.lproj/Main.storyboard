@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B1q-Tc-MIf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B1q-Tc-MIf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -58,11 +58,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-09-bPw" userLabel="favoriteButton">
-                                <rect key="frame" x="286" y="33" width="28" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-09-bPw" userLabel="bookmarkButton">
+                                <rect key="frame" x="286" y="28" width="28" height="28"/>
                                 <state key="normal" image="bookmarkIcon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="bookmarkIconFilled"/>
+                                <connections>
+                                    <action selector="bookmarkButtonPressed:" destination="703-4V-yAM" eventType="touchUpInside" id="FVv-jT-dSH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8He-TX-X94" userLabel="indexButton">
                                 <rect key="frame" x="18" y="25" width="33" height="33"/>
@@ -74,7 +78,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lo-Nv-aJY" userLabel="chapterLabel">
-                                <rect key="frame" x="76" y="36.5" width="42" height="20.5"/>
+                                <rect key="frame" x="76" y="31" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -165,18 +169,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-bN-Lfg">
-                                <rect key="frame" x="16" y="72" width="560" height="491"/>
+                                <rect key="frame" x="16" y="0.0" width="560" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.5450980392" green="0.0" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qhH-bN-Lfg" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="16" id="7YT-Cb-tYL"/>
-                            <constraint firstAttribute="centerY" secondItem="qhH-bN-Lfg" secondAttribute="centerY" constant="-17.5" id="XCd-Iv-uc9"/>
-                            <constraint firstAttribute="height" secondItem="qhH-bN-Lfg" secondAttribute="height" constant="109" id="a18-re-prK"/>
+                            <constraint firstAttribute="centerY" secondItem="qhH-bN-Lfg" secondAttribute="centerY" id="XCd-Iv-uc9"/>
+                            <constraint firstAttribute="height" secondItem="qhH-bN-Lfg" secondAttribute="height" id="a18-re-prK"/>
                             <constraint firstAttribute="trailing" secondItem="qhH-bN-Lfg" secondAttribute="trailing" constant="24" id="sV3-mQ-nXV"/>
                         </constraints>
                     </view>
@@ -186,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1397" y="-227.5"/>
+            <point key="canvasLocation" x="1397" y="-228"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="lcu-kI-ulh">
@@ -212,6 +216,7 @@
     <resources>
         <image name="bookIcon" width="33" height="33"/>
         <image name="bookmarkIcon" width="28" height="28"/>
+        <image name="bookmarkIconFilled" width="28" height="28"/>
         <image name="indexIcon" width="33" height="33"/>
         <image name="moreIcon" width="33" height="33"/>
     </resources>
