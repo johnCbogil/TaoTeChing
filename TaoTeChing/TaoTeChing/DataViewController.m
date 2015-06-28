@@ -52,6 +52,9 @@
     [super viewDidAppear:animated];
     NSLog(@" ");
     NSLog(@"%@ frame in viewDidAppear: %p", NSStringFromCGRect(self.navigationBar.frame), self.dataObject);
+    
+    // check DAO if the current page is bookmarked
+    // set the nav bar's bookmark icon
 }
 
 - (IBAction)homeButtonPressed:(id)sender {
