@@ -10,6 +10,7 @@
 #import "ModelController.h"
 #import "DataViewController.h"
 #import "PageViewController.h"
+#import "BookmarkManager.h"
 
 @interface RootViewController ()
 @property (readonly, strong, nonatomic) ModelController *modelController;
@@ -56,6 +57,9 @@
     
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
+    
+    [self.bookmarkButton addTarget:self action:@selector(bookmarkButtonTouch:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,9 +114,16 @@
 }
 - (IBAction)bookmarkButtonPressed:(id)sender {
     NSLog(@"bookmarkButtonPressed");
-
     
-    // Get the current page number
-    // store that page number in a DAO
+    NSLog(@"%d",self.modelController.dataViewController.currentChapter);
+    
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    [defaults setInteger:self.modelController.dataViewController.currentChapter forKey:self.modelController.dataViewController.currentChapterString];
+    [defaults synchronize];
+}
+
+- (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event
+{
+    self.bookmarkButton.selected = !self.bookmarkButton.selected;
 }
 @end

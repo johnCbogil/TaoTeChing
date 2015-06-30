@@ -63,7 +63,7 @@
                                 <state key="normal" image="bookmarkIcon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted" image="bookmarkIconFilled"/>
+                                <state key="selected" image="bookmarkIconFilled"/>
                                 <connections>
                                     <action selector="bookmarkButtonPressed:" destination="703-4V-yAM" eventType="touchUpInside" id="FVv-jT-dSH"/>
                                 </connections>

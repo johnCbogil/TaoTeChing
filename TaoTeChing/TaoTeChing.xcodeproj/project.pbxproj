@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522940FA1B3F76FC008968F9 /* BookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 522940F91B3F76FC008968F9 /* BookmarkManager.m */; };
 		52301D001B38BF6600DDC108 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301CFF1B38BF6600DDC108 /* MoreViewController.m */; };
 		52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301D061B38CBFB00DDC108 /* TabBarViewController.m */; };
 		527C75091B2F5D6A006E64B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C75081B2F5D6A006E64B3 /* main.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		522940F81B3F76FC008968F9 /* BookmarkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkManager.h; sourceTree = "<group>"; };
+		522940F91B3F76FC008968F9 /* BookmarkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkManager.m; sourceTree = "<group>"; };
 		52301CFE1B38BF6600DDC108 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		52301CFF1B38BF6600DDC108 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		52301D051B38CBFB00DDC108 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 			children = (
 				527C750A1B2F5D6A006E64B3 /* AppDelegate.h */,
 				527C750B1B2F5D6A006E64B3 /* AppDelegate.m */,
+				522940F81B3F76FC008968F9 /* BookmarkManager.h */,
+				522940F91B3F76FC008968F9 /* BookmarkManager.m */,
 				527C750D1B2F5D6A006E64B3 /* RootViewController.h */,
 				527C750E1B2F5D6A006E64B3 /* RootViewController.m */,
 				527C75101B2F5D6A006E64B3 /* DataViewController.h */,
@@ -258,6 +263,7 @@
 				527C75091B2F5D6A006E64B3 /* main.m in Sources */,
 				52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */,
 				527C750F1B2F5D6A006E64B3 /* RootViewController.m in Sources */,
+				522940FA1B3F76FC008968F9 /* BookmarkManager.m in Sources */,
 				52301D001B38BF6600DDC108 /* MoreViewController.m in Sources */,
 				52FC59B41B3664230004A278 /* PageViewController.m in Sources */,
 			);

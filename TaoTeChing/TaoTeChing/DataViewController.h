@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UILabel *chapterLabel;
+@property (weak, nonatomic) NSString *currentChapterString;
 @property (nonatomic) int currentChapter;
 
 @end

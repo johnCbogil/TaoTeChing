@@ -57,6 +57,7 @@
     // set the nav bar's bookmark icon
 }
 
+// How to jump btw pages
 - (IBAction)homeButtonPressed:(id)sender {
 
     DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:0 storyboard:self.storyboard];
@@ -81,4 +82,6 @@
     }
     self.chapterLabel.font = [UIFont fontWithName:@"Avenir Next" size:20];
 }
+
+
 @end

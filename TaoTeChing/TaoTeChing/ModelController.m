@@ -17,13 +17,6 @@
  
  There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
  */
-
-
-@interface ModelController ()
-
-@property (readonly, strong, nonatomic) NSArray *pageData;
-@end
-
 @implementation ModelController
 
 static ModelController *sharedInstance = nil;
@@ -68,12 +61,27 @@ static ModelController *sharedInstance = nil;
     }
 
     // Create a new view controller and pass suitable data.
-    DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
-    dataViewController.dataObject = self.pageData[index];
-    dataViewController.currentChapter = (int)index;
+    self.dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+    self.dataViewController.dataObject = self.pageData[index];
+    self.dataViewController.currentChapter = (int)index;
+
     
-    return dataViewController;
+    
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle: NSNumberFormatterSpellOutStyle];
+    NSString* numberString = [formatter stringFromNumber:self.pageData[index]];
+    
+    if (self.dataViewController.currentChapterString == 0) {
+        self.dataViewController.currentChapterString = @"About";
+    }
+    else{
+        self.dataViewController.currentChapterString = numberString.capitalizedString;
+    }
+    
+    return self.dataViewController;
 }
+
+
 
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController {
     // Return the index of the given data view controller.
