@@ -11,10 +11,11 @@
 @interface BookmarkManager : NSObject
 
 @property (nonatomic) NSMutableArray *listOfBookmarks;
-
+@property (nonatomic) NSUserDefaults *defaults;
 -(void)logBookmarks;
 
-- (void)addBookmark:(int)chapterNumber;
+- (void)addBookmark:(int)chapterNumber forKey:(NSString*)chapterNumberString;
 + (BookmarkManager *)bookmarkManager;
 + (BookmarkManager *)instantiateBookmarkManager;
+- (void)getBookmarkForKey:(NSString*)key;
 @end

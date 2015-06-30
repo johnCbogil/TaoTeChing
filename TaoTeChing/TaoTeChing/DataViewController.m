@@ -9,6 +9,7 @@
 #import "DataViewController.h"
 #import "PageViewController.h"
 #import "ModelController.h"
+#import "BookmarkManager.h"
 
 @interface DataViewController ()
 
@@ -24,6 +25,7 @@
     // Hide navigationBar shadow
 //    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
 //    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -36,18 +36,23 @@ static BookmarkManager *sharedInstance = nil;
     if (self) {
 
         self.listOfBookmarks = [[NSMutableArray alloc]init];
+        self.defaults = [NSUserDefaults standardUserDefaults];
     }
     return self;
 }
 
-- (void)addBookmark:(int)chapterNumber{
+- (void)addBookmark:(int)chapterNumber forKey:(NSString*)chapterNumberString{
     
     NSNumber *chapterNumberFormatted = [NSNumber numberWithInt:chapterNumber];
     [self.listOfBookmarks addObject:chapterNumberFormatted];
+    [self.defaults setInteger:chapterNumber forKey:chapterNumberString];
+    
 }
 
-- (void)logBookmarks{
-    NSLog(@"%@", self.listOfBookmarks);
+- (void)getBookmarkForKey:(NSString*)key{
+    
+    NSLog(@"%ld", (long)[self.defaults integerForKey:key]);
+    
 }
 
 @end

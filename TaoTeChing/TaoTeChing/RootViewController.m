@@ -115,11 +115,14 @@
 - (IBAction)bookmarkButtonPressed:(id)sender {
     NSLog(@"bookmarkButtonPressed");
     
-    NSLog(@"%d",self.modelController.dataViewController.currentChapter);
+        NSLog(@"%d",self.modelController.dataViewController.currentChapter);
+        [[BookmarkManager bookmarkManager]addBookmark:self.modelController.dataViewController.currentChapter forKey:self.modelController.dataViewController.currentChapterString];
     
-    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setInteger:self.modelController.dataViewController.currentChapter forKey:self.modelController.dataViewController.currentChapterString];
-    [defaults synchronize];
+//    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+//    [defaults setInteger:self.modelController.dataViewController.currentChapter forKey:self.modelController.dataViewController.currentChapterString];
+//    [defaults synchronize];
+    
+    
 }
 
 - (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event
