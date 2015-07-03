@@ -12,7 +12,7 @@
 
 static BookmarkManager *sharedInstance = nil;
 
-
+// update singleton code, use dispatch once. may not need multiple class methods
 + (BookmarkManager *)instantiateBookmarkManager
 {
     @synchronized(self) {
@@ -35,24 +35,16 @@ static BookmarkManager *sharedInstance = nil;
     self = [super init];
     if (self) {
 
-        self.listOfBookmarks = [[NSMutableArray alloc]init];
         self.defaults = [NSUserDefaults standardUserDefaults];
+        // retreive bookmarks here
     }
     return self;
 }
 
-- (void)addBookmark:(int)chapterNumber forKey:(NSString*)chapterNumberString{
-    
-    NSNumber *chapterNumberFormatted = [NSNumber numberWithInt:chapterNumber];
-    [self.listOfBookmarks addObject:chapterNumberFormatted];
-    [self.defaults setInteger:chapterNumber forKey:chapterNumberString];
-    
-}
+- (void)addBookmark:(int)chapterNumber forKey:(int)chapterNumberString{
 
-- (void)getBookmarkForKey:(NSString*)key{
-    
-    NSLog(@"%ld", (long)[self.defaults integerForKey:key]);
-    
-}
+    [self.defaults setInteger:chapterNumber forKey:[NSString stringWithFormat:@"%d", chapterNumber]];
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
 
+}
 @end

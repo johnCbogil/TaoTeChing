@@ -11,16 +11,11 @@
 #import "ModelController.h"
 #import "BookmarkManager.h"
 
-@interface DataViewController ()
-
-@end
-
 @implementation DataViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
-    [self formatChapterLabel];
 
     // Hide navigationBar shadow
 //    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
@@ -35,28 +30,35 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-//    self.dataLabel.text = [self.dataObject description];
     self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
 
-    NSLog(@"%@ frame in viewWillAppear: %p", NSStringFromCGRect(self.navigationBar.frame), self.dataObject);
+    //NSLog(@"%@ frame in viewWillAppear: %p", NSStringFromCGRect(self.navigationBar.frame), self.dataObject);
 }
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    NSLog(@"%@ frame in layoutSub: %p", NSStringFromCGRect(self.navigationBar.frame), self.dataObject);
 
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSLog(@" ");
-    NSLog(@"%@ frame in viewDidAppear: %p", NSStringFromCGRect(self.navigationBar.frame), self.dataObject);
+
+    NSLog(@"Current chapter is: %d", self.currentChapter);
     
-    // check DAO if the current page is bookmarked
-    // set the nav bar's bookmark icon
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([[[defaults dictionaryRepresentation]allKeys]containsObject:[NSString stringWithFormat:@"%d", self.currentChapter]]) {
+        NSLog(@"This page has beeen bookmarked ya heard");
+    }
+    else{
+        NSLog(@"this page not bookmarked");
+    }
+    
+    // access the rootvc's bookmark icon
+    
+    // refresh the current bookmark icon using setneedsdisplay(?)
 }
 
 // How to jump btw pages
@@ -68,22 +70,7 @@
     
     // Page direction depends on index number
     [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-}
-
-- (void)formatChapterLabel{
-
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setNumberStyle: NSNumberFormatterSpellOutStyle];
-    NSString* numberString = [formatter stringFromNumber:[NSNumber numberWithInt: self.currentChapter]];
     
-    if (self.currentChapter == 0) {
-        self.chapterLabel.text = @"About";
-    }
-    else{
-        self.chapterLabel.text = numberString.capitalizedString;
-    }
-    self.chapterLabel.font = [UIFont fontWithName:@"Avenir Next" size:20];
+
 }
-
-
 @end

@@ -9,14 +9,6 @@
 #import "ModelController.h"
 #import "DataViewController.h"
 
-/*
- A controller object that manages a simple model -- a collection of month names.
- 
- The controller serves as the data source for the page view controller; it therefore implements pageViewController:viewControllerBeforeViewController: and pageViewController:viewControllerAfterViewController:.
- It also implements a custom method, viewControllerAtIndex: which is useful in the implementation of the data source methods, and in the initial configuration of the application.
- 
- There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
- */
 @implementation ModelController
 
 static ModelController *sharedInstance = nil;
@@ -49,6 +41,8 @@ static ModelController *sharedInstance = nil;
                                                       encoding:NSUTF8StringEncoding
                                                          error:NULL];
         NSArray *lines = [content componentsSeparatedByString:@"#"];
+        
+        //change lines to "text"
         _pageData = lines;        
     }
     return self;
@@ -63,20 +57,9 @@ static ModelController *sharedInstance = nil;
     // Create a new view controller and pass suitable data.
     self.dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
     self.dataViewController.dataObject = self.pageData[index];
+    // consider moving current chapter to vc
     self.dataViewController.currentChapter = (int)index;
 
-    
-    
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setNumberStyle: NSNumberFormatterSpellOutStyle];
-    NSString* numberString = [formatter stringFromNumber:self.pageData[index]];
-    
-    if (self.dataViewController.currentChapterString == 0) {
-        self.dataViewController.currentChapterString = @"About";
-    }
-    else{
-        self.dataViewController.currentChapterString = numberString.capitalizedString;
-    }
     
     return self.dataViewController;
 }

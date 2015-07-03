@@ -12,13 +12,8 @@
 #import "PageViewController.h"
 #import "BookmarkManager.h"
 
-@interface RootViewController ()
-@property (readonly, strong, nonatomic) ModelController *modelController;
-@end
-
 @implementation RootViewController
 
-@synthesize modelController = _modelController;
 
 -(void)viewDidLoad{
     
@@ -27,11 +22,11 @@
     // Configure the page view controller and add it as a child view controller.
     [PageViewController pageViewController].pageViewController.delegate = self;
     
-    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    DataViewController *startingViewController = [[ModelController modelController] viewControllerAtIndex:0 storyboard:self.storyboard];
     NSArray *viewControllers = @[startingViewController];
     [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
-    [PageViewController pageViewController].pageViewController.dataSource = self.modelController;
+    [PageViewController pageViewController].pageViewController.dataSource = [ModelController modelController];
     
     [self addChildViewController:[PageViewController pageViewController].pageViewController];
     [self.containerView addSubview:[PageViewController pageViewController].pageViewController.view];
@@ -59,54 +54,12 @@
     self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
     
     [self.bookmarkButton addTarget:self action:@selector(bookmarkButtonTouch:withEvent:) forControlEvents:UIControlEventTouchUpInside];
-
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (ModelController *)modelController {
-    // Return the model controller object, creating it if necessary.
-    // In more complex implementations, the model controller may be passed to the view controller.
-    if (!_modelController) {
-        _modelController = [[ModelController alloc] init];
-    }
-    return _modelController;
-}
-
-#pragma mark - UIPageViewController delegate methods
-
-//- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation {
-//    if (UIInterfaceOrientationIsPortrait(orientation) || ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)) {
-//        // In portrait orientation or on iPhone: Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller. Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to YES, so set it to NO here.
-//
-//        UIViewController *currentViewController = self.pageViewController.viewControllers[0];
-//        NSArray *viewControllers = @[currentViewController];
-//        [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-//
-//        self.pageViewController.doubleSided = NO;
-//        return UIPageViewControllerSpineLocationMin;
-//    }
-//
-//    // In landscape orientation: Set set the spine location to "mid" and the page view controller's view controllers array to contain two view controllers. If the current page is even, set it to contain the current and next view controllers; if it is odd, set the array to contain the previous and current view controllers.
-//    DataViewController *currentViewController = self.pageViewController.viewControllers[0];
-//    NSArray *viewControllers = nil;
-//
-//    NSUInteger indexOfCurrentViewController = [self.modelController indexOfViewController:currentViewController];
-//    if (indexOfCurrentViewController == 0 || indexOfCurrentViewController % 2 == 0) {
-//        UIViewController *nextViewController = [self.modelController pageViewController:self.pageViewController viewControllerAfterViewController:currentViewController];
-//        viewControllers = @[currentViewController, nextViewController];
-//    } else {
-//        UIViewController *previousViewController = [self.modelController pageViewController:self.pageViewController viewControllerBeforeViewController:currentViewController];
-//        viewControllers = @[previousViewController, currentViewController];
-//    }
-//    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-//
-//
-//    return UIPageViewControllerSpineLocationMid;
-//}
 
 - (IBAction)indexButtonPressed:(id)sender {
     
@@ -115,13 +68,11 @@
 - (IBAction)bookmarkButtonPressed:(id)sender {
     NSLog(@"bookmarkButtonPressed");
     
-        NSLog(@"%d",self.modelController.dataViewController.currentChapter);
-        [[BookmarkManager bookmarkManager]addBookmark:self.modelController.dataViewController.currentChapter forKey:self.modelController.dataViewController.currentChapterString];
+        NSLog(@"%d",[ModelController modelController].dataViewController.currentChapter);
     
-//    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-//    [defaults setInteger:self.modelController.dataViewController.currentChapter forKey:self.modelController.dataViewController.currentChapterString];
-//    [defaults synchronize];
-    
+        [[BookmarkManager bookmarkManager]addBookmark:[ModelController modelController].dataViewController.currentChapter forKey:[ModelController modelController].dataViewController.currentChapter];
+
+
     
 }
 
