@@ -59,7 +59,6 @@
         NSLog(@"This page has NOT been bookmarked");
         [rvc.bookmarkButton setSelected:NO];
     }
-    //
 }
 
 // How to jump btw pages

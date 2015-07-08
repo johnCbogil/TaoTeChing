@@ -36,15 +36,18 @@ static BookmarkManager *sharedInstance = nil;
     if (self) {
 
         self.defaults = [NSUserDefaults standardUserDefaults];
-        // retreive bookmarks here
+        self.bookmarks = [[NSMutableDictionary alloc]init];
+        [self.defaults setObject:self.bookmarks forKey:@"bookmarks"];
     }
     return self;
 }
 
 // May not need chapterNumberString here
-- (void)addBookmark:(int)chapterNumber forKey:(int)chapterNumberString{
+- (void)addBookmark:(int)chapterNumber{
 
     [self.defaults setInteger:chapterNumber forKey:[NSString stringWithFormat:@"%d", chapterNumber]];
+    [self.bookmarks setObject:[NSNumber numberWithInt:chapterNumber] forKey:[NSNumber numberWithInt:chapterNumber]];
+    
 }
 
 - (void)removeBookmark:(int)chapterNumber{
