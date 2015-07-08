@@ -83,6 +83,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521047EB1B4DBC390075B1E1 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				527C750D1B2F5D6A006E64B3 /* RootViewController.h */,
+				527C750E1B2F5D6A006E64B3 /* RootViewController.m */,
+				527C75101B2F5D6A006E64B3 /* DataViewController.h */,
+				527C75111B2F5D6A006E64B3 /* DataViewController.m */,
+				527C75131B2F5D6A006E64B3 /* ModelController.h */,
+				527C75141B2F5D6A006E64B3 /* ModelController.m */,
+				52FC59B21B3664230004A278 /* PageViewController.h */,
+				52FC59B31B3664230004A278 /* PageViewController.m */,
+			);
+			name = Book;
+			sourceTree = "<group>";
+		};
+		521047ED1B4DBC4D0075B1E1 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				522940F81B3F76FC008968F9 /* BookmarkManager.h */,
+				522940F91B3F76FC008968F9 /* BookmarkManager.m */,
+			);
+			name = Bookmarks;
+			sourceTree = "<group>";
+		};
+		521047EE1B4DBC710075B1E1 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				52301CFE1B38BF6600DDC108 /* MoreViewController.h */,
+				52301CFF1B38BF6600DDC108 /* MoreViewController.m */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
 		527C74FA1B2F5D6A006E64B3 = {
 			isa = PBXGroup;
 			children = (
@@ -105,21 +138,12 @@
 		527C75051B2F5D6A006E64B3 /* TaoTeChing */ = {
 			isa = PBXGroup;
 			children = (
+				521047EE1B4DBC710075B1E1 /* More */,
+				521047ED1B4DBC4D0075B1E1 /* Bookmarks */,
+				521047EB1B4DBC390075B1E1 /* Book */,
 				527C750A1B2F5D6A006E64B3 /* AppDelegate.h */,
 				527C750B1B2F5D6A006E64B3 /* AppDelegate.m */,
-				522940F81B3F76FC008968F9 /* BookmarkManager.h */,
-				522940F91B3F76FC008968F9 /* BookmarkManager.m */,
-				527C750D1B2F5D6A006E64B3 /* RootViewController.h */,
-				527C750E1B2F5D6A006E64B3 /* RootViewController.m */,
-				527C75101B2F5D6A006E64B3 /* DataViewController.h */,
-				527C75111B2F5D6A006E64B3 /* DataViewController.m */,
-				527C75131B2F5D6A006E64B3 /* ModelController.h */,
-				527C75141B2F5D6A006E64B3 /* ModelController.m */,
-				52FC59B21B3664230004A278 /* PageViewController.h */,
-				52FC59B31B3664230004A278 /* PageViewController.m */,
 				527C75161B2F5D6A006E64B3 /* Main.storyboard */,
-				52301CFE1B38BF6600DDC108 /* MoreViewController.h */,
-				52301CFF1B38BF6600DDC108 /* MoreViewController.m */,
 				52301D051B38CBFB00DDC108 /* TabBarViewController.h */,
 				52301D061B38CBFB00DDC108 /* TabBarViewController.m */,
 				527C75191B2F5D6A006E64B3 /* Images.xcassets */,
