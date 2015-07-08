@@ -21,6 +21,7 @@
 //    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
 //    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,19 +43,23 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+//    
+//    DataViewController *viewController = [[PageViewController pageViewController].pageViewController.viewControllers lastObject];
+//    self.currentChapter = [modelArray indexOfObject:[viewController page]];
+    
+    DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
+    NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
+    
+
     
     RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
-    NSLog(@"Current chapter is: %d", self.currentChapter);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([[[defaults dictionaryRepresentation]allKeys]containsObject:[NSString stringWithFormat:@"%d", self.currentChapter]]) {
-        NSLog(@"This page has beeen bookmarked ya heard");
+    if ([[[defaults dictionaryRepresentation]allKeys]containsObject:[NSString stringWithFormat:@"%ld", currentIndex]]) {
         [rvc.bookmarkButton setSelected:YES];
     }
     else{
-        NSLog(@"this page not bookmarked");
         [rvc.bookmarkButton setSelected:NO];
-        
     }
 }
 
@@ -68,4 +73,6 @@
     // Page direction depends on index number
     [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
 }
+
+
 @end

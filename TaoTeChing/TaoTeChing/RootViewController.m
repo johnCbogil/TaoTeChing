@@ -54,8 +54,6 @@
     self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
     
     [self.bookmarkButton addTarget:self action:@selector(bookmarkButtonTouch:withEvent:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,15 +66,31 @@
     NSLog(@"indexButtonPressed");
 }
 - (IBAction)bookmarkButtonPressed:(id)sender {
-    NSLog(@"bookmarkButtonPressed");
-    
-        NSLog(@"%d",[ModelController modelController].dataViewController.currentChapter);
-    
-        [[BookmarkManager bookmarkManager]addBookmark:[ModelController modelController].dataViewController.currentChapter forKey:[ModelController modelController].dataViewController.currentChapter];  
+    if (self.bookmarkButton.isSelected) {
+        [[BookmarkManager bookmarkManager]removeBookmark:[ModelController modelController].dataViewController.currentChapter];
+        
+    }
+    else {
+        
+        DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
+        NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
+        
+        
+        NSLog(@"Bookmarking page: %ld",currentIndex);
+        [[BookmarkManager bookmarkManager]addBookmark:(int)currentIndex forKey:(int)currentIndex];
+    }    
 }
 
 - (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event
 {
     self.bookmarkButton.selected = !self.bookmarkButton.selected;
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+    DataViewController *currentView = [pageViewController.viewControllers objectAtIndex:0];
+    NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
+    NSLog(@"The current chapter is: %ld", (long)currentIndex);
+    [ModelController modelController].dataViewController.currentChapter = (int)currentIndex;
 }
 @end

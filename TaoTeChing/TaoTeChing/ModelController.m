@@ -57,8 +57,8 @@ static ModelController *sharedInstance = nil;
     // Create a new view controller and pass suitable data.
     self.dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
     self.dataViewController.dataObject = self.pageData[index];
+    
     // consider moving current chapter to vc
-    self.dataViewController.currentChapter = (int)index;
 
     
     return self.dataViewController;
@@ -98,6 +98,14 @@ static ModelController *sharedInstance = nil;
     }
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
+
+//- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+//{
+//    if (completed) {
+//        self.dataViewController.currentChapter = (int)index;
+//    }
+//}
+
 
 
 @end

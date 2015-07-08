@@ -41,10 +41,14 @@ static BookmarkManager *sharedInstance = nil;
     return self;
 }
 
+// May not need chapterNumberString here
 - (void)addBookmark:(int)chapterNumber forKey:(int)chapterNumberString{
 
     [self.defaults setInteger:chapterNumber forKey:[NSString stringWithFormat:@"%d", chapterNumber]];
-    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+}
 
+- (void)removeBookmark:(int)chapterNumber{
+    
+    [self.defaults removeObjectForKey:[NSString stringWithFormat:@"%d", chapterNumber]];
 }
 @end
