@@ -17,6 +17,6 @@
 - (IBAction)indexButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 - (IBAction)bookmarkButtonPressed:(id)sender;
-
+- (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event;
 @end
 

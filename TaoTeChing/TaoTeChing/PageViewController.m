@@ -35,7 +35,6 @@ static PageViewController *sharedInstance = nil;
     if(self)
     {
         self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-        
     }
     return self;
 }

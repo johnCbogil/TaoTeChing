@@ -32,33 +32,30 @@
     [super viewWillAppear:animated];
     self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
-
-    //NSLog(@"%@ frame in viewWillAppear: %p", NSStringFromCGRect(self.navigationBar.frame), self.dataObject);
 }
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
+    
+    RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
     NSLog(@"Current chapter is: %d", self.currentChapter);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([[[defaults dictionaryRepresentation]allKeys]containsObject:[NSString stringWithFormat:@"%d", self.currentChapter]]) {
         NSLog(@"This page has beeen bookmarked ya heard");
+        [rvc.bookmarkButton setSelected:YES];
     }
     else{
         NSLog(@"this page not bookmarked");
+        [rvc.bookmarkButton setSelected:NO];
+        
     }
-    
-    // access the rootvc's bookmark icon
-    
-    // refresh the current bookmark icon using setneedsdisplay(?)
 }
 
 // How to jump btw pages
@@ -70,7 +67,5 @@
     
     // Page direction depends on index number
     [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-    
-
 }
 @end

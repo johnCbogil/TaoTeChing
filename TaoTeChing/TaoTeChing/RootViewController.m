@@ -54,6 +54,8 @@
     self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
     
     [self.bookmarkButton addTarget:self action:@selector(bookmarkButtonTouch:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,10 +72,7 @@
     
         NSLog(@"%d",[ModelController modelController].dataViewController.currentChapter);
     
-        [[BookmarkManager bookmarkManager]addBookmark:[ModelController modelController].dataViewController.currentChapter forKey:[ModelController modelController].dataViewController.currentChapter];
-
-
-    
+        [[BookmarkManager bookmarkManager]addBookmark:[ModelController modelController].dataViewController.currentChapter forKey:[ModelController modelController].dataViewController.currentChapter];  
 }
 
 - (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event

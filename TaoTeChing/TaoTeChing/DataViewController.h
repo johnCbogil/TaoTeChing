@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootViewController.h"
+
+@class RootViewController;
 
 @interface DataViewController : UIViewController
 @property (strong, nonatomic) id dataObject;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic) int currentChapter;
+
+@property (nonatomic) RootViewController *rootVC;
+
 @end
 
