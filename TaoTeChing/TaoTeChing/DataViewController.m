@@ -10,6 +10,8 @@
 #import "PageViewController.h"
 #import "ModelController.h"
 #import "BookmarkManager.h"
+#import "RootViewController.h"
+
 
 @implementation DataViewController
 
@@ -43,22 +45,18 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-//    
-//    DataViewController *viewController = [[PageViewController pageViewController].pageViewController.viewControllers lastObject];
-//    self.currentChapter = [modelArray indexOfObject:[viewController page]];
     
     DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
     NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
-    
-
-    
     RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([[[defaults dictionaryRepresentation]allKeys]containsObject:[NSString stringWithFormat:@"%ld", currentIndex]]) {
+        NSLog(@"This page has been bookmarked");
         [rvc.bookmarkButton setSelected:YES];
     }
     else{
+        NSLog(@"This page has NOT been bookmarked");
         [rvc.bookmarkButton setSelected:NO];
     }
 }

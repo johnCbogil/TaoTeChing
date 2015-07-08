@@ -66,16 +66,17 @@
     NSLog(@"indexButtonPressed");
 }
 - (IBAction)bookmarkButtonPressed:(id)sender {
+    
+    // [ModelController modelController].dataViewController.currentChapter
+    DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
+    NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
+    
     if (self.bookmarkButton.isSelected) {
-        [[BookmarkManager bookmarkManager]removeBookmark:[ModelController modelController].dataViewController.currentChapter];
-        
+        NSLog(@"Removing page: %ld", currentIndex);
+        [[BookmarkManager bookmarkManager]removeBookmark:(int)currentIndex];
     }
     else {
-        
-        DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
-        NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
-        
-        
+
         NSLog(@"Bookmarking page: %ld",currentIndex);
         [[BookmarkManager bookmarkManager]addBookmark:(int)currentIndex forKey:(int)currentIndex];
     }    
@@ -91,6 +92,5 @@
     DataViewController *currentView = [pageViewController.viewControllers objectAtIndex:0];
     NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
     NSLog(@"The current chapter is: %ld", (long)currentIndex);
-    [ModelController modelController].dataViewController.currentChapter = (int)currentIndex;
 }
 @end
