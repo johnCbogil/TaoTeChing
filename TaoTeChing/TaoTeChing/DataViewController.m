@@ -18,14 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
-
+    
     // Hide navigationBar shadow
-//    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-//    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    //    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    //    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
-    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
-
-    
+    // Print all of nsuserdefaults
+    //    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,8 +51,7 @@
     NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
     RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([[BookmarkManager bookmarkManager].bookmarks objectForKey:[NSString stringWithFormat:@"%ld", currentIndex]]) {
+    if ([[BookmarkManager bookmarkManager].bookmarks containsObject:[NSString stringWithFormat:@"%ld", currentIndex]]) {
         NSLog(@"This page has been bookmarked");
         [rvc.bookmarkButton setSelected:YES];
     }
@@ -61,19 +59,13 @@
         NSLog(@"This page has NOT been bookmarked");
         [rvc.bookmarkButton setSelected:NO];
     }
-
-    // 
-//    if ([[BookmarkManager bookmarkManager].bookmarks objectForKey:[NSString stringWithFormat:@"%ld", currentIndex]]) {
-//        NSLog(@"hello");
-//    }
 }
 
 // How to jump btw pages
 - (IBAction)homeButtonPressed:(id)sender {
-
+    
     DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:0 storyboard:self.storyboard];
     NSArray *viewControllers = @[zeroVC];
-    
     
     // Page direction depends on index number
     [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];

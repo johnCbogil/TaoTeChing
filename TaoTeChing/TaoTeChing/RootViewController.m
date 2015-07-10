@@ -73,7 +73,7 @@
     
     if (self.bookmarkButton.isSelected) {
         NSLog(@"Removing page: %ld", currentIndex);
-        [[BookmarkManager bookmarkManager]removeBookmark:(int)currentIndex];
+        [[BookmarkManager bookmarkManager]removeBookmark:[NSString stringWithFormat:@"%ld",currentIndex]];
     }
     else {
 
