@@ -11,7 +11,7 @@
 @interface BookmarkManager : NSObject
 
 @property (nonatomic) NSUserDefaults *defaults;
-- (void)addBookmark:(int)chapterNumber;
+- (void)addBookmark:(NSString*)chapterNumber;
 - (void)removeBookmark:(int)chapterNumber;
 + (BookmarkManager *)bookmarkManager;
 + (BookmarkManager *)instantiateBookmarkManager;

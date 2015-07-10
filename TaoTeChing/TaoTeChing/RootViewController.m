@@ -78,7 +78,7 @@
     else {
 
         NSLog(@"Bookmarking page: %ld",currentIndex);
-        [[BookmarkManager bookmarkManager]addBookmark:(int)currentIndex];
+        [[BookmarkManager bookmarkManager]addBookmark:[NSString stringWithFormat:@"%ld",currentIndex]];
     }    
 }
 

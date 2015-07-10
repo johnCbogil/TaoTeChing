@@ -23,6 +23,8 @@
 //    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
 //    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+
     
 }
 
@@ -51,7 +53,7 @@
     RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([[[defaults dictionaryRepresentation]allKeys]containsObject:[NSString stringWithFormat:@"%ld", currentIndex]]) {
+    if ([[BookmarkManager bookmarkManager].bookmarks objectForKey:[NSString stringWithFormat:@"%ld", currentIndex]]) {
         NSLog(@"This page has been bookmarked");
         [rvc.bookmarkButton setSelected:YES];
     }
@@ -59,6 +61,11 @@
         NSLog(@"This page has NOT been bookmarked");
         [rvc.bookmarkButton setSelected:NO];
     }
+
+    // 
+//    if ([[BookmarkManager bookmarkManager].bookmarks objectForKey:[NSString stringWithFormat:@"%ld", currentIndex]]) {
+//        NSLog(@"hello");
+//    }
 }
 
 // How to jump btw pages
