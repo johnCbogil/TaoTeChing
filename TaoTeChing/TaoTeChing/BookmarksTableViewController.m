@@ -24,6 +24,11 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.navigationItem.title = @"Bookmarks";
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIFont fontWithName:@"Avenir Next" size:21],
+      NSFontAttributeName, nil]];
 }
 
 - (void)viewDidAppear:(BOOL)animated{

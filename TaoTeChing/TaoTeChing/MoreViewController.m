@@ -19,6 +19,13 @@
     // Do any additional setup after loading the view.
 //    [self.colorSwitch addTarget:self
 //                      action:@selector(stateChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    self.navigationItem.title = @"More";
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIFont fontWithName:@"Avenir Next" size:21],
+      NSFontAttributeName, nil]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
