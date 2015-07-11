@@ -35,7 +35,7 @@ static ModelController *sharedInstance = nil;
     self = [super init];
     if (self) {
 
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"TaoTeChing - Gia"
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"TaoTeChing - Mitchell"
                                                          ofType:@"txt"];
         NSString *content = [NSString stringWithContentsOfFile:path
                                                       encoding:NSUTF8StringEncoding
