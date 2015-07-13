@@ -36,6 +36,7 @@
     [super viewWillAppear:animated];
     self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
+    
 }
 
 - (void)viewDidLayoutSubviews

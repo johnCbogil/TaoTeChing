@@ -10,5 +10,6 @@
 
 @interface BookmarksViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *zeroStateLabel;
 
 @end

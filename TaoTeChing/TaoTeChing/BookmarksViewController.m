@@ -8,6 +8,7 @@
 
 #import "BookmarksViewController.h"
 #import "BookmarkManager.h"
+#import "ModelController.h"
 
 @interface BookmarksViewController ()
 
@@ -29,10 +30,24 @@
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIFont fontWithName:@"Avenir Next" size:21],
       NSFontAttributeName, nil]];
+    
+    self.zeroStateLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
+    
+
+    
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [self.tableView reloadData];
+    if ([BookmarkManager bookmarkManager].bookmarks.count) {
+        self.zeroStateLabel.alpha = 0.0;
+        self.tableView.alpha = 1.0;
+    }
+    else{
+        self.tableView.alpha = 0.0;
+        self.zeroStateLabel.alpha = 1.0;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,9 +73,13 @@
     
     // Configure the cell...
     NSString *bookmark = [NSString stringWithFormat:@"Chapter %@",[BookmarkManager bookmarkManager].bookmarks[indexPath.row]];
-    cell.textLabel.text = bookmark.capitalizedString;
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
-      
+    
+    NSString *previewText = [ModelController modelController].pageData[indexPath.row];
+    previewText = [previewText substringToIndex: MIN(19, [previewText length])];
+    bookmark = [NSString stringWithFormat:@"Chapter %@:   %@...",[BookmarkManager bookmarkManager].bookmarks[indexPath.row],previewText];
+    cell.textLabel.text = bookmark.capitalizedString;
+
     
     return cell;
 }
