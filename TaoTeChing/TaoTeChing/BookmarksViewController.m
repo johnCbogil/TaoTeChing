@@ -32,6 +32,8 @@
       NSFontAttributeName, nil]];
     
     self.zeroStateLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
+
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -39,10 +41,22 @@
     if ([BookmarkManager bookmarkManager].bookmarks.count) {
         self.zeroStateLabel.alpha = 0.0;
         self.tableView.alpha = 1.0;
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editButtonSelected:)];
+        
+        // Format the edit button
+//        [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+//                                            [UIFont fontWithName:@"Avenir Next" size:19.0], NSFontAttributeName,
+//                                            [UIColor blackColor], NSForegroundColorAttributeName,
+//                                            nil] 
+//                                  forState:UIControlStateNormal];
     }
     else{
         self.tableView.alpha = 0.0;
         self.zeroStateLabel.alpha = 1.0;
+        
+        self.navigationItem.rightBarButtonItem = nil;
+
     }
 }
 
@@ -95,6 +109,17 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
+}
+
+- (void) editButtonSelected: (id) sender
+{
+    if (self.tableView.editing) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editButtonSelected:)];
+        [self.tableView setEditing:NO animated:YES];
+    } else {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editButtonSelected:)];
+        [self.tableView setEditing:YES animated:YES];
+    }
 }
 
 
