@@ -364,7 +364,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sne-IM-XJM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sne-IM-XJM">
                                 <rect key="frame" x="-5" y="0.0" width="605" height="550"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
@@ -380,14 +380,26 @@
                                     <outlet property="delegate" destination="a4k-SN-iYF" id="PKq-T9-s0U"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You don't have any bookmarks, but that's okay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKd-iK-lqZ">
-                                <rect key="frame" x="38" y="210" width="260" height="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any bookmarks, but that's okay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKd-iK-lqZ">
+                                <rect key="frame" x="167" y="239" width="260" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="kjm-JM-7Mj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sne-IM-XJM" secondAttribute="trailing" id="2Ul-jW-Xkr"/>
+                            <constraint firstItem="R2t-22-W0t" firstAttribute="top" secondItem="FKd-iK-lqZ" secondAttribute="bottom" constant="215" id="2k0-V8-CQ1"/>
+                            <constraint firstItem="Sne-IM-XJM" firstAttribute="top" secondItem="yZA-Vy-coV" secondAttribute="top" id="6k2-i7-JP7"/>
+                            <constraint firstItem="R2t-22-W0t" firstAttribute="top" secondItem="Sne-IM-XJM" secondAttribute="bottom" constant="1" id="Aoe-oO-fk7"/>
+                            <constraint firstItem="Sne-IM-XJM" firstAttribute="leading" secondItem="yZA-Vy-coV" secondAttribute="leadingMargin" constant="-21" id="HAN-pa-Lkh"/>
+                            <constraint firstItem="FKd-iK-lqZ" firstAttribute="top" secondItem="SPA-J3-pqE" secondAttribute="bottom" constant="175" id="KR4-Se-JH5"/>
+                            <constraint firstItem="FKd-iK-lqZ" firstAttribute="centerX" secondItem="Sne-IM-XJM" secondAttribute="centerX" id="m7a-8r-I1x"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="f1d-gF-KHP"/>
                     <connections>
