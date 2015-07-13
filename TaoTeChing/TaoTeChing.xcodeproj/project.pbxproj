@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521047F11B4DC5840075B1E1 /* BookmarksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521047F01B4DC5840075B1E1 /* BookmarksTableViewController.m */; };
+		521047F11B4DC5840075B1E1 /* BookmarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521047F01B4DC5840075B1E1 /* BookmarksViewController.m */; };
 		522940FA1B3F76FC008968F9 /* BookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 522940F91B3F76FC008968F9 /* BookmarkManager.m */; };
 		52301D001B38BF6600DDC108 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301CFF1B38BF6600DDC108 /* MoreViewController.m */; };
 		52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301D061B38CBFB00DDC108 /* TabBarViewController.m */; };
@@ -37,8 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		521047EF1B4DC5840075B1E1 /* BookmarksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarksTableViewController.h; sourceTree = "<group>"; };
-		521047F01B4DC5840075B1E1 /* BookmarksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarksTableViewController.m; sourceTree = "<group>"; };
+		521047EF1B4DC5840075B1E1 /* BookmarksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarksViewController.h; sourceTree = "<group>"; };
+		521047F01B4DC5840075B1E1 /* BookmarksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarksViewController.m; sourceTree = "<group>"; };
 		522940F81B3F76FC008968F9 /* BookmarkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkManager.h; sourceTree = "<group>"; };
 		522940F91B3F76FC008968F9 /* BookmarkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkManager.m; sourceTree = "<group>"; };
 		52301CFE1B38BF6600DDC108 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
@@ -108,8 +108,8 @@
 			children = (
 				522940F81B3F76FC008968F9 /* BookmarkManager.h */,
 				522940F91B3F76FC008968F9 /* BookmarkManager.m */,
-				521047EF1B4DC5840075B1E1 /* BookmarksTableViewController.h */,
-				521047F01B4DC5840075B1E1 /* BookmarksTableViewController.m */,
+				521047EF1B4DC5840075B1E1 /* BookmarksViewController.h */,
+				521047F01B4DC5840075B1E1 /* BookmarksViewController.m */,
 			);
 			name = Bookmarks;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 				52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */,
 				527C750F1B2F5D6A006E64B3 /* RootViewController.m in Sources */,
 				522940FA1B3F76FC008968F9 /* BookmarkManager.m in Sources */,
-				521047F11B4DC5840075B1E1 /* BookmarksTableViewController.m in Sources */,
+				521047F11B4DC5840075B1E1 /* BookmarksViewController.m in Sources */,
 				52301D001B38BF6600DDC108 /* MoreViewController.m in Sources */,
 				52FC59B41B3664230004A278 /* PageViewController.m in Sources */,
 			);

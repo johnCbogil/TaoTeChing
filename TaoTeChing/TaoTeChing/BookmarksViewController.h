@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BookmarksTableViewController : UITableViewController
+@interface BookmarksViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

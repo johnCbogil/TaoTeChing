@@ -59,6 +59,10 @@
         NSLog(@"This page has NOT been bookmarked");
         [rvc.bookmarkButton setSelected:NO];
     }
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle:NSNumberFormatterSpellOutStyle];
+    rvc.chapterLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithInt:(int)currentIndex]].capitalizedString;
 }
 
 // How to jump btw pages

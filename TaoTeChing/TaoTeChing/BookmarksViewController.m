@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 John Bogil. All rights reserved.
 //
 
-#import "BookmarksTableViewController.h"
+#import "BookmarksViewController.h"
 #import "BookmarkManager.h"
 
-@interface BookmarksTableViewController ()
+@interface BookmarksViewController ()
 
 @end
 
-@implementation BookmarksTableViewController
+@implementation BookmarksViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,8 +57,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [BookmarkManager bookmarkManager].bookmarks[indexPath.row];
-    
+    NSString *bookmark = [NSString stringWithFormat:@"Chapter %@",[BookmarkManager bookmarkManager].bookmarks[indexPath.row]];
+    cell.textLabel.text = bookmark.capitalizedString;
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
+      
     
     return cell;
 }
