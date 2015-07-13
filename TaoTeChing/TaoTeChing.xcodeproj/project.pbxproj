@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		521047F11B4DC5840075B1E1 /* BookmarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521047F01B4DC5840075B1E1 /* BookmarksViewController.m */; };
 		522940FA1B3F76FC008968F9 /* BookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 522940F91B3F76FC008968F9 /* BookmarkManager.m */; };
-		52301D001B38BF6600DDC108 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301CFF1B38BF6600DDC108 /* MoreViewController.m */; };
 		52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301D061B38CBFB00DDC108 /* TabBarViewController.m */; };
 		527C75091B2F5D6A006E64B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C75081B2F5D6A006E64B3 /* main.m */; };
 		527C750C1B2F5D6A006E64B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C750B1B2F5D6A006E64B3 /* AppDelegate.m */; };
@@ -22,6 +21,7 @@
 		527C75291B2F5D6B006E64B3 /* TaoTeChingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C75281B2F5D6B006E64B3 /* TaoTeChingTests.m */; };
 		527C75371B2F6028006E64B3 /* TaoTeChing - Gia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 527C75361B2F6028006E64B3 /* TaoTeChing - Gia.txt */; };
 		52C920A21B517AEB001F8A86 /* TaoTeChing - Mitchell.txt in Resources */ = {isa = PBXBuildFile; fileRef = 52C920A11B517AEB001F8A86 /* TaoTeChing - Mitchell.txt */; };
+		52EBA23A1B5461EC009CFFA3 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EBA2391B5461EC009CFFA3 /* MoreTableViewController.m */; };
 		52FC59B41B3664230004A278 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FC59B31B3664230004A278 /* PageViewController.m */; };
 		DDC7CBEE1B3DE807005C4861 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC7CBED1B3DE807005C4861 /* Reveal.framework */; };
 /* End PBXBuildFile section */
@@ -41,8 +41,6 @@
 		521047F01B4DC5840075B1E1 /* BookmarksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarksViewController.m; sourceTree = "<group>"; };
 		522940F81B3F76FC008968F9 /* BookmarkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkManager.h; sourceTree = "<group>"; };
 		522940F91B3F76FC008968F9 /* BookmarkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkManager.m; sourceTree = "<group>"; };
-		52301CFE1B38BF6600DDC108 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
-		52301CFF1B38BF6600DDC108 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		52301D051B38CBFB00DDC108 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
 		52301D061B38CBFB00DDC108 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
 		527C75031B2F5D6A006E64B3 /* TaoTeChing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaoTeChing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +62,8 @@
 		527C75281B2F5D6B006E64B3 /* TaoTeChingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaoTeChingTests.m; sourceTree = "<group>"; };
 		527C75361B2F6028006E64B3 /* TaoTeChing - Gia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TaoTeChing - Gia.txt"; sourceTree = "<group>"; };
 		52C920A11B517AEB001F8A86 /* TaoTeChing - Mitchell.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TaoTeChing - Mitchell.txt"; sourceTree = "<group>"; };
+		52EBA2381B5461EC009CFFA3 /* MoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewController.h; sourceTree = "<group>"; };
+		52EBA2391B5461EC009CFFA3 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
 		52FC59B21B3664230004A278 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		52FC59B31B3664230004A278 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		DDC7CBED1B3DE807005C4861 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 		521047EE1B4DBC710075B1E1 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				52301CFE1B38BF6600DDC108 /* MoreViewController.h */,
-				52301CFF1B38BF6600DDC108 /* MoreViewController.m */,
+				52EBA2381B5461EC009CFFA3 /* MoreTableViewController.h */,
+				52EBA2391B5461EC009CFFA3 /* MoreTableViewController.m */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -294,11 +294,11 @@
 				527C750C1B2F5D6A006E64B3 /* AppDelegate.m in Sources */,
 				527C75151B2F5D6A006E64B3 /* ModelController.m in Sources */,
 				527C75091B2F5D6A006E64B3 /* main.m in Sources */,
+				52EBA23A1B5461EC009CFFA3 /* MoreTableViewController.m in Sources */,
 				52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */,
 				527C750F1B2F5D6A006E64B3 /* RootViewController.m in Sources */,
 				522940FA1B3F76FC008968F9 /* BookmarkManager.m in Sources */,
 				521047F11B4DC5840075B1E1 /* BookmarksViewController.m in Sources */,
-				52301D001B38BF6600DDC108 /* MoreViewController.m in Sources */,
 				52FC59B41B3664230004A278 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
