@@ -59,6 +59,9 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     
+    self.view.backgroundColor = [UIColor viewBackgroundColor];
+    self.tabBarController.tabBar.barTintColor = [UIColor viewBackgroundColor];
+    [UINavigationBar appearance].barTintColor = [UIColor viewBackgroundColor];
 }
 
 - (void)didReceiveMemoryWarning {

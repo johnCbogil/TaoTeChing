@@ -39,7 +39,7 @@
     self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
     self.textView.textColor = [UIColor textColor];
-    self.view.backgroundColor = [UIColor viewBackgroundColor];
+    //self.view.backgroundColor = [UIColor viewBackgroundColor];
 
 }
 

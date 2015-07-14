@@ -107,17 +107,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-bN-Lfg">
-                                <rect key="frame" x="16" y="0.0" width="560" height="613"/>
+                                <rect key="frame" x="16" y="0.0" width="560" height="600"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qhH-bN-Lfg" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="16" id="7YT-Cb-tYL"/>
-                            <constraint firstAttribute="centerY" secondItem="qhH-bN-Lfg" secondAttribute="centerY" constant="-6.5" id="XCd-Iv-uc9"/>
-                            <constraint firstAttribute="height" secondItem="qhH-bN-Lfg" secondAttribute="height" constant="-13" id="a18-re-prK"/>
+                            <constraint firstAttribute="centerY" secondItem="qhH-bN-Lfg" secondAttribute="centerY" id="XCd-Iv-uc9"/>
+                            <constraint firstAttribute="height" secondItem="qhH-bN-Lfg" secondAttribute="height" id="a18-re-prK"/>
                             <constraint firstAttribute="trailing" secondItem="qhH-bN-Lfg" secondAttribute="trailing" constant="24" id="sV3-mQ-nXV"/>
                         </constraints>
                     </view>

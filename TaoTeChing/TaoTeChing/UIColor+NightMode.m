@@ -16,7 +16,7 @@
     if ([SettingsManager sharedManager].isNightModeOn) {
         return [UIColor blackColor];
     } else {
-        return [UIColor clearColor];
+        return [UIColor whiteColor];
     }
 }
 
