@@ -11,6 +11,7 @@
 @interface SettingsManager : NSObject
 
 + (instancetype)sharedManager;
+- (void)updateNightMode:(BOOL)isNightModeOn;
 
 
 @end

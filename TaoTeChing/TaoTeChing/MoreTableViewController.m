@@ -7,8 +7,10 @@
 //
 
 #import "MoreTableViewController.h"
+#import "SettingsManager.h"
 
 @interface MoreTableViewController ()
+@property (weak, nonatomic) IBOutlet UISwitch *nightModeSwitch;
 
 @end
 
@@ -34,6 +36,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)nightModeSwitched:(UISwitch *)sender {
+    
+    [[SettingsManager sharedManager]updateNightMode:sender.isOn];
+}
+
 
 #pragma mark - Table view data source
 
