@@ -10,6 +10,7 @@
 		521047F11B4DC5840075B1E1 /* BookmarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521047F01B4DC5840075B1E1 /* BookmarksViewController.m */; };
 		522940FA1B3F76FC008968F9 /* BookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 522940F91B3F76FC008968F9 /* BookmarkManager.m */; };
 		52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301D061B38CBFB00DDC108 /* TabBarViewController.m */; };
+		523888541B5596040083762C /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 523888531B5596040083762C /* SettingsManager.m */; };
 		527C75091B2F5D6A006E64B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C75081B2F5D6A006E64B3 /* main.m */; };
 		527C750C1B2F5D6A006E64B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C750B1B2F5D6A006E64B3 /* AppDelegate.m */; };
 		527C750F1B2F5D6A006E64B3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C750E1B2F5D6A006E64B3 /* RootViewController.m */; };
@@ -43,6 +44,8 @@
 		522940F91B3F76FC008968F9 /* BookmarkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkManager.m; sourceTree = "<group>"; };
 		52301D051B38CBFB00DDC108 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
 		52301D061B38CBFB00DDC108 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
+		523888521B5596040083762C /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
+		523888531B5596040083762C /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
 		527C75031B2F5D6A006E64B3 /* TaoTeChing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaoTeChing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527C75071B2F5D6A006E64B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527C75081B2F5D6A006E64B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 		527C75051B2F5D6A006E64B3 /* TaoTeChing */ = {
 			isa = PBXGroup;
 			children = (
+				523888521B5596040083762C /* SettingsManager.h */,
+				523888531B5596040083762C /* SettingsManager.m */,
 				521047EE1B4DBC710075B1E1 /* More */,
 				521047ED1B4DBC4D0075B1E1 /* Bookmarks */,
 				521047EB1B4DBC390075B1E1 /* Book */,
@@ -291,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				527C75121B2F5D6A006E64B3 /* DataViewController.m in Sources */,
+				523888541B5596040083762C /* SettingsManager.m in Sources */,
 				527C750C1B2F5D6A006E64B3 /* AppDelegate.m in Sources */,
 				527C75151B2F5D6A006E64B3 /* ModelController.m in Sources */,
 				527C75091B2F5D6A006E64B3 /* main.m in Sources */,
