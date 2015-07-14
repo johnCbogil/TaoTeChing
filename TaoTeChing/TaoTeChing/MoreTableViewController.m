@@ -31,6 +31,12 @@
       [UIFont fontWithName:@"Avenir Next" size:21],
       NSFontAttributeName, nil]];
 }
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
+    [self.nightModeSwitch setOn:[SettingsManager sharedManager].isNightModeOn animated:NO];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

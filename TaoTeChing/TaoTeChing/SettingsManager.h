@@ -12,6 +12,8 @@
 
 + (instancetype)sharedManager;
 - (void)updateNightMode:(BOOL)isNightModeOn;
+@property (assign, nonatomic) BOOL isNightModeOn;
+
 
 
 @end

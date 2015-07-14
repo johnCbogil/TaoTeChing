@@ -11,7 +11,6 @@
 @interface SettingsManager()
 
 @property (nonatomic, strong) NSUserDefaults *defaults;
-@property (assign, nonatomic) BOOL isNightModeOn;
 
 @end
 
@@ -38,7 +37,6 @@
 }
 
 - (void)updateNightMode:(BOOL)isNightModeOn{
-    
     
     self.isNightModeOn = isNightModeOn;
     [self.defaults setBool:isNightModeOn forKey:@"nightMode"];

@@ -11,6 +11,8 @@
 #import "ModelController.h"
 #import "BookmarkManager.h"
 #import "RootViewController.h"
+#import "SettingsManager.h"
+#import "UIColor+NightMode.h"
 
 
 @implementation DataViewController
@@ -36,7 +38,8 @@
     [super viewWillAppear:animated];
     self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
     self.textView.text = [self.dataObject description];
-    
+    self.textView.backgroundColor = [UIColor textViewBackgroundColor];
+
 }
 
 - (void)viewDidLayoutSubviews

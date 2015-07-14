@@ -99,45 +99,45 @@
     }   
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//    // Get the views.
-//    UIView * fromView = self.tabBarController.selectedViewController.view;
-//    UIView * toView = [[self.tabBarController.viewControllers objectAtIndex:1] view];
-//    
-//    // Get the size of the view area.
-//    CGRect viewSize = fromView.frame;
-//    BOOL scrollRight = 1 > self.tabBarController.selectedIndex;
-//    
-//    // Add the to view to the tab bar view.
-//    [fromView.superview addSubview:toView];
-//    
-//    // Position it off screen.
-//    toView.frame = CGRectMake((scrollRight ? 320 : -320), viewSize.origin.y, 320, viewSize.size.height);
-//    
-//    [UIView animateWithDuration:0.3
-//                     animations: ^{
-//                         
-//                         // Animate the views on and off the screen. This will appear to slide.
-//                         fromView.frame =CGRectMake((scrollRight ? -320 : 320), viewSize.origin.y, 320, viewSize.size.height);
-//                         toView.frame =CGRectMake(0, viewSize.origin.y, 320, viewSize.size.height);
-//                     }
-//     
-//                     completion:^(BOOL finished) {
-//                         if (finished) {
-//                             
-//                             // Remove the old view from the tabbar view.
-//                             [fromView removeFromSuperview];
-//                             self.tabBarController.selectedIndex = 1;
-//                             DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:self.chapterNumber storyboard:self.storyboard];
-//                             NSArray *viewControllers = @[zeroVC];
-//                             
-//                             // Page direction depends on index number
-//                             [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-//                         }
-//                     }];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    // Get the views.
+    UIView * fromView = self.tabBarController.selectedViewController.view;
+    UIView * toView = [[self.tabBarController.viewControllers objectAtIndex:1] view];
+    
+    // Get the size of the view area.
+    CGRect viewSize = fromView.frame;
+    BOOL scrollRight = 1 > self.tabBarController.selectedIndex;
+    
+    // Add the to view to the tab bar view.
+    [fromView.superview addSubview:toView];
+    
+    // Position it off screen.
+    toView.frame = CGRectMake((scrollRight ? 320 : -320), viewSize.origin.y, 320, viewSize.size.height);
+    
+    [UIView animateWithDuration:0.3
+                     animations: ^{
+                         
+                         // Animate the views on and off the screen. This will appear to slide.
+                         fromView.frame =CGRectMake((scrollRight ? -320 : 320), viewSize.origin.y, 320, viewSize.size.height);
+                         toView.frame =CGRectMake(0, viewSize.origin.y, 320, viewSize.size.height);
+                     }
+     
+                     completion:^(BOOL finished) {
+                         if (finished) {
+                             
+                             // Remove the old view from the tabbar view.
+                             [fromView removeFromSuperview];
+                             self.tabBarController.selectedIndex = 1;
+                             DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:[[BookmarkManager bookmarkManager].bookmarks[indexPath.row]integerValue] storyboard:self.storyboard];
+                             NSArray *viewControllers = @[zeroVC];
+                             
+                             // Page direction depends on index number
+                             [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+                         }
+                     }];
+}
 
 //- (void) editButtonSelected: (id) sender
 //{
