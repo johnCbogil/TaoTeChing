@@ -11,6 +11,7 @@
 #import "DataViewController.h"
 #import "PageViewController.h"
 #import "BookmarkManager.h"
+#import "UIColor+NightMode.h"
 
 @implementation RootViewController
 
@@ -54,6 +55,10 @@
     self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
     
     [self.bookmarkButton addTarget:self action:@selector(bookmarkButtonTouch:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
 }
 
 - (void)didReceiveMemoryWarning {

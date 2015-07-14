@@ -11,12 +11,21 @@
 
 @implementation UIColor (NightMode)
 
-+ (UIColor *)textViewBackgroundColor{
++ (UIColor *)viewBackgroundColor{
 
     if ([SettingsManager sharedManager].isNightModeOn) {
-        return [UIColor redColor];
+        return [UIColor blackColor];
     } else {
         return [UIColor clearColor];
+    }
+}
+
++ (UIColor *)textColor{
+    
+    if ([SettingsManager sharedManager].isNightModeOn) {
+        return [UIColor whiteColor];
+    } else {
+        return [UIColor blackColor];
     }
 }
 

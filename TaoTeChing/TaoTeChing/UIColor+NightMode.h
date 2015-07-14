@@ -10,6 +10,6 @@
 
 @interface UIColor (NightMode)
 
-+ (UIColor *)textViewBackgroundColor;
-
++ (UIColor *)viewBackgroundColor;
++ (UIColor *)textColor;
 @end
