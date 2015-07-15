@@ -12,6 +12,7 @@
 		52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301D061B38CBFB00DDC108 /* TabBarViewController.m */; };
 		523888541B5596040083762C /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 523888531B5596040083762C /* SettingsManager.m */; };
 		523888571B559D630083762C /* UIColor+NightMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 523888561B559D630083762C /* UIColor+NightMode.m */; };
+		5264674D1B55FD68002E01F5 /* IndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5264674C1B55FD68002E01F5 /* IndexTableViewController.m */; };
 		527C75091B2F5D6A006E64B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C75081B2F5D6A006E64B3 /* main.m */; };
 		527C750C1B2F5D6A006E64B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C750B1B2F5D6A006E64B3 /* AppDelegate.m */; };
 		527C750F1B2F5D6A006E64B3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C750E1B2F5D6A006E64B3 /* RootViewController.m */; };
@@ -49,6 +50,8 @@
 		523888531B5596040083762C /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
 		523888551B559D630083762C /* UIColor+NightMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NightMode.h"; sourceTree = "<group>"; };
 		523888561B559D630083762C /* UIColor+NightMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NightMode.m"; sourceTree = "<group>"; };
+		5264674B1B55FD68002E01F5 /* IndexTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexTableViewController.h; path = ../IndexTableViewController.h; sourceTree = "<group>"; };
+		5264674C1B55FD68002E01F5 /* IndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IndexTableViewController.m; path = ../IndexTableViewController.m; sourceTree = "<group>"; };
 		527C75031B2F5D6A006E64B3 /* TaoTeChing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaoTeChing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527C75071B2F5D6A006E64B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527C75081B2F5D6A006E64B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				527C75141B2F5D6A006E64B3 /* ModelController.m */,
 				52FC59B21B3664230004A278 /* PageViewController.h */,
 				52FC59B31B3664230004A278 /* PageViewController.m */,
+				5264674B1B55FD68002E01F5 /* IndexTableViewController.h */,
+				5264674C1B55FD68002E01F5 /* IndexTableViewController.m */,
 			);
 			name = Book;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				527C75121B2F5D6A006E64B3 /* DataViewController.m in Sources */,
+				5264674D1B55FD68002E01F5 /* IndexTableViewController.m in Sources */,
 				523888571B559D630083762C /* UIColor+NightMode.m in Sources */,
 				523888541B5596040083762C /* SettingsManager.m in Sources */,
 				527C750C1B2F5D6A006E64B3 /* AppDelegate.m in Sources */,

@@ -70,15 +70,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    NSString *bookmark = [NSString stringWithFormat:@"Chapter %@",[BookmarkManager bookmarkManager].bookmarks[indexPath.row]];
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
-    self.chapterNumber = (int)[BookmarkManager bookmarkManager].bookmarks[indexPath.row];
     NSString *previewText = [ModelController modelController].pageData[indexPath.row];
     previewText = [previewText substringToIndex: MIN(19, [previewText length])];
-    bookmark = [NSString stringWithFormat:@"Chapter %@:   %@...",[BookmarkManager bookmarkManager].bookmarks[indexPath.row],previewText];
-    cell.textLabel.text = bookmark.capitalizedString;
+    cell.textLabel.text = [NSString stringWithFormat:@"Chapter %@:   %@...",[BookmarkManager bookmarkManager].bookmarks[indexPath.row],previewText].capitalizedString;
 
-    
     return cell;
 }
 // Override to support conditional editing of the table view.

@@ -25,8 +25,18 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-09-bPw" userLabel="bookmarkButton">
-                                <rect key="frame" x="286" y="28" width="28" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8He-TX-X94" userLabel="indexButton">
+                                <rect key="frame" x="18" y="25" width="33" height="33"/>
+                                <state key="normal" image="indexIcon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="indexButtonPressed:" destination="703-4V-yAM" eventType="touchUpInside" id="hvK-NJ-TBF"/>
+                                    <segue destination="zSd-EJ-fIs" kind="presentation" id="YmS-y5-BDi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-09-bPw" userLabel="bookmarkButton">
+                                <rect key="frame" x="556" y="28" width="28" height="28"/>
                                 <state key="normal" image="bookmarkIcon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,21 +45,6 @@
                                     <action selector="bookmarkButtonPressed:" destination="703-4V-yAM" eventType="touchUpInside" id="FVv-jT-dSH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8He-TX-X94" userLabel="indexButton">
-                                <rect key="frame" x="18" y="25" width="33" height="33"/>
-                                <state key="normal" image="indexIcon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="indexButtonPressed:" destination="703-4V-yAM" eventType="touchUpInside" id="hvK-NJ-TBF"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chapter Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lo-Nv-aJY" userLabel="chapterLabel">
-                                <rect key="frame" x="76" y="31" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -60,12 +55,16 @@
                             <constraint firstAttribute="trailing" secondItem="OMy-DI-HQT" secondAttribute="trailing" id="HCx-b5-WDJ"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="Nek-mY-gqN"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" id="Opf-VF-uMA"/>
+                            <constraint firstItem="Wwy-09-bPw" firstAttribute="leading" secondItem="OMy-DI-HQT" secondAttribute="trailing" constant="-44" id="S8G-ey-qaG"/>
                             <constraint firstItem="IfR-02-kHw" firstAttribute="top" secondItem="tem-fe-vbx" secondAttribute="bottom" id="Ufc-s3-6jv"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="leading" secondItem="8He-TX-X94" secondAttribute="trailing" constant="-51" id="Vbn-nb-oJ4"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" id="nBS-cF-GPt"/>
                             <constraint firstItem="IfR-02-kHw" firstAttribute="top" secondItem="tem-fe-vbx" secondAttribute="bottom" constant="-25" id="oxP-Yp-4he"/>
                             <constraint firstAttribute="trailing" secondItem="tem-fe-vbx" secondAttribute="trailing" id="q9T-EV-WHG"/>
                             <constraint firstAttribute="trailing" secondItem="tem-fe-vbx" secondAttribute="trailing" id="sx3-9i-Q5s"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="tTn-GY-Z4l"/>
+                            <constraint firstItem="Wwy-09-bPw" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" constant="-36" id="vWI-W7-S2k"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="top" secondItem="8He-TX-X94" secondAttribute="bottom" constant="-38" id="zpI-6H-u5m"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -83,7 +82,6 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="bookmarkButton" destination="Wwy-09-bPw" id="lcJ-zI-CpN"/>
-                        <outlet property="chapterLabel" destination="6Lo-Nv-aJY" id="7hf-fY-PWD"/>
                         <outlet property="containerView" destination="tem-fe-vbx" id="s71-C6-SE9"/>
                         <outlet property="homeTabBarItem" destination="GC4-kk-Mst" id="pnk-MW-gWS"/>
                         <outlet property="indexButton" destination="8He-TX-X94" id="kfH-qv-wwI"/>
@@ -415,16 +413,17 @@
             </objects>
             <point key="canvasLocation" x="1439" y="-921"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Index Table View Controller-->
         <scene sceneID="ljv-Yw-kVj">
             <objects>
-                <tableViewController id="qqt-b0-Tph" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4Q-s0-Wgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="qqt-b0-Tph" customClass="IndexTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ew0-eL-R0B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Od2-If-6aO">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Od2-If-6aO">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Od2-If-6aO" id="w1y-bM-3yE">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -436,8 +435,35 @@
                             <outlet property="delegate" destination="qqt-b0-Tph" id="ZpP-ub-8Re"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="mcD-77-llm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="oJd-eY-FKl">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="qqt-b0-Tph" id="IUG-DI-4Z1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="oJd-eY-FKl" id="kEB-77-rEe"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g4Q-s0-Wgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2813" y="-227"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6lX-WJ-Xj3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4C-Im-PLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zSd-EJ-fIs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1P0-pd-YCj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qqt-b0-Tph" kind="relationship" relationship="rootViewController" id="pGq-wk-WSJ"/>
+                    </connections>
+                </navigationController>
             </objects>
             <point key="canvasLocation" x="2111" y="-227"/>
         </scene>
