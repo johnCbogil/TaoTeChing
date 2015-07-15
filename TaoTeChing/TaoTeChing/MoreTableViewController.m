@@ -36,6 +36,7 @@
     [super viewWillAppear:animated];
     
     [self.nightModeSwitch setOn:[SettingsManager sharedManager].isNightModeOn animated:NO];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning {

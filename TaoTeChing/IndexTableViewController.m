@@ -8,9 +8,11 @@
 
 #import "IndexTableViewController.h"
 #import "ModelController.h"
+#import "PageViewController.h"
 
 @interface IndexTableViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property int indexCounter;
 
 @end
 
@@ -24,6 +26,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.indexCounter = 0;
+    self.title = @"Index";
     
 
 }
@@ -54,10 +59,26 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
-
-    // The cell title is going to be the index position of every item in pagedata
+    NSString *previewText = [ModelController modelController].pageData[indexPath.row];
+    previewText = [previewText substringToIndex: MIN(19, [previewText length])];
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
+    cell.textLabel.text = [NSString stringWithFormat:@"Chapter %d:   %@... ",self.indexCounter, previewText];
+    self.indexCounter++;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+
+    [self dismissViewControllerAnimated:YES completion:^{
+                                                        DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:indexPath.row storyboard:self.storyboard];
+                                                        NSArray *viewControllers = @[zeroVC];
+                                                        
+                                                        // Page direction depends on index number
+                                                        [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+    
+    }];
 }
 
 

@@ -45,19 +45,29 @@
                                     <action selector="bookmarkButtonPressed:" destination="703-4V-yAM" eventType="touchUpInside" id="FVv-jT-dSH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQA-JH-WHv">
+                                <rect key="frame" x="59" y="29.5" width="132.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tem-fe-vbx" secondAttribute="trailing" id="2BS-NK-OxI"/>
                             <constraint firstItem="OMy-DI-HQT" firstAttribute="top" secondItem="I7W-xW-C47" secondAttribute="bottom" id="2Ym-6p-QbQ"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="leading" secondItem="tQA-JH-WHv" secondAttribute="trailing" constant="-222.5" id="6Ut-mQ-5pT"/>
+                            <constraint firstItem="tQA-JH-WHv" firstAttribute="leading" secondItem="8He-TX-X94" secondAttribute="trailing" constant="8" id="8pg-3i-XoB"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="97g-hO-U2v"/>
                             <constraint firstItem="OMy-DI-HQT" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="AAS-Y0-i09"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="top" secondItem="tQA-JH-WHv" secondAttribute="bottom" constant="-33" id="CNL-yQ-o2U"/>
                             <constraint firstAttribute="trailing" secondItem="OMy-DI-HQT" secondAttribute="trailing" id="HCx-b5-WDJ"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="Nek-mY-gqN"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" id="Opf-VF-uMA"/>
                             <constraint firstItem="Wwy-09-bPw" firstAttribute="leading" secondItem="OMy-DI-HQT" secondAttribute="trailing" constant="-44" id="S8G-ey-qaG"/>
                             <constraint firstItem="IfR-02-kHw" firstAttribute="top" secondItem="tem-fe-vbx" secondAttribute="bottom" id="Ufc-s3-6jv"/>
                             <constraint firstItem="OMy-DI-HQT" firstAttribute="leading" secondItem="8He-TX-X94" secondAttribute="trailing" constant="-51" id="Vbn-nb-oJ4"/>
+                            <constraint firstItem="OMy-DI-HQT" firstAttribute="top" secondItem="tQA-JH-WHv" secondAttribute="bottom" constant="-36" id="hrq-Nq-U3N"/>
                             <constraint firstItem="tem-fe-vbx" firstAttribute="top" secondItem="OMy-DI-HQT" secondAttribute="bottom" id="nBS-cF-GPt"/>
                             <constraint firstItem="IfR-02-kHw" firstAttribute="top" secondItem="tem-fe-vbx" secondAttribute="bottom" constant="-25" id="oxP-Yp-4he"/>
                             <constraint firstAttribute="trailing" secondItem="tem-fe-vbx" secondAttribute="trailing" id="q9T-EV-WHG"/>
@@ -68,6 +78,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="6Ut-mQ-5pT"/>
+                                <exclude reference="hrq-Nq-U3N"/>
                                 <exclude reference="2BS-NK-OxI"/>
                                 <exclude reference="Nek-mY-gqN"/>
                                 <exclude reference="nBS-cF-GPt"/>
@@ -82,6 +94,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="bookmarkButton" destination="Wwy-09-bPw" id="lcJ-zI-CpN"/>
+                        <outlet property="chapterLabel" destination="tQA-JH-WHv" id="a0l-eN-wil"/>
                         <outlet property="containerView" destination="tem-fe-vbx" id="s71-C6-SE9"/>
                         <outlet property="homeTabBarItem" destination="GC4-kk-Mst" id="pnk-MW-gWS"/>
                         <outlet property="indexButton" destination="8He-TX-X94" id="kfH-qv-wwI"/>
@@ -416,7 +429,6 @@
         <!--Index Table View Controller-->
         <scene sceneID="ljv-Yw-kVj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g4Q-s0-Wgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="qqt-b0-Tph" customClass="IndexTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ew0-eL-R0B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -446,13 +458,13 @@
                         <outlet property="doneButton" destination="oJd-eY-FKl" id="kEB-77-rEe"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4Q-s0-Wgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2813" y="-227"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6lX-WJ-Xj3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B4C-Im-PLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zSd-EJ-fIs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1P0-pd-YCj">
@@ -464,6 +476,7 @@
                         <segue destination="qqt-b0-Tph" kind="relationship" relationship="rootViewController" id="pGq-wk-WSJ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4C-Im-PLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2111" y="-227"/>
         </scene>
