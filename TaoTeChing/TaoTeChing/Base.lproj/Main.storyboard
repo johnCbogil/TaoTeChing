@@ -163,7 +163,9 @@
         <scene sceneID="Jr2-dt-qc7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mGf-sf-Xle" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bookmarkIcon" id="PeX-0p-EHE"/>
+                    <tabBarItem key="tabBarItem" title="" image="bookmarkIcon" id="PeX-0p-EHE">
+                        <inset key="imageInsets" minX="3" minY="5" maxX="-3" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B0W-ui-Nnv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -182,7 +184,9 @@
         <scene sceneID="lkd-aa-s89">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="854-20-hoC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="moreIcon" id="Ose-VL-sbh"/>
+                    <tabBarItem key="tabBarItem" title="" image="moreIcon" id="Ose-VL-sbh">
+                        <inset key="imageInsets" minX="3" minY="5" maxX="-3" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Azu-MY-K8t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
