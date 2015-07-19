@@ -108,8 +108,7 @@
 				527C75141B2F5D6A006E64B3 /* ModelController.m */,
 				52FC59B21B3664230004A278 /* PageViewController.h */,
 				52FC59B31B3664230004A278 /* PageViewController.m */,
-				5264674B1B55FD68002E01F5 /* IndexTableViewController.h */,
-				5264674C1B55FD68002E01F5 /* IndexTableViewController.m */,
+				52F458E61B5C68A000720E92 /* Index */,
 			);
 			name = Book;
 			sourceTree = "<group>";
@@ -201,6 +200,15 @@
 				527C75271B2F5D6B006E64B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52F458E61B5C68A000720E92 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				5264674B1B55FD68002E01F5 /* IndexTableViewController.h */,
+				5264674C1B55FD68002E01F5 /* IndexTableViewController.m */,
+			);
+			name = Index;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

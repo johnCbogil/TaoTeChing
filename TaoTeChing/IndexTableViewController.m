@@ -12,8 +12,6 @@
 
 @interface IndexTableViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
-@property int indexCounter;
-
 @end
 
 @implementation IndexTableViewController
@@ -26,8 +24,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.indexCounter = 0;
     self.title = @"Index";
     
 
@@ -56,15 +52,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    // Configure the cell...
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+
     NSString *previewText = [ModelController modelController].pageData[indexPath.row];
     previewText = [previewText substringToIndex: MIN(19, [previewText length])];
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
-    cell.textLabel.text = [NSString stringWithFormat:@"Chapter %d:   %@... ",self.indexCounter, previewText];
-    self.indexCounter++;
-    
+    cell.textLabel.text = [NSString stringWithFormat:@"Chapter %lu:   %@... ",(unsigned long)[[ModelController modelController].pageData indexOfObject:[ModelController modelController].pageData[indexPath.row]], previewText];
     return cell;
 }
 
