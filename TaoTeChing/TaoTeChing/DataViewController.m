@@ -13,6 +13,7 @@
 #import "RootViewController.h"
 #import "SettingsManager.h"
 #import "UIColor+NightMode.h"
+#import "UIFont+FontSize.h"
 
 
 @implementation DataViewController
@@ -36,7 +37,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.textView.font = [UIFont fontWithName:@"Avenir Next" size:18];
+    self.textView.font = [UIFont fontWithName:@"Avenir Next" size:[UIFont fontSize]];
+    NSLog(@"The font is being set to %ld", (long)[UIFont fontSize]);
     self.textView.text = [self.dataObject description];
     self.textView.textColor = [UIColor textColor];
     //self.view.backgroundColor = [UIColor viewBackgroundColor];

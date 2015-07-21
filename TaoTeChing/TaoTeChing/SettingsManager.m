@@ -32,6 +32,7 @@
     if (self) {
         self.defaults = [NSUserDefaults standardUserDefaults];
         self.isNightModeOn = [self.defaults boolForKey:@"nightMode"];
+        self.fontSize = [self.defaults integerForKey:@"fontSize"];
     }
     return self;
 }
@@ -41,6 +42,15 @@
     self.isNightModeOn = isNightModeOn;
     [self.defaults setBool:isNightModeOn forKey:@"nightMode"];
 
+}
+
+- (void)updateFontSize:(int)fontSize{
+    
+    self.fontSize = fontSize;
+    [self.defaults setInteger:fontSize forKey:@"fontSize"];
+    NSLog(@"Saved font size: %d to user defaults", fontSize);
+    
+    
 }
 
 @end
