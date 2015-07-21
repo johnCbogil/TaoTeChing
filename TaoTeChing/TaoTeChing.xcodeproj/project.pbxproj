@@ -143,6 +143,17 @@
 			name = More;
 			sourceTree = "<group>";
 		};
+		526F7DA81B5EF70500529738 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				523888551B559D630083762C /* UIColor+NightMode.h */,
+				523888561B559D630083762C /* UIColor+NightMode.m */,
+				526F7DA21B5ED7B200529738 /* UIFont+FontSize.h */,
+				526F7DA31B5ED7B200529738 /* UIFont+FontSize.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		527C74FA1B2F5D6A006E64B3 = {
 			isa = PBXGroup;
 			children = (
@@ -168,12 +179,9 @@
 				521047EE1B4DBC710075B1E1 /* More */,
 				521047ED1B4DBC4D0075B1E1 /* Bookmarks */,
 				521047EB1B4DBC390075B1E1 /* Book */,
+				526F7DA81B5EF70500529738 /* Categories */,
 				527C750A1B2F5D6A006E64B3 /* AppDelegate.h */,
 				527C750B1B2F5D6A006E64B3 /* AppDelegate.m */,
-				523888551B559D630083762C /* UIColor+NightMode.h */,
-				523888561B559D630083762C /* UIColor+NightMode.m */,
-				526F7DA21B5ED7B200529738 /* UIFont+FontSize.h */,
-				526F7DA31B5ED7B200529738 /* UIFont+FontSize.m */,
 				527C75161B2F5D6A006E64B3 /* Main.storyboard */,
 				52301D051B38CBFB00DDC108 /* TabBarViewController.h */,
 				52301D061B38CBFB00DDC108 /* TabBarViewController.m */,

@@ -44,13 +44,10 @@
 
 }
 
-- (void)updateFontSize:(int)fontSize{
+- (void)updateFontSize:(NSInteger)fontSize{
     
     self.fontSize = fontSize;
-    [self.defaults setInteger:fontSize forKey:@"fontSize"];
-    NSLog(@"Saved font size: %d to user defaults", fontSize);
-    
-    
+    [self.defaults setInteger:self.fontSize forKey:@"fontSize"];
 }
 
 @end

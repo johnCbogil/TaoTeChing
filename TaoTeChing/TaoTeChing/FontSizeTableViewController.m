@@ -24,6 +24,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.title = @"Set Font Size";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,25 +38,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [[SettingsManager sharedManager]updateFontSize:indexPath.row];
-//    if (indexPath.row == 0) {
-//        [[SettingsManager sharedManager]updateFontSize:18];
-//        NSLog(@"Selected row 0 : size 18");
-//    }
-//    else if (indexPath.row == 1){
-//        [[SettingsManager sharedManager]updateFontSize:22];
-//        NSLog(@"Selected row 0 : size 22");
-//    }
-//    else{
-//        [[SettingsManager sharedManager]updateFontSize:26];
-//        NSLog(@"Selected row 0 : size 26");
-//    }
+
 }
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-//
 //- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.
 //    // Return the number of rows in the section.

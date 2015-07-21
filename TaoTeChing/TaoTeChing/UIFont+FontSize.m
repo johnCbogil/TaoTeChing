@@ -13,13 +13,10 @@
 + (NSInteger)fontSize{
     
     if ([SettingsManager sharedManager].fontSize == 0) {
-        NSLog(@"Returning 18 for font size");
         return 18;
     } else if([SettingsManager sharedManager].fontSize == 1) {
-        NSLog(@"Returning 22 for font size");
         return 22;
     }else{
-        NSLog(@"Returning 26 for font size");
         return 26;
     }
 }
