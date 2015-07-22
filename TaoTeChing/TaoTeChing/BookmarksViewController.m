@@ -12,7 +12,10 @@
 #import "PageViewController.h"
 
 @interface BookmarksViewController ()
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *zeroStateLabel;
+@property (nonatomic) UIBarButtonItem *customEditButtonItem;
+@property (nonatomic) int chapterNumber;
 @end
 
 @implementation BookmarksViewController
@@ -67,6 +70,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
+    
+    
+    if ([BookmarkManager bookmarkManager].bookmarks.count == 0) {
+        self.zeroStateLabel.alpha = 1.0;
+    }
+    
     return [BookmarkManager bookmarkManager].bookmarks.count;
 }
 

@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BookmarksViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UILabel *zeroStateLabel;
-@property (nonatomic) UIBarButtonItem *customEditButtonItem;
-@property (nonatomic) int chapterNumber;
+
 
 @end
