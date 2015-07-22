@@ -135,7 +135,17 @@
                              NSArray *viewControllers = @[zeroVC];
                              
                              // Page direction depends on index number
-                             [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+                             
+                             DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
+                             NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
+                             if (indexPath.row > currentIndex) {
+
+                             [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+                             }
+                             else{
+                                 [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+                                 
+                             }
                          }
                      }];
 }
