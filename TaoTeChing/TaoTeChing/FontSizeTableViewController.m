@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *smallFontSizeCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *mediumFontSizeCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *largeFontSizeCell;
-
+@property(retain)  NSIndexPath* lastIndexPath;
 @end
 
 @implementation FontSizeTableViewController
@@ -30,16 +30,9 @@
     
     self.title = @"Set Font Size";
     
-    if ([UIFont fontSize]==18) {
-        self.smallFontSizeCell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
-    else if ([UIFont fontSize]==22){
-        self.mediumFontSizeCell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
-    else if ([UIFont fontSize]==26){
-        self.largeFontSizeCell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -53,25 +46,65 @@
     [[SettingsManager sharedManager]updateFontSize:indexPath.row];
     
     // add a checkmark to the selected indexpath.row
-
+    // remove all the other check marks
     
+    self.lastIndexPath = indexPath;
+    
+    [tableView reloadData];
 
 }
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete method implementation.
-//    // Return the number of rows in the section.
-//    return 0;
-//}
 
-/*
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 3;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    if (indexPath.row == 0) {
+        if ([indexPath compare:self.lastIndexPath] == NSOrderedSame)
+        {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+        else
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        cell.textLabel.text = @"small";
+    }
+    else if(indexPath.row == 1){
+        if ([indexPath compare:self.lastIndexPath] == NSOrderedSame)
+        {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+        else
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        cell.textLabel.text = @"medium";
+    }
+    else{
+        if ([indexPath compare:self.lastIndexPath] == NSOrderedSame)
+        {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+        else
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        cell.textLabel.text = @"large";
+
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
