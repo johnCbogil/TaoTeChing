@@ -51,10 +51,10 @@ static BookmarkManager *sharedInstance = nil;
     [self.defaults setObject:self.bookmarks forKey:@"bookmarks"];
 }
 
-- (void)removeBookmark:(NSString*)chapterNumber{
+- (void)removeBookmark:(NSInteger)chapterNumber{
     
 //    [self.defaults removeObjectForKey:[NSString stringWithFormat:@"%d", chapterNumber]];
-    [self.bookmarks removeObject:chapterNumber];
+    [self.bookmarks removeObjectAtIndex:chapterNumber]; //:chapterNumber];
     [self.defaults setObject:self.bookmarks forKey:@"bookmarks"];
 }
 @end
