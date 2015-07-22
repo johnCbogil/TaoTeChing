@@ -1,4 +1,15 @@
-The tao that can be told 
+What is Daoism?
+
+Daoism is a religious and philosophical tradition which originated in China in the 4th century BCE, roughly at the same time as Confucianism. This tradition emphasizes reverence for the Dao—the fundamental metaphysical reality—as a matter of ultimate human concern.
+
+What is the Daodejing?
+
+The Daodejing is a book of Daoist teachings from the 4th century BCE, and is widely considered to be the most important text in Daoism.
+
+What do Daoists believe?
+
+Daoists share a broad range of beliefs, but generally speaking, Daoists believe that there is an ultimate metaphysical reality which they call the dao, which encompasses everything there is. A common symbol of Daoist thought is the taijitu (the yin/yang symbol), which represents the mutual dependence between unity and duality, and can help make this idea more concrete. In the taijitu, we see two opposite polarities; yin ("negative", or black) and yang ("positive", or white), each of which flow in to the other, and each of which contains a small point of the other. This illustrates that one polarity constantly emerges out of its opposite; opposing polarities must finally be thought of as arising together and being mutually co-dependent. This taijitu symbol is a good way of communicating the Daoist understanding that duality and the various separate parts of reality can be thought of as a unified whole, and the nature of this unified whole is described by the term "Dao".
+#The tao that can be told
 
 is not the eternal Tao 
 
