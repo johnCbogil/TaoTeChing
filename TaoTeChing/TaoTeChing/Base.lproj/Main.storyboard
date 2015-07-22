@@ -25,7 +25,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8He-TX-X94" userLabel="indexButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8He-TX-X94" userLabel="indexButton">
                                 <rect key="frame" x="18" y="25" width="33" height="33"/>
                                 <state key="normal" image="indexIcon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -335,6 +335,11 @@
                             <outlet property="delegate" destination="1mx-ul-pxc" id="UYe-Z1-wzI"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="largeFontSizeCell" destination="AiL-9H-9QX" id="XAu-Xa-AIe"/>
+                        <outlet property="mediumFontSizeCell" destination="3AB-GT-flW" id="6m1-2m-uur"/>
+                        <outlet property="smallFontSizeCell" destination="yvV-0d-nQp" id="eWK-61-a94"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ref-S6-Hup" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

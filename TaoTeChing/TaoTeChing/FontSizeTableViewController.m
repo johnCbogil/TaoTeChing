@@ -11,6 +11,9 @@
 #import "UIFont+FontSize.h"
 
 @interface FontSizeTableViewController ()
+@property (weak, nonatomic) IBOutlet UITableViewCell *smallFontSizeCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *mediumFontSizeCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *largeFontSizeCell;
 
 @end
 
@@ -26,6 +29,16 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.title = @"Set Font Size";
+    
+    if ([UIFont fontSize]==18) {
+        self.smallFontSizeCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else if ([UIFont fontSize]==22){
+        self.mediumFontSizeCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else if ([UIFont fontSize]==26){
+        self.largeFontSizeCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +51,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [[SettingsManager sharedManager]updateFontSize:indexPath.row];
+    
+    // add a checkmark to the selected indexpath.row
+
+    
 
 }
 //- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
