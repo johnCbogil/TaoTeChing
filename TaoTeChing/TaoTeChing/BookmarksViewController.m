@@ -85,7 +85,8 @@
     
     // Configure the cell...
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
-    NSString *previewText = [ModelController modelController].pageData[indexPath.row];
+    NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [BookmarkManager bookmarkManager].bookmarks[indexPath.row]]integerValue];
+    NSString *previewText = [ModelController modelController].pageData[chapterNumber];
     previewText = [previewText substringToIndex: MIN(19, [previewText length])];
     cell.textLabel.text = [NSString stringWithFormat:@"Chapter %@:   %@...",[BookmarkManager bookmarkManager].bookmarks[indexPath.row],previewText].capitalizedString;
 

@@ -182,11 +182,11 @@
 				526F7DA81B5EF70500529738 /* Categories */,
 				527C750A1B2F5D6A006E64B3 /* AppDelegate.h */,
 				527C750B1B2F5D6A006E64B3 /* AppDelegate.m */,
-				527C75161B2F5D6A006E64B3 /* Main.storyboard */,
 				52301D051B38CBFB00DDC108 /* TabBarViewController.h */,
 				52301D061B38CBFB00DDC108 /* TabBarViewController.m */,
 				527C75191B2F5D6A006E64B3 /* Images.xcassets */,
 				527C751B1B2F5D6A006E64B3 /* LaunchScreen.xib */,
+				527C75161B2F5D6A006E64B3 /* Main.storyboard */,
 				527C75061B2F5D6A006E64B3 /* Supporting Files */,
 			);
 			path = TaoTeChing;
