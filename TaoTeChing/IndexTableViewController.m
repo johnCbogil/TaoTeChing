@@ -55,9 +55,15 @@
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 
     NSString *previewText = [ModelController modelController].pageData[indexPath.row];
+    NSInteger chapterNumber = (unsigned long)[[ModelController modelController].pageData indexOfObject:[ModelController modelController].pageData[indexPath.row]];
     previewText = [previewText substringToIndex: MIN(19, [previewText length])];
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
-    cell.textLabel.text = [NSString stringWithFormat:@"Chapter %lu:   %@... ",(unsigned long)[[ModelController modelController].pageData indexOfObject:[ModelController modelController].pageData[indexPath.row]], previewText];
+    if (chapterNumber == 0) {
+        cell.textLabel.text = [NSString stringWithFormat:@"About: %@", previewText];
+    }
+    else{
+        cell.textLabel.text = [NSString stringWithFormat:@"Chapter %lu:   %@... ",chapterNumber, previewText];  
+    }
     return cell;
 }
 

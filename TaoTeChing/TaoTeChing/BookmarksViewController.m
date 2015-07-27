@@ -88,7 +88,13 @@
     NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [BookmarkManager bookmarkManager].bookmarks[indexPath.row]]integerValue];
     NSString *previewText = [ModelController modelController].pageData[chapterNumber];
     previewText = [previewText substringToIndex: MIN(19, [previewText length])];
-    cell.textLabel.text = [NSString stringWithFormat:@"Chapter %@:   %@...",[BookmarkManager bookmarkManager].bookmarks[indexPath.row],previewText].capitalizedString;
+    if (chapterNumber == 0) {
+        cell.textLabel.text = [NSString stringWithFormat:@"About: %@", previewText];
+    }
+    else{
+        cell.textLabel.text = [NSString stringWithFormat:@"Chapter %ld:   %@...",(long)chapterNumber,previewText].capitalizedString;
+  
+    }
 
     return cell;
 }
@@ -144,7 +150,7 @@
                              DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:[[BookmarkManager bookmarkManager].bookmarks[indexPath.row]integerValue] storyboard:self.storyboard];
                              NSArray *viewControllers = @[zeroVC];
                              
-                             // Page direction depends on index number
+                             // Page direction depends on chapter number
                              
                              DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
                              NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];

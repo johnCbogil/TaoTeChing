@@ -67,7 +67,12 @@
     
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle:NSNumberFormatterSpellOutStyle];
-    rvc.chapterLabel.text = [NSString stringWithFormat:@"Chapter %@",[numberFormatter stringFromNumber:[NSNumber numberWithInt:(int)currentIndex]].capitalizedString];
+    if (currentIndex == 0) {
+        rvc.chapterLabel.text = @"About";
+    }
+    else{
+        rvc.chapterLabel.text = [NSString stringWithFormat:@"Chapter %@",[numberFormatter stringFromNumber:[NSNumber numberWithInt:(int)currentIndex]].capitalizedString];
+    }
 }
 
 // How to jump btw pages
