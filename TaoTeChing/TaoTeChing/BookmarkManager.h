@@ -12,7 +12,7 @@
 
 @property (nonatomic) NSUserDefaults *defaults;
 - (void)addBookmark:(NSString*)chapterNumber;
-- (void)removeBookmark:(NSInteger)chapterNumber;
+- (void)removeBookmark:(NSInteger)chapterNumber onCompletion:(void(^)(void))completionBlock;
 + (BookmarkManager *)bookmarkManager;
 + (BookmarkManager *)instantiateBookmarkManager;
 @property (nonatomic)NSMutableArray *bookmarks;

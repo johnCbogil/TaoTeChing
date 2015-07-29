@@ -109,8 +109,13 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         NSLog(@"Removing page: %ld", indexPath.row);
-        [[BookmarkManager bookmarkManager]removeBookmark:indexPath.row]; //[NSString stringWithFormat:@"%ld",indexPath.row]];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+       // [[BookmarkManager bookmarkManager]removeBookmark:indexPath.row]; //[NSString stringWithFormat:@"%ld",indexPath.row]];
+        
+        NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [BookmarkManager bookmarkManager].bookmarks[indexPath.row]]integerValue];
+        
+        [[BookmarkManager bookmarkManager]removeBookmark:chapterNumber onCompletion:^{
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
