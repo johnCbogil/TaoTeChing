@@ -53,9 +53,6 @@ static BookmarkManager *sharedInstance = nil;
 
 - (void)removeBookmark:(NSInteger)chapterNumber onCompletion:(void(^)(void))completionBlock{
     
-    
-//    [self.defaults removeObjectForKey:[NSString stringWithFormat:@"%d", chapterNumber]];
-//    [self.bookmarks removeObjectAtIndex:chapterNumber]; //:chapterNumber];
     NSString *bookmarkToRemove = nil;
     for (NSString *bookmark in self.bookmarks) {
         if ([bookmark isEqualToString:[NSString stringWithFormat:@"%ld",chapterNumber]]) {
