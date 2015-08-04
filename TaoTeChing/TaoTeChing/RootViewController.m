@@ -80,7 +80,7 @@
     NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
     
     if (self.bookmarkButton.isSelected) {
-        NSLog(@"Removing page: %ld", currentIndex);
+        NSLog(@"Removing page: %ld", (long)currentIndex);
         //[[BookmarkManager bookmarkManager]removeBookmark:currentIndex];//[NSString stringWithFormat:@"%ld",currentIndex]];
         [[BookmarkManager bookmarkManager]removeBookmark:currentIndex
                                             onCompletion:^{
@@ -89,7 +89,7 @@
     }
     else {
 
-        NSLog(@"Bookmarking page: %ld",currentIndex);
+        NSLog(@"Bookmarking page: %ld",(long)currentIndex);
         [[BookmarkManager bookmarkManager]addBookmark:[NSString stringWithFormat:@"%ld",currentIndex]];
     }    
 }

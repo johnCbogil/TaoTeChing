@@ -56,7 +56,7 @@
     NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
     RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
     
-    if ([[BookmarkManager bookmarkManager].bookmarks containsObject:[NSString stringWithFormat:@"%ld", currentIndex]]) {
+    if ([[BookmarkManager bookmarkManager].bookmarks containsObject:[NSString stringWithFormat:@"%ld", (long)currentIndex]]) {
         NSLog(@"This page has been bookmarked");
         [rvc.bookmarkButton setSelected:YES];
     }

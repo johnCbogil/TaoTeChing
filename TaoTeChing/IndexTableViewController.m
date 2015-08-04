@@ -62,7 +62,7 @@
         cell.textLabel.text = [NSString stringWithFormat:@"About: %@", previewText];
     }
     else{
-        cell.textLabel.text = [NSString stringWithFormat:@"Chapter %lu:   %@... ",chapterNumber, previewText];  
+        cell.textLabel.text = [NSString stringWithFormat:@"Chapter %lu:   %@... ",(long)chapterNumber, previewText];  
     }
     return cell;
 }

@@ -55,7 +55,7 @@ static BookmarkManager *sharedInstance = nil;
     
     NSString *bookmarkToRemove = nil;
     for (NSString *bookmark in self.bookmarks) {
-        if ([bookmark isEqualToString:[NSString stringWithFormat:@"%ld",chapterNumber]]) {
+        if ([bookmark isEqualToString:[NSString stringWithFormat:@"%ld",(long)chapterNumber]]) {
             bookmarkToRemove = bookmark;
         }
     }

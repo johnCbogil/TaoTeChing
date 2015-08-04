@@ -28,7 +28,6 @@
 		52C920A21B517AEB001F8A86 /* TaoTeChing - Mitchell.txt in Resources */ = {isa = PBXBuildFile; fileRef = 52C920A11B517AEB001F8A86 /* TaoTeChing - Mitchell.txt */; };
 		52EBA23A1B5461EC009CFFA3 /* MoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EBA2391B5461EC009CFFA3 /* MoreTableViewController.m */; };
 		52FC59B41B3664230004A278 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FC59B31B3664230004A278 /* PageViewController.m */; };
-		DDC7CBEE1B3DE807005C4861 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC7CBED1B3DE807005C4861 /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +80,6 @@
 		52EBA2391B5461EC009CFFA3 /* MoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewController.m; sourceTree = "<group>"; };
 		52FC59B21B3664230004A278 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		52FC59B31B3664230004A278 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
-		DDC7CBED1B3DE807005C4861 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDC7CBEE1B3DE807005C4861 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +157,6 @@
 				527C75051B2F5D6A006E64B3 /* TaoTeChing */,
 				527C75251B2F5D6B006E64B3 /* TaoTeChingTests */,
 				527C75041B2F5D6A006E64B3 /* Products */,
-				DDC7CBED1B3DE807005C4861 /* Reveal.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -482,14 +478,9 @@
 				);
 				INFOPLIST_FILE = TaoTeChing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-framework",
-					"\"Reveal\"",
-					"-lz",
-					"-ObjC",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -505,14 +496,9 @@
 				);
 				INFOPLIST_FILE = TaoTeChing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-framework",
-					"\"Reveal\"",
-					"-lz",
-					"-ObjC",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
