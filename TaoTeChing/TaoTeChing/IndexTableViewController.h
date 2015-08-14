@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IndexHeader.h"
 
 @interface IndexTableViewController : UITableViewController
-
+@property (strong ,nonatomic) IndexHeader *header;
 @end

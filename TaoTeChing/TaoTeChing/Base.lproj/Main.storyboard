@@ -387,9 +387,20 @@
                                 <action selector="doneButtonPressed:" destination="qqt-b0-Tph" id="IUG-DI-4Z1"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="randomIcon" style="done" id="Hhx-Ak-Lxg">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="weE-Hl-mcK">
+                                <rect key="frame" x="451" y="7" width="88" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="randomIcon"/>
+                                <connections>
+                                    <action selector="randomButtonPressed:" destination="qqt-b0-Tph" eventType="touchUpInside" id="xG4-mK-BeM"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="doneButton" destination="oJd-eY-FKl" id="kEB-77-rEe"/>
+                        <outlet property="randomButton" destination="weE-Hl-mcK" id="GV0-w5-9j7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4Q-s0-Wgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -421,5 +432,6 @@
         <image name="bookmarkIconFilled" width="28" height="28"/>
         <image name="indexIcon" width="33" height="33"/>
         <image name="moreIcon" width="33" height="33"/>
+        <image name="randomIcon" width="33" height="33"/>
     </resources>
 </document>

@@ -9,9 +9,10 @@
 #import "IndexTableViewController.h"
 #import "ModelController.h"
 #import "PageViewController.h"
-#import "JumpToPageTableViewCell.h"
+#import "IndexHeader.h"
 
-@interface IndexTableViewController () <JumpToPageTableViewCellDelegate>
+@interface IndexTableViewController () <JumpToChapterDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *randomButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @end
 
@@ -20,108 +21,90 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.tableView addGestureRecognizer:tap];
+
     self.title = @"Index";
     
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"JumpToPageCell" owner:self options:nil];
-
-    JumpToPageTableViewCell *cell = nib[0];
-    cell.cellDelegate = self;
-    self.tableView.tableHeaderView = cell;
     
+    self.header = nib[0];
+    self.header.jumpToChapterDelegate = self;
+    self.tableView.tableHeaderView = self.header;
 }
+
+- (void)dismissKeyboard {
+    [self.header.jumpToPageTextField resignFirstResponder];
+}
+
 - (IBAction)doneButtonPressed:(id)sender {
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
     return [ModelController modelController].pageData.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-//    if (indexPath.row == 0) {
-//        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"jumpToPageCell"];
-//        [self.tableView registerNib:[UINib nibWithNibName:@"JumpToPageCell" bundle:nil ] forCellReuseIdentifier:@"jumpToPageCell"];
-//
-//        JumpToPageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jumpToPageCell" forIndexPath:indexPath];
-//        cell.cellDelegate = self;
-//        return cell;
-//        
-//    }
-//    else {
-    
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        
-        NSString *previewText = [ModelController modelController].pageData[indexPath.row];
-        NSInteger chapterNumber = (unsigned long)[[ModelController modelController].pageData indexOfObject:[ModelController modelController].pageData[indexPath.row]];
-        previewText = [previewText substringToIndex: MIN(19, [previewText length])];
-        cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
-        if (chapterNumber == 0) {
-            cell.textLabel.text = [NSString stringWithFormat:@"About: %@", previewText];
-        }
-        else{
-            cell.textLabel.text = [NSString stringWithFormat:@"Chapter %lu:   %@... ",(long)chapterNumber, previewText];
-        }
-        return cell;
-        
-   // }
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    NSString *previewText = [ModelController modelController].pageData[indexPath.row];
+    NSInteger chapterNumber = (unsigned long)[[ModelController modelController].pageData indexOfObject:[ModelController modelController].pageData[indexPath.row]];
+    previewText = [previewText substringToIndex: MIN(19, [previewText length])];
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
+    if (chapterNumber == 0) {
+        cell.textLabel.text = [NSString stringWithFormat:@"About: %@", previewText];
+    }
+    else {
+        cell.textLabel.text = [NSString stringWithFormat:@"Chapter %lu:   %@... ",(long)chapterNumber, previewText];
+    }
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
     NSInteger row = indexPath.row;
-    
     [self jumpToChapter:row];
 }
 
 - (void)jumpToChapter:(NSInteger)row {
-    
     [self dismissViewControllerAnimated:YES completion:^{
         DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:row storyboard:self.storyboard];
         NSArray *viewControllers = @[zeroVC];
-        
-        
         DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
         NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
         if (row > currentIndex) {
             [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
         }
-        else{
+        else if (row == currentIndex){
+            [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
+        }
+        else {
             [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
         }
     }];
-
-    
 }
 
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44;
 }
+
+- (IBAction)randomButtonPressed:(id)sender {
+    int r = arc4random_uniform((int)81);
+    [self jumpToChapter:r];
+}
+
 
 
 /*
