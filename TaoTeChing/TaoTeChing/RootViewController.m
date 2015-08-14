@@ -12,6 +12,7 @@
 #import "PageViewController.h"
 #import "BookmarkManager.h"
 #import "UIColor+NightMode.h"
+#import "SettingsManager.h"
 
 @implementation RootViewController
 
@@ -23,7 +24,7 @@
     // Configure the page view controller and add it as a child view controller.
     [PageViewController pageViewController].pageViewController.delegate = self;
     
-    DataViewController *startingViewController = [[ModelController modelController] viewControllerAtIndex:0 storyboard:self.storyboard];
+    DataViewController *startingViewController = [[ModelController modelController] viewControllerAtIndex:[SettingsManager sharedManager].lastChapter storyboard:self.storyboard];
     NSArray *viewControllers = @[startingViewController];
     [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     

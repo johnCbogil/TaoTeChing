@@ -13,6 +13,7 @@
 + (instancetype)sharedManager;
 - (void)updateNightMode:(BOOL)isNightModeOn;
 - (void)updateFontSize:(NSInteger)fontSize;
+- (void)updateLastChapter:(NSInteger)lastChapter;
 @property (assign, nonatomic) BOOL isNightModeOn;
 @property (nonatomic) NSInteger fontSize;
 @property (nonatomic) NSInteger lastChapter;

@@ -14,6 +14,7 @@
 #import "SettingsManager.h"
 #import "UIColor+NightMode.h"
 #import "UIFont+FontSize.h"
+#import "SettingsManager.h"
 
 
 @implementation DataViewController
@@ -54,6 +55,7 @@
     
     DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
     NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
+    [[SettingsManager sharedManager]updateLastChapter:currentIndex];
     RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
     
     if ([[BookmarkManager bookmarkManager].bookmarks containsObject:[NSString stringWithFormat:@"%ld", (long)currentIndex]]) {
