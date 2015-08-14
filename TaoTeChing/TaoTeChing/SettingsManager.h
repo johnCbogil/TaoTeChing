@@ -15,7 +15,5 @@
 - (void)updateFontSize:(NSInteger)fontSize;
 @property (assign, nonatomic) BOOL isNightModeOn;
 @property (nonatomic) NSInteger fontSize;
-
-
-
+@property (nonatomic) NSInteger lastChapter;
 @end
