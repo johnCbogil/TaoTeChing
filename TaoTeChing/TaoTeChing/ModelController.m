@@ -22,6 +22,7 @@ static ModelController *sharedInstance = nil;
         return sharedInstance;
     }
 }
+
 + (ModelController *)modelController
 {
     if (sharedInstance==nil)
@@ -34,7 +35,6 @@ static ModelController *sharedInstance = nil;
 - (instancetype)init {
     self = [super init];
     if (self) {
-
         NSString *path = [[NSBundle mainBundle] pathForResource:@"TaoTeChing - Mitchell"
                                                          ofType:@"txt"];
         NSString *content = [NSString stringWithContentsOfFile:path
@@ -42,8 +42,7 @@ static ModelController *sharedInstance = nil;
                                                          error:NULL];
         NSArray *lines = [content componentsSeparatedByString:@"#"];
         
-        //change lines to "text"
-        _pageData = lines;        
+        _pageData = lines;
     }
     return self;
 }
@@ -60,8 +59,6 @@ static ModelController *sharedInstance = nil;
     
     return self.dataViewController;
 }
-
-
 
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController {
     // Return the index of the given data view controller.

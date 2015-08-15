@@ -69,6 +69,8 @@
     
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle:NSNumberFormatterSpellOutStyle];
+    
+    // THIS NEEDS A TRANSITION
     if (currentIndex == 0) {
         rvc.chapterLabel.text = @"About";
     }
@@ -76,16 +78,4 @@
         rvc.chapterLabel.text = [NSString stringWithFormat:@"Chapter %@",[numberFormatter stringFromNumber:[NSNumber numberWithInt:(int)currentIndex]].capitalizedString];
     }
 }
-
-// How to jump btw pages
-- (IBAction)homeButtonPressed:(id)sender {
-    
-    DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:0 storyboard:self.storyboard];
-    NSArray *viewControllers = @[zeroVC];
-    
-    // Page direction depends on index number
-    [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-}
-
-
 @end

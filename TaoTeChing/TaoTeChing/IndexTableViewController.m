@@ -78,22 +78,27 @@
     [self jumpToChapter:row];
 }
 
-- (void)jumpToChapter:(NSInteger)row {
-    [self dismissViewControllerAnimated:YES completion:^{
-        DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:row storyboard:self.storyboard];
-        NSArray *viewControllers = @[zeroVC];
-        DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
-        NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
-        if (row > currentIndex) {
-            [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-        }
-        else if (row == currentIndex){
-            [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
-        }
-        else {
-            [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-        }
-    }];
+- (void)jumpToChapter:(NSInteger)chapterNumber {
+    
+    // NEED TO CHECK THAT INPUT IS A NUMBER.
+    // NEED TO HANDLE NON NUMBER
+    if (chapterNumber <= 81) {
+        [self dismissViewControllerAnimated:YES completion:^{
+            DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:chapterNumber storyboard:self.storyboard];
+            NSArray *viewControllers = @[zeroVC];
+            DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
+            NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
+            if (chapterNumber > currentIndex) {
+                [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+            }
+            else if (chapterNumber == currentIndex){
+                [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
+            }
+            else {
+                [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+            }
+        }];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

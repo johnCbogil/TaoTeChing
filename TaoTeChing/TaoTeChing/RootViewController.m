@@ -17,11 +17,8 @@
 @implementation RootViewController
 
 
--(void)viewDidLoad{
-    
+-(void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    // Configure the page view controller and add it as a child view controller.
     [PageViewController pageViewController].pageViewController.delegate = self;
     
     DataViewController *startingViewController = [[ModelController modelController] viewControllerAtIndex:[SettingsManager sharedManager].lastChapter storyboard:self.storyboard];
@@ -58,8 +55,7 @@
     [self.bookmarkButton addTarget:self action:@selector(bookmarkButtonTouch:withEvent:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    
+- (void)viewWillAppear:(BOOL)animated {
     self.view.backgroundColor = [UIColor viewBackgroundColor];
     self.tabBarController.tabBar.barTintColor = [UIColor viewBackgroundColor];
     [UINavigationBar appearance].barTintColor = [UIColor viewBackgroundColor];
@@ -67,7 +63,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)indexButtonPressed:(id)sender {
@@ -75,33 +70,26 @@
     NSLog(@"indexButtonPressed");
 }
 - (IBAction)bookmarkButtonPressed:(id)sender {
-    
-    // [ModelController modelController].dataViewController.currentChapter
     DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
     NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
     
     if (self.bookmarkButton.isSelected) {
         NSLog(@"Removing page: %ld", (long)currentIndex);
-        //[[BookmarkManager bookmarkManager]removeBookmark:currentIndex];//[NSString stringWithFormat:@"%ld",currentIndex]];
         [[BookmarkManager bookmarkManager]removeBookmark:currentIndex
                                             onCompletion:^{
-                                                
                                             }];
     }
     else {
-
         NSLog(@"Bookmarking page: %ld",(long)currentIndex);
         [[BookmarkManager bookmarkManager]addBookmark:[NSString stringWithFormat:@"%ld",currentIndex]];
     }    
 }
 
-- (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event
-{
+- (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event {
     self.bookmarkButton.selected = !self.bookmarkButton.selected;
 }
 
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
-{
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
     DataViewController *currentView = [pageViewController.viewControllers objectAtIndex:0];
     NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
     NSLog(@"The current chapter is: %ld", (long)currentIndex);
