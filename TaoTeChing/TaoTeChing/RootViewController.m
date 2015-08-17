@@ -52,7 +52,7 @@
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
     
-    [self.bookmarkButton addTarget:self action:@selector(bookmarkButtonTouch:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.bookmarkButton addTarget:self action:@selector(bookmarkButtonTouch:withEvent:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -82,11 +82,21 @@
     else {
         NSLog(@"Bookmarking page: %ld",(long)currentIndex);
         [[BookmarkManager bookmarkManager]addBookmark:[NSString stringWithFormat:@"%ld",currentIndex]];
-    }    
+    }
+    [self bookmarkButtonTouch:sender withEvent:nil];
 }
 
 - (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event {
-    self.bookmarkButton.selected = !self.bookmarkButton.selected;
+    
+    
+    [UIView transitionWithView:aButton
+                      duration:1.0
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        //aButton.selected = YES;
+                        self.bookmarkButton.selected = !self.bookmarkButton.selected;
+                    }
+                    completion:nil];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {

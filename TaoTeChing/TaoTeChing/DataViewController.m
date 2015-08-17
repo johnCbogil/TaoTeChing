@@ -70,7 +70,13 @@
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle:NSNumberFormatterSpellOutStyle];
     
-    // THIS NEEDS A TRANSITION
+    CATransition *transition = [CATransition animation];
+    [transition setType:kCATransitionFade];
+    [transition setDuration:.25f];
+    [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    [rvc.chapterLabel.layer addAnimation:transition forKey:@"highlight"];
+    
+    
     if (currentIndex == 0) {
         rvc.chapterLabel.text = @"About";
     }
