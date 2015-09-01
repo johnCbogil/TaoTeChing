@@ -87,16 +87,9 @@
 }
 
 - (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event {
-    
-    
-    [UIView transitionWithView:aButton
-                      duration:1.0
-                       options:UIViewAnimationOptionTransitionCrossDissolve
-                    animations:^{
+
                         //aButton.selected = YES;
                         self.bookmarkButton.selected = !self.bookmarkButton.selected;
-                    }
-                    completion:nil];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
