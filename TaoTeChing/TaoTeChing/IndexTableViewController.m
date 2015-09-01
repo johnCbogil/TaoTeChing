@@ -20,11 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(dismissKeyboard)];
-    [self.tableView addGestureRecognizer:tap];
 
     self.title = @"Index";
     
@@ -33,10 +28,21 @@
     self.header = nib[0];
     self.header.jumpToChapterDelegate = self;
     self.tableView.tableHeaderView = self.header;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+}
+
+- (void)keyboardDidShow:(NSNotification *)note
+{
+    self.tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.tableView addGestureRecognizer:self.tap];
 }
 
 - (void)dismissKeyboard {
     [self.header.jumpToPageTextField resignFirstResponder];
+    [self.tableView removeGestureRecognizer:self.tap];
 }
 
 - (IBAction)doneButtonPressed:(id)sender {
@@ -46,7 +52,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 #pragma mark - Table view data source
 

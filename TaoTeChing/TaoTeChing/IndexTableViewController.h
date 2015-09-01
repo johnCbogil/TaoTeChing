@@ -11,4 +11,5 @@
 
 @interface IndexTableViewController : UITableViewController
 @property (strong ,nonatomic) IndexHeader *header;
+@property (strong, nonatomic) UITapGestureRecognizer *tap;
 @end
