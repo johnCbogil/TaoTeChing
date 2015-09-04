@@ -55,6 +55,14 @@
     // Return the number of sections.
     return 1;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 1) {
+        //https://itunes.apple.com/us/app/tao-te-ching-lao-tzu/id1026211399?mt=8
+        static NSString *const iOS7AppStoreURLFormat = @"itms-apps://itunes.apple.com/app/id1026211399";        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:iOS7AppStoreURLFormat]]];
+    }
+}
 //
 //- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.

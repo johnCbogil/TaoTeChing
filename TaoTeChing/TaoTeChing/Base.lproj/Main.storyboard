@@ -212,7 +212,7 @@
                         <sections>
                             <tableViewSection id="knI-YD-ssT">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="oii-Ia-FpY">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="setFontSizeCell" id="oii-Ia-FpY">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oii-Ia-FpY" id="tEU-be-dr8">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -259,6 +259,51 @@
                                         <connections>
                                             <segue destination="1mx-ul-pxc" kind="show" id="pK7-z7-Jjx"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="rateAppCell" id="Mre-7d-HHq">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mre-7d-HHq" id="61I-Mg-A1R">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate This App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoZ-bj-vDT">
+                                                    <rect key="frame" x="14" y="10" width="113" height="24"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="MoZ-bj-vDT" secondAttribute="trailing" constant="446" id="0VZ-2w-r1a"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MoZ-bj-vDT" secondAttribute="trailing" constant="440" id="3jY-GI-Va5"/>
+                                                <constraint firstItem="MoZ-bj-vDT" firstAttribute="top" secondItem="61I-Mg-A1R" secondAttribute="topMargin" constant="2" id="4bw-Oi-kY5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MoZ-bj-vDT" secondAttribute="bottom" constant="2" id="G3l-0q-ObR"/>
+                                                <constraint firstAttribute="centerY" secondItem="MoZ-bj-vDT" secondAttribute="centerY" constant="0.25" id="HFG-Df-VTH"/>
+                                                <constraint firstItem="MoZ-bj-vDT" firstAttribute="leading" secondItem="61I-Mg-A1R" secondAttribute="leadingMargin" constant="6" id="Hu1-bd-Zgl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MoZ-bj-vDT" secondAttribute="bottom" constant="1.5" id="NKo-F4-dNF"/>
+                                                <constraint firstItem="MoZ-bj-vDT" firstAttribute="leading" secondItem="61I-Mg-A1R" secondAttribute="leadingMargin" constant="12" id="OcS-xO-jwZ"/>
+                                                <constraint firstAttribute="centerX" secondItem="MoZ-bj-vDT" secondAttribute="centerX" constant="214" id="UU9-Zp-VjU"/>
+                                                <constraint firstItem="MoZ-bj-vDT" firstAttribute="leading" secondItem="61I-Mg-A1R" secondAttribute="leading" constant="18" id="Y28-tl-iB1"/>
+                                                <constraint firstItem="MoZ-bj-vDT" firstAttribute="top" secondItem="61I-Mg-A1R" secondAttribute="topMargin" constant="2" id="aQt-rx-Mwc"/>
+                                                <constraint firstItem="MoZ-bj-vDT" firstAttribute="top" secondItem="61I-Mg-A1R" secondAttribute="top" constant="11" id="bwf-tl-uxw"/>
+                                                <constraint firstAttribute="centerX" secondItem="MoZ-bj-vDT" secondAttribute="centerX" constant="214" id="obx-Dd-bPs"/>
+                                                <constraint firstAttribute="bottom" secondItem="MoZ-bj-vDT" secondAttribute="bottom" constant="11.5" id="pVy-YN-a4q"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="0VZ-2w-r1a"/>
+                                                    <exclude reference="3jY-GI-Va5"/>
+                                                    <exclude reference="G3l-0q-ObR"/>
+                                                    <exclude reference="HFG-Df-VTH"/>
+                                                    <exclude reference="OcS-xO-jwZ"/>
+                                                    <exclude reference="UU9-Zp-VjU"/>
+                                                    <exclude reference="Y28-tl-iB1"/>
+                                                    <exclude reference="aQt-rx-Mwc"/>
+                                                    <exclude reference="bwf-tl-uxw"/>
+                                                    <exclude reference="obx-Dd-bPs"/>
+                                                    <exclude reference="pVy-YN-a4q"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
