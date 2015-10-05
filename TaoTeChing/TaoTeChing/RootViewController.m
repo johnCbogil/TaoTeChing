@@ -10,7 +10,7 @@
 #import "ModelController.h"
 #import "DataViewController.h"
 #import "PageViewController.h"
-#import "BookmarkManager.h"
+#import "FavoritesManager.h"
 #import "UIColor+NightMode.h"
 #import "SettingsManager.h"
 
@@ -75,13 +75,13 @@
     
     if (self.bookmarkButton.isSelected) {
         NSLog(@"Removing page: %ld", (long)currentIndex);
-        [[BookmarkManager bookmarkManager]removeBookmark:currentIndex
+        [[FavoritesManager favoritesManager]removeBookmark:currentIndex
                                             onCompletion:^{
                                             }];
     }
     else {
         NSLog(@"Bookmarking page: %ld",(long)currentIndex);
-        [[BookmarkManager bookmarkManager]addBookmark:[NSString stringWithFormat:@"%ld",currentIndex]];
+        [[FavoritesManager favoritesManager]addBookmark:[NSString stringWithFormat:@"%ld",currentIndex]];
     }
     [self bookmarkButtonTouch:sender withEvent:nil];
 }

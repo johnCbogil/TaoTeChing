@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BookmarkManager : NSObject
+@interface FavoritesManager : NSObject
 
 @property (nonatomic) NSUserDefaults *defaults;
 - (void)addBookmark:(NSString*)chapterNumber;
 - (void)removeBookmark:(NSInteger)chapterNumber onCompletion:(void(^)(void))completionBlock;
-+ (BookmarkManager *)bookmarkManager;
-+ (BookmarkManager *)instantiateBookmarkManager;
++ (FavoritesManager *)favoritesManager;
++ (FavoritesManager *)instantiateFavoritesManager;
 @property (nonatomic)NSMutableArray *bookmarks;
 @end

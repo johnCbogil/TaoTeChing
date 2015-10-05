@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		521047F11B4DC5840075B1E1 /* BookmarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521047F01B4DC5840075B1E1 /* BookmarksViewController.m */; };
-		522940FA1B3F76FC008968F9 /* BookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 522940F91B3F76FC008968F9 /* BookmarkManager.m */; };
+		522940FA1B3F76FC008968F9 /* FavoritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 522940F91B3F76FC008968F9 /* FavoritesManager.m */; };
 		52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52301D061B38CBFB00DDC108 /* TabBarViewController.m */; };
 		523888541B5596040083762C /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 523888531B5596040083762C /* SettingsManager.m */; };
 		523888571B559D630083762C /* UIColor+NightMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 523888561B559D630083762C /* UIColor+NightMode.m */; };
@@ -45,8 +45,8 @@
 /* Begin PBXFileReference section */
 		521047EF1B4DC5840075B1E1 /* BookmarksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarksViewController.h; sourceTree = "<group>"; };
 		521047F01B4DC5840075B1E1 /* BookmarksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarksViewController.m; sourceTree = "<group>"; };
-		522940F81B3F76FC008968F9 /* BookmarkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkManager.h; sourceTree = "<group>"; };
-		522940F91B3F76FC008968F9 /* BookmarkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkManager.m; sourceTree = "<group>"; };
+		522940F81B3F76FC008968F9 /* FavoritesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesManager.h; sourceTree = "<group>"; };
+		522940F91B3F76FC008968F9 /* FavoritesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesManager.m; sourceTree = "<group>"; };
 		52301D051B38CBFB00DDC108 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		52301D061B38CBFB00DDC108 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		523888521B5596040083762C /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
@@ -121,15 +121,15 @@
 			name = Book;
 			sourceTree = "<group>";
 		};
-		521047ED1B4DBC4D0075B1E1 /* Bookmarks */ = {
+		521047ED1B4DBC4D0075B1E1 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				522940F81B3F76FC008968F9 /* BookmarkManager.h */,
-				522940F91B3F76FC008968F9 /* BookmarkManager.m */,
+				522940F81B3F76FC008968F9 /* FavoritesManager.h */,
+				522940F91B3F76FC008968F9 /* FavoritesManager.m */,
 				521047EF1B4DC5840075B1E1 /* BookmarksViewController.h */,
 				521047F01B4DC5840075B1E1 /* BookmarksViewController.m */,
 			);
-			name = Bookmarks;
+			name = Favorites;
 			sourceTree = "<group>";
 		};
 		521047EE1B4DBC710075B1E1 /* More */ = {
@@ -177,7 +177,7 @@
 		527C75051B2F5D6A006E64B3 /* TaoTeChing */ = {
 			isa = PBXGroup;
 			children = (
-				521047ED1B4DBC4D0075B1E1 /* Bookmarks */,
+				521047ED1B4DBC4D0075B1E1 /* Favorites */,
 				521047EB1B4DBC390075B1E1 /* Book */,
 				521047EE1B4DBC710075B1E1 /* More */,
 				526F7DA81B5EF70500529738 /* Categories */,
@@ -277,7 +277,7 @@
 		527C74FB1B2F5D6A006E64B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "John Bogil";
 				TargetAttributes = {
 					527C75021B2F5D6A006E64B3 = {
@@ -350,7 +350,7 @@
 				52EBA23A1B5461EC009CFFA3 /* MoreTableViewController.m in Sources */,
 				52301D071B38CBFB00DDC108 /* TabBarViewController.m in Sources */,
 				527C750F1B2F5D6A006E64B3 /* RootViewController.m in Sources */,
-				522940FA1B3F76FC008968F9 /* BookmarkManager.m in Sources */,
+				522940FA1B3F76FC008968F9 /* FavoritesManager.m in Sources */,
 				521047F11B4DC5840075B1E1 /* BookmarksViewController.m in Sources */,
 				52FC59B41B3664230004A278 /* PageViewController.m in Sources */,
 			);
@@ -415,6 +415,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -488,6 +489,7 @@
 				);
 				INFOPLIST_FILE = TaoTeChing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = johnbogil.taoteching;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -506,6 +508,7 @@
 				);
 				INFOPLIST_FILE = TaoTeChing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = johnbogil.taoteching;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -526,6 +529,7 @@
 				);
 				INFOPLIST_FILE = TaoTeChingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "johnbogil.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaoTeChing.app/TaoTeChing";
 			};
@@ -541,6 +545,7 @@
 				);
 				INFOPLIST_FILE = TaoTeChingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "johnbogil.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaoTeChing.app/TaoTeChing";
 			};

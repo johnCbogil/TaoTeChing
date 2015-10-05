@@ -9,7 +9,7 @@
 #import "DataViewController.h"
 #import "PageViewController.h"
 #import "ModelController.h"
-#import "BookmarkManager.h"
+#import "FavoritesManager.h"
 #import "RootViewController.h"
 #import "SettingsManager.h"
 #import "UIColor+NightMode.h"
@@ -58,7 +58,7 @@
     [[SettingsManager sharedManager]updateLastChapter:currentIndex];
     RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
     
-    if ([[BookmarkManager bookmarkManager].bookmarks containsObject:[NSString stringWithFormat:@"%ld", (long)currentIndex]]) {
+    if ([[FavoritesManager favoritesManager].bookmarks containsObject:[NSString stringWithFormat:@"%ld", (long)currentIndex]]) {
         NSLog(@"This page has been bookmarked");
         [rvc.bookmarkButton setSelected:YES];
     }

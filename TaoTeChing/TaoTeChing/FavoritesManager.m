@@ -6,27 +6,27 @@
 //  Copyright (c) 2015 John Bogil. All rights reserved.
 //
 
-#import "BookmarkManager.h"
+#import "FavoritesManager.h"
 
-@implementation BookmarkManager
+@implementation FavoritesManager
 
-static BookmarkManager *sharedInstance = nil;
+static FavoritesManager *sharedInstance = nil;
 
 // update singleton code, use dispatch once. may not need multiple class methods
-+ (BookmarkManager *)instantiateBookmarkManager
++ (FavoritesManager *)instantiateFavoritesManager
 {
     @synchronized(self) {
         if (sharedInstance == nil) {
-            sharedInstance = [[BookmarkManager alloc] init];
+            sharedInstance = [[FavoritesManager alloc] init];
         }
         return sharedInstance;
     }
 }
-+ (BookmarkManager *)bookmarkManager
++ (FavoritesManager *)favoritesManager
 {
     if (sharedInstance==nil)
     {
-        [BookmarkManager instantiateBookmarkManager];
+        [FavoritesManager instantiateFavoritesManager];
     }
     return sharedInstance;
 }

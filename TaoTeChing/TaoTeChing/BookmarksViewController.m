@@ -7,7 +7,7 @@
 //
 
 #import "BookmarksViewController.h"
-#import "BookmarkManager.h"
+#import "FavoritesManager.h"
 #import "ModelController.h"
 #import "PageViewController.h"
 
@@ -39,7 +39,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [self.tableView reloadData];
-    if ([BookmarkManager bookmarkManager].bookmarks.count) {
+    if ([FavoritesManager favoritesManager].bookmarks.count) {
         self.zeroStateLabel.alpha = 0.0;
         self.tableView.alpha = 1.0;
     }
@@ -72,11 +72,11 @@
     // Return the number of rows in the section.
     
     
-    if ([BookmarkManager bookmarkManager].bookmarks.count == 0) {
+    if ([FavoritesManager favoritesManager].bookmarks.count == 0) {
         self.zeroStateLabel.alpha = 1.0;
     }
     
-    return [BookmarkManager bookmarkManager].bookmarks.count;
+    return [FavoritesManager favoritesManager].bookmarks.count;
 }
 
 
@@ -85,7 +85,7 @@
     
     // Configure the cell...
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
-    NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [BookmarkManager bookmarkManager].bookmarks[indexPath.row]]integerValue];
+    NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].bookmarks[indexPath.row]]integerValue];
     NSString *previewText = [ModelController modelController].pageData[chapterNumber];
     previewText = [previewText substringToIndex: MIN(19, [previewText length])];
     if (chapterNumber == 0) {
@@ -111,9 +111,9 @@
         NSLog(@"Removing page: %ld", (long)indexPath.row);
         // [[BookmarkManager bookmarkManager]removeBookmark:indexPath.row]; //[NSString stringWithFormat:@"%ld",indexPath.row]];
         
-        NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [BookmarkManager bookmarkManager].bookmarks[indexPath.row]]integerValue];
+        NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].bookmarks[indexPath.row]]integerValue];
         
-        [[BookmarkManager bookmarkManager]removeBookmark:chapterNumber onCompletion:^{
+        [[FavoritesManager favoritesManager]removeBookmark:chapterNumber onCompletion:^{
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -152,7 +152,7 @@
                              // Remove the old view from the tabbar view.
                              [fromView removeFromSuperview];
                              self.tabBarController.selectedIndex = 1;
-                             DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:[[BookmarkManager bookmarkManager].bookmarks[indexPath.row]integerValue] storyboard:self.storyboard];
+                             DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:[[FavoritesManager favoritesManager].bookmarks[indexPath.row]integerValue] storyboard:self.storyboard];
                              NSArray *viewControllers = @[zeroVC];
                              
                              // Page direction depends on chapter number
@@ -160,7 +160,7 @@
                              DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
                              NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
                              
-                             NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [BookmarkManager bookmarkManager].bookmarks[indexPath.row]]integerValue];
+                             NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].bookmarks[indexPath.row]]integerValue];
                              
                              
                              if (chapterNumber > currentIndex) {
