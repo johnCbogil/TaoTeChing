@@ -58,7 +58,7 @@
     [[SettingsManager sharedManager]updateLastChapter:currentIndex];
     RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
     
-    if ([[FavoritesManager favoritesManager].bookmarks containsObject:[NSString stringWithFormat:@"%ld", (long)currentIndex]]) {
+    if ([[FavoritesManager favoritesManager].favorites containsObject:[NSString stringWithFormat:@"%ld", (long)currentIndex]]) {
         NSLog(@"This page has been bookmarked");
         [rvc.bookmarkButton setSelected:YES];
     }

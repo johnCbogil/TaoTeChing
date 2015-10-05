@@ -1,5 +1,5 @@
 //
-//  BookmarksTableViewController.h
+//  FavoritesTableViewController.h
 //  TaoTeChing
 //
 //  Created by John Bogil on 7/8/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BookmarksViewController : UIViewController
+@interface FavoritesViewController : UIViewController
 
 
 @end

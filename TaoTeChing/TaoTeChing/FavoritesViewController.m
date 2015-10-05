@@ -1,24 +1,24 @@
 //
-//  BookmarksTableViewController.m
+//  FavoritesTableViewController.m
 //  TaoTeChing
 //
 //  Created by John Bogil on 7/8/15.
 //  Copyright (c) 2015 John Bogil. All rights reserved.
 //
 
-#import "BookmarksViewController.h"
+#import "FavoritesViewController.h"
 #import "FavoritesManager.h"
 #import "ModelController.h"
 #import "PageViewController.h"
 
-@interface BookmarksViewController ()
+@interface FavoritesViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *zeroStateLabel;
 @property (nonatomic) UIBarButtonItem *customEditButtonItem;
 @property (nonatomic) int chapterNumber;
 @end
 
-@implementation BookmarksViewController
+@implementation FavoritesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +29,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.navigationItem.title = @"Bookmarks";
+    self.navigationItem.title = @"Favorites";
     [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                                       [UIFont fontWithName:@"Avenir Next" size:21],
                                                                       NSFontAttributeName, nil]];
@@ -39,7 +39,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [self.tableView reloadData];
-    if ([FavoritesManager favoritesManager].bookmarks.count) {
+    if ([FavoritesManager favoritesManager].favorites.count) {
         self.zeroStateLabel.alpha = 0.0;
         self.tableView.alpha = 1.0;
     }
@@ -72,11 +72,11 @@
     // Return the number of rows in the section.
     
     
-    if ([FavoritesManager favoritesManager].bookmarks.count == 0) {
+    if ([FavoritesManager favoritesManager].favorites.count == 0) {
         self.zeroStateLabel.alpha = 1.0;
     }
     
-    return [FavoritesManager favoritesManager].bookmarks.count;
+    return [FavoritesManager favoritesManager].favorites.count;
 }
 
 
@@ -85,7 +85,7 @@
     
     // Configure the cell...
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
-    NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].bookmarks[indexPath.row]]integerValue];
+    NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].favorites[indexPath.row]]integerValue];
     NSString *previewText = [ModelController modelController].pageData[chapterNumber];
     previewText = [previewText substringToIndex: MIN(19, [previewText length])];
     if (chapterNumber == 0) {
@@ -111,7 +111,7 @@
         NSLog(@"Removing page: %ld", (long)indexPath.row);
         // [[BookmarkManager bookmarkManager]removeBookmark:indexPath.row]; //[NSString stringWithFormat:@"%ld",indexPath.row]];
         
-        NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].bookmarks[indexPath.row]]integerValue];
+        NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].favorites[indexPath.row]]integerValue];
         
         [[FavoritesManager favoritesManager]removeBookmark:chapterNumber onCompletion:^{
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -152,7 +152,7 @@
                              // Remove the old view from the tabbar view.
                              [fromView removeFromSuperview];
                              self.tabBarController.selectedIndex = 1;
-                             DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:[[FavoritesManager favoritesManager].bookmarks[indexPath.row]integerValue] storyboard:self.storyboard];
+                             DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:[[FavoritesManager favoritesManager].favorites[indexPath.row]integerValue] storyboard:self.storyboard];
                              NSArray *viewControllers = @[zeroVC];
                              
                              // Page direction depends on chapter number
@@ -160,7 +160,7 @@
                              DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
                              NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
                              
-                             NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].bookmarks[indexPath.row]]integerValue];
+                             NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].favorites[indexPath.row]]integerValue];
                              
                              
                              if (chapterNumber > currentIndex) {

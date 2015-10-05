@@ -36,9 +36,9 @@ static FavoritesManager *sharedInstance = nil;
     if (self) {
         
         self.defaults = [NSUserDefaults standardUserDefaults];
-        self.bookmarks = [[self.defaults objectForKey:@"bookmarks"]mutableCopy];
-        if(!self.bookmarks){
-            self.bookmarks = [[NSMutableArray alloc]init];
+        self.favorites = [[self.defaults objectForKey:@"favorites"]mutableCopy];
+        if(!self.favorites){
+            self.favorites = [[NSMutableArray alloc]init];
         }
     }
     return self;
@@ -47,22 +47,22 @@ static FavoritesManager *sharedInstance = nil;
 - (void)addBookmark:(NSString*)chapterNumber{
     
     //[self.defaults setInteger:chapterNumber forKey:[NSString stringWithFormat:@"%d", chapterNumber]];
-    [self.bookmarks addObject:chapterNumber];
-    [self.defaults setObject:self.bookmarks forKey:@"bookmarks"];
+    [self.favorites addObject:chapterNumber];
+    [self.defaults setObject:self.favorites forKey:@"favorites"];
 }
 
 - (void)removeBookmark:(NSInteger)chapterNumber onCompletion:(void(^)(void))completionBlock{
     
     NSString *bookmarkToRemove = nil;
-    for (NSString *bookmark in self.bookmarks) {
-        if ([bookmark isEqualToString:[NSString stringWithFormat:@"%ld",(long)chapterNumber]]) {
-            bookmarkToRemove = bookmark;
+    for (NSString *favorites in self.favorites) {
+        if ([favorites isEqualToString:[NSString stringWithFormat:@"%ld",(long)chapterNumber]]) {
+            bookmarkToRemove = favorites;
         }
     }
     if (bookmarkToRemove) {
-        [self.bookmarks removeObject:bookmarkToRemove];
+        [self.favorites removeObject:bookmarkToRemove];
     }
-    [self.defaults setObject:self.bookmarks forKey:@"bookmarks"];
+    [self.defaults setObject:self.favorites forKey:@"favorites"];
     if (completionBlock) {
         completionBlock();
     }

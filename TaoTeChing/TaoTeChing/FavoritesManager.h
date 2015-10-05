@@ -15,5 +15,5 @@
 - (void)removeBookmark:(NSInteger)chapterNumber onCompletion:(void(^)(void))completionBlock;
 + (FavoritesManager *)favoritesManager;
 + (FavoritesManager *)instantiateFavoritesManager;
-@property (nonatomic)NSMutableArray *bookmarks;
+@property (nonatomic)NSMutableArray *favorites;
 @end
