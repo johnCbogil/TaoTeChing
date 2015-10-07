@@ -156,7 +156,7 @@
                              
                              // Page direction depends on chapter number
                              
-                             DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
+                             DataViewController *currentView = (DataViewController*)[[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
                              NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
                              
                              NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].favorites[indexPath.row]]integerValue];
