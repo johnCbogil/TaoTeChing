@@ -1,5 +1,5 @@
 //
-//  BookmarkManager.h
+//  FavoritesManager.h
 //  TaoTeChing
 //
 //  Created by John Bogil on 6/27/15.
@@ -11,8 +11,8 @@
 @interface FavoritesManager : NSObject
 
 @property (nonatomic) NSUserDefaults *defaults;
-- (void)addBookmark:(NSString*)chapterNumber;
-- (void)removeBookmark:(NSInteger)chapterNumber onCompletion:(void(^)(void))completionBlock;
+- (void)addFavorite:(NSString*)chapterNumber;
+- (void)removeFavorite:(NSInteger)chapterNumber onCompletion:(void(^)(void))completionBlock;
 + (FavoritesManager *)favoritesManager;
 + (FavoritesManager *)instantiateFavoritesManager;
 @property (nonatomic)NSMutableArray *favorites;

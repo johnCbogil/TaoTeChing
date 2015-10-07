@@ -11,12 +11,12 @@
 @interface RootViewController : UIViewController <UIPageViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITabBarItem *homeTabBarItem;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-@property (weak, nonatomic) IBOutlet UIButton *bookmarkButton;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (weak, nonatomic) IBOutlet UIButton *indexButton;
 @property (weak, nonatomic) IBOutlet UILabel *chapterLabel;
 - (IBAction)indexButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
-- (IBAction)bookmarkButtonPressed:(id)sender;
-- (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event;
+- (IBAction)favoriteButtonPressed:(id)sender;
+- (void)favoriteButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event;
 @end
 

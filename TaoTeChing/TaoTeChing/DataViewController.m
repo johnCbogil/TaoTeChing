@@ -59,12 +59,12 @@
     RootViewController *rvc = (RootViewController*)[PageViewController pageViewController].pageViewController.delegate;
     
     if ([[FavoritesManager favoritesManager].favorites containsObject:[NSString stringWithFormat:@"%ld", (long)currentIndex]]) {
-        NSLog(@"This page has been bookmarked");
-        [rvc.bookmarkButton setSelected:YES];
+        NSLog(@"This page has been favorited");
+        [rvc.favoriteButton setSelected:YES];
     }
     else{
-        NSLog(@"This page has NOT been bookmarked");
-        [rvc.bookmarkButton setSelected:NO];
+        NSLog(@"This page has NOT been favorited");
+        [rvc.favoriteButton setSelected:NO];
     }
     
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];

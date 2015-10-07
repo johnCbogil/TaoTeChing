@@ -39,15 +39,15 @@
                                     <segue destination="zSd-EJ-fIs" kind="presentation" id="YmS-y5-BDi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-09-bPw" userLabel="bookmarkButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-09-bPw" userLabel="favoriteButton">
                                 <rect key="frame" x="556" y="28" width="28" height="28"/>
                                 <animations/>
-                                <state key="normal" image="bookmarkIcon">
+                                <state key="normal" image="favoriteIcon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" image="bookmarkIconFilled"/>
+                                <state key="selected" image="favoriteIconFilled"/>
                                 <connections>
-                                    <action selector="bookmarkButtonPressed:" destination="703-4V-yAM" eventType="touchUpInside" id="FVv-jT-dSH"/>
+                                    <action selector="favoriteButtonPressed:" destination="703-4V-yAM" eventType="touchUpInside" id="sk2-gl-paO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQA-JH-WHv">
@@ -100,9 +100,9 @@
                         <inset key="imageInsets" minX="3" minY="5" maxX="-3" maxY="-5"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="bookmarkButton" destination="Wwy-09-bPw" id="lcJ-zI-CpN"/>
                         <outlet property="chapterLabel" destination="tQA-JH-WHv" id="a0l-eN-wil"/>
                         <outlet property="containerView" destination="tem-fe-vbx" id="s71-C6-SE9"/>
+                        <outlet property="favoriteButton" destination="Wwy-09-bPw" id="tFQ-9Y-D82"/>
                         <outlet property="homeTabBarItem" destination="GC4-kk-Mst" id="pnk-MW-gWS"/>
                         <outlet property="indexButton" destination="8He-TX-X94" id="kfH-qv-wwI"/>
                         <outlet property="navigationBar" destination="OMy-DI-HQT" id="qZe-Ny-hFG"/>
@@ -173,7 +173,7 @@
         <scene sceneID="Jr2-dt-qc7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mGf-sf-Xle" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bookmarkIcon" id="PeX-0p-EHE">
+                    <tabBarItem key="tabBarItem" title="" image="favoriteIcon" id="PeX-0p-EHE">
                         <inset key="imageInsets" minX="3" minY="5" maxX="-3" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -515,8 +515,8 @@
     </scenes>
     <resources>
         <image name="bookIcon" width="33" height="33"/>
-        <image name="bookmarkIcon" width="28" height="28"/>
-        <image name="bookmarkIconFilled" width="28" height="28"/>
+        <image name="favoriteIcon" width="28" height="28"/>
+        <image name="favoriteIconFilled" width="28" height="28"/>
         <image name="indexIcon" width="33" height="33"/>
         <image name="moreIcon" width="33" height="33"/>
         <image name="randomIcon" width="33" height="33"/>

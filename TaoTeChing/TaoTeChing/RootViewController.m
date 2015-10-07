@@ -51,8 +51,6 @@
     
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = [PageViewController pageViewController].pageViewController.gestureRecognizers;
-    
-//    [self.bookmarkButton addTarget:self action:@selector(bookmarkButtonTouch:withEvent:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -69,27 +67,27 @@
     
     NSLog(@"indexButtonPressed");
 }
-- (IBAction)bookmarkButtonPressed:(id)sender {
+- (IBAction)favoriteButtonPressed:(id)sender {
     DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
     NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
     
-    if (self.bookmarkButton.isSelected) {
+    if (self.favoriteButton.isSelected) {
         NSLog(@"Removing page: %ld", (long)currentIndex);
-        [[FavoritesManager favoritesManager]removeBookmark:currentIndex
+        [[FavoritesManager favoritesManager]removeFavorite:currentIndex
                                             onCompletion:^{
                                             }];
     }
     else {
-        NSLog(@"Bookmarking page: %ld",(long)currentIndex);
-        [[FavoritesManager favoritesManager]addBookmark:[NSString stringWithFormat:@"%ld",currentIndex]];
+        NSLog(@"Favoriting page: %ld",(long)currentIndex);
+        [[FavoritesManager favoritesManager]addFavorite:[NSString stringWithFormat:@"%ld",currentIndex]];
     }
-    [self bookmarkButtonTouch:sender withEvent:nil];
+    [self favoriteButtonTouch:sender withEvent:nil];
 }
 
-- (void)bookmarkButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event {
+- (void)favoriteButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event {
 
                         //aButton.selected = YES;
-                        self.bookmarkButton.selected = !self.bookmarkButton.selected;
+                        self.favoriteButton.selected = !self.favoriteButton.selected;
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {

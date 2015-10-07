@@ -1,5 +1,5 @@
 //
-//  BookmarkManager.m
+//  FavoritesManager.m
 //  TaoTeChing
 //
 //  Created by John Bogil on 6/27/15.
@@ -44,23 +44,23 @@ static FavoritesManager *sharedInstance = nil;
     return self;
 }
 
-- (void)addBookmark:(NSString*)chapterNumber{
+- (void)addFavorite:(NSString*)chapterNumber{
     
     //[self.defaults setInteger:chapterNumber forKey:[NSString stringWithFormat:@"%d", chapterNumber]];
     [self.favorites addObject:chapterNumber];
     [self.defaults setObject:self.favorites forKey:@"favorites"];
 }
 
-- (void)removeBookmark:(NSInteger)chapterNumber onCompletion:(void(^)(void))completionBlock{
+- (void)removeFavorite:(NSInteger)chapterNumber onCompletion:(void(^)(void))completionBlock{
     
-    NSString *bookmarkToRemove = nil;
+    NSString *favoriteToRemove = nil;
     for (NSString *favorites in self.favorites) {
         if ([favorites isEqualToString:[NSString stringWithFormat:@"%ld",(long)chapterNumber]]) {
-            bookmarkToRemove = favorites;
+            favoriteToRemove = favorites;
         }
     }
-    if (bookmarkToRemove) {
-        [self.favorites removeObject:bookmarkToRemove];
+    if (favoriteToRemove) {
+        [self.favorites removeObject:favoriteToRemove];
     }
     [self.defaults setObject:self.favorites forKey:@"favorites"];
     if (completionBlock) {

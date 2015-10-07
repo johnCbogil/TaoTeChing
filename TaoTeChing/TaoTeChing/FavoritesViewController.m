@@ -109,11 +109,10 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         NSLog(@"Removing page: %ld", (long)indexPath.row);
-        // [[BookmarkManager bookmarkManager]removeBookmark:indexPath.row]; //[NSString stringWithFormat:@"%ld",indexPath.row]];
         
         NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].favorites[indexPath.row]]integerValue];
         
-        [[FavoritesManager favoritesManager]removeBookmark:chapterNumber onCompletion:^{
+        [[FavoritesManager favoritesManager]removeFavorite:chapterNumber onCompletion:^{
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
