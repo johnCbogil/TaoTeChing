@@ -91,7 +91,7 @@
         [self dismissViewControllerAnimated:YES completion:^{
             DataViewController *zeroVC = [[ModelController modelController] viewControllerAtIndex:chapterNumber storyboard:self.storyboard];
             NSArray *viewControllers = @[zeroVC];
-            DataViewController *currentView = [[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
+            DataViewController *currentView = (DataViewController*)[[PageViewController pageViewController].pageViewController.viewControllers objectAtIndex:0];
             NSInteger currentIndex = [[ModelController modelController] indexOfViewController:currentView];
             if (chapterNumber > currentIndex) {
                 [[PageViewController pageViewController].pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];

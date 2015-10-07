@@ -21,14 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
-    
     // Hide navigationBar shadow
     //    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     //    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
     // Print all of nsuserdefaults
     //    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +47,8 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
+    [self.textView setContentOffset:CGPointZero animated:NO];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
