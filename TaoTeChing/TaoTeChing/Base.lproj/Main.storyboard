@@ -481,7 +481,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="randomIcon" style="done" id="Hhx-Ak-Lxg">
                             <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="weE-Hl-mcK">
-                                <rect key="frame" x="451" y="7" width="88" height="33"/>
+                                <rect key="frame" x="492" y="5" width="88" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" image="randomIcon"/>

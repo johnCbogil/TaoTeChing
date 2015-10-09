@@ -14,6 +14,7 @@
 @interface IndexTableViewController () <JumpToChapterDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *randomButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UILabel *indexChapterLabel;
 @end
 
 @implementation IndexTableViewController
