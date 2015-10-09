@@ -74,8 +74,8 @@
     if (self.favoriteButton.isSelected) {
         NSLog(@"Removing page: %ld", (long)currentIndex);
         [[FavoritesManager favoritesManager]removeFavorite:currentIndex
-                                            onCompletion:^{
-                                            }];
+                                              onCompletion:^{
+                                              }];
     }
     else {
         NSLog(@"Favoriting page: %ld",(long)currentIndex);
@@ -85,9 +85,9 @@
 }
 
 - (void)favoriteButtonTouch:(UIButton *)aButton withEvent:(UIEvent *)event {
-
-                        //aButton.selected = YES;
-                        self.favoriteButton.selected = !self.favoriteButton.selected;
+    
+    //aButton.selected = YES;
+    self.favoriteButton.selected = !self.favoriteButton.selected;
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {

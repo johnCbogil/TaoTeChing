@@ -38,6 +38,4 @@ static PageViewController *sharedInstance = nil;
     }
     return self;
 }
-
-
 @end
