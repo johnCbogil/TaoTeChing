@@ -285,11 +285,11 @@
                                             <segue destination="1mx-ul-pxc" kind="show" id="pK7-z7-Jjx"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="rateAppCell" id="Mre-7d-HHq">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rateAppCell" id="Mre-7d-HHq">
                                         <rect key="frame" x="0.0" y="143" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mre-7d-HHq" id="61I-Mg-A1R">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate This App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoZ-bj-vDT">
@@ -330,6 +330,58 @@
                                                     <exclude reference="bwf-tl-uxw"/>
                                                     <exclude reference="obx-Dd-bPs"/>
                                                     <exclude reference="pVy-YN-a4q"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rateAppCell" id="rsu-4l-p1K">
+                                        <rect key="frame" x="0.0" y="187" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rsu-4l-p1K" id="bdj-7d-EJU">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOr-oT-Ias">
+                                                    <rect key="frame" x="14" y="10" width="113" height="25"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="113" id="omH-md-7Z1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="ZOr-oT-Ias" firstAttribute="centerY" secondItem="bdj-7d-EJU" secondAttribute="centerY" id="1kt-nW-I6R"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZOr-oT-Ias" secondAttribute="trailing" constant="446" id="3wO-eY-8ih"/>
+                                                <constraint firstItem="ZOr-oT-Ias" firstAttribute="top" secondItem="bdj-7d-EJU" secondAttribute="top" constant="11" id="6ru-P0-O0b"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZOr-oT-Ias" secondAttribute="bottom" constant="2" id="DRd-cz-wEL"/>
+                                                <constraint firstItem="ZOr-oT-Ias" firstAttribute="leading" secondItem="bdj-7d-EJU" secondAttribute="leading" constant="18" id="FlP-I0-MaF"/>
+                                                <constraint firstAttribute="centerX" secondItem="ZOr-oT-Ias" secondAttribute="centerX" constant="214" id="MaH-py-eSC"/>
+                                                <constraint firstAttribute="centerY" secondItem="ZOr-oT-Ias" secondAttribute="centerY" constant="0.25" id="T2r-dS-iiT"/>
+                                                <constraint firstAttribute="centerX" secondItem="ZOr-oT-Ias" secondAttribute="centerX" constant="214" id="bM7-86-arK"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZOr-oT-Ias" secondAttribute="bottom" constant="11.5" id="boF-3c-VmR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZOr-oT-Ias" secondAttribute="trailing" constant="440" id="fVZ-FM-Ull"/>
+                                                <constraint firstItem="ZOr-oT-Ias" firstAttribute="leading" secondItem="bdj-7d-EJU" secondAttribute="leadingMargin" constant="12" id="q0e-os-lvl"/>
+                                                <constraint firstItem="ZOr-oT-Ias" firstAttribute="leading" secondItem="bdj-7d-EJU" secondAttribute="leadingMargin" constant="6" id="rNf-og-U7z"/>
+                                                <constraint firstItem="ZOr-oT-Ias" firstAttribute="top" secondItem="bdj-7d-EJU" secondAttribute="topMargin" constant="2" id="vGg-04-IKF"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="3wO-eY-8ih"/>
+                                                    <exclude reference="6ru-P0-O0b"/>
+                                                    <exclude reference="DRd-cz-wEL"/>
+                                                    <exclude reference="FlP-I0-MaF"/>
+                                                    <exclude reference="MaH-py-eSC"/>
+                                                    <exclude reference="T2r-dS-iiT"/>
+                                                    <exclude reference="bM7-86-arK"/>
+                                                    <exclude reference="boF-3c-VmR"/>
+                                                    <exclude reference="fVZ-FM-Ull"/>
+                                                    <exclude reference="q0e-os-lvl"/>
+                                                    <exclude reference="vGg-04-IKF"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

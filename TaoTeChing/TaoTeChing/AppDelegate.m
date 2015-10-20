@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Instabug/Instabug.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [Instabug startWithToken:@"e8119e915901595a5e28cb35a4880b25" captureSource:IBGCaptureSourceUIKit invocationEvent:IBGInvocationEventNone];
     return YES;
 }
 

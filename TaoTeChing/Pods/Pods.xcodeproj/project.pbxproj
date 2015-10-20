@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E66957FEF3CC742161598A58B796D03 /* Pods-TaoTeChing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CF3627C01BCB18412704D4D8FC33B1 /* Pods-TaoTeChing-dummy.m */; };
+		545F7E0DDF3E35583BA4228C92D622D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCD2C965D3962DF0DBEC73CAC3BE0EB /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D0447013785C14C4D954C030D070AD8 /* IBGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IBGEnums.h; path = Instabug.framework/Versions/A/Headers/IBGEnums.h; sourceTree = "<group>"; };
+		51CF3627C01BCB18412704D4D8FC33B1 /* Pods-TaoTeChing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaoTeChing-dummy.m"; sourceTree = "<group>"; };
+		6B773F96162F601878D5CD0703AE22CA /* libPods-TaoTeChing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaoTeChing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CCD2C965D3962DF0DBEC73CAC3BE0EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6F1D47C093353CAA32C2D0EF01D5DD4D /* Pods-TaoTeChing-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaoTeChing-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8D35797523054D1491CCF70D89D0DB87 /* Pods-TaoTeChing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaoTeChing.release.xcconfig"; sourceTree = "<group>"; };
+		9F7CDB5A8EC5CD257CE6DB080F44098C /* Instabug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Instabug.h; path = Instabug.framework/Versions/A/Headers/Instabug.h; sourceTree = "<group>"; };
+		B7D353CDA65552CCAF52A99C7E985C7C /* Pods-TaoTeChing-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaoTeChing-acknowledgements.plist"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D6A333BAE564369859AA5A75782CF8BC /* Pods-TaoTeChing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaoTeChing.debug.xcconfig"; sourceTree = "<group>"; };
+		E3359C8B3B23FF08C5A9695CAD3B355F /* Instabug.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Instabug.bundle; sourceTree = "<group>"; };
+		E7EA6E1FACCE5B06B363AE2BD3845D83 /* Pods-TaoTeChing-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaoTeChing-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D983127BA1A66483E58B21120C3C74A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545F7E0DDF3E35583BA4228C92D622D7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13B821EDAF85BECEAD923D6DB45D09FB /* Instabug */ = {
+			isa = PBXGroup;
+			children = (
+				1D0447013785C14C4D954C030D070AD8 /* IBGEnums.h */,
+				9F7CDB5A8EC5CD257CE6DB080F44098C /* Instabug.h */,
+				85618282E1889A2D18807F21992EA822 /* Resources */,
+			);
+			path = Instabug;
+			sourceTree = "<group>";
+		};
+		246D53631C083604E0FFA513ABF78D11 /* Pods-TaoTeChing */ = {
+			isa = PBXGroup;
+			children = (
+				6F1D47C093353CAA32C2D0EF01D5DD4D /* Pods-TaoTeChing-acknowledgements.markdown */,
+				B7D353CDA65552CCAF52A99C7E985C7C /* Pods-TaoTeChing-acknowledgements.plist */,
+				51CF3627C01BCB18412704D4D8FC33B1 /* Pods-TaoTeChing-dummy.m */,
+				E7EA6E1FACCE5B06B363AE2BD3845D83 /* Pods-TaoTeChing-resources.sh */,
+				D6A333BAE564369859AA5A75782CF8BC /* Pods-TaoTeChing.debug.xcconfig */,
+				8D35797523054D1491CCF70D89D0DB87 /* Pods-TaoTeChing.release.xcconfig */,
+			);
+			name = "Pods-TaoTeChing";
+			path = "Target Support Files/Pods-TaoTeChing";
+			sourceTree = "<group>";
+		};
+		4E5EA88FBB044A3829C853AC3F8A096E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13B821EDAF85BECEAD923D6DB45D09FB /* Instabug */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6CCD2C965D3962DF0DBEC73CAC3BE0EB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		67FB6390B51408279D18ED4FBCB0A1E5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				246D53631C083604E0FFA513ABF78D11 /* Pods-TaoTeChing */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				4E5EA88FBB044A3829C853AC3F8A096E /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				67FB6390B51408279D18ED4FBCB0A1E5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		85618282E1889A2D18807F21992EA822 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E3359C8B3B23FF08C5A9695CAD3B355F /* Instabug.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B773F96162F601878D5CD0703AE22CA /* libPods-TaoTeChing.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1595289E87608D73D859A1668636EEA8 /* Pods-TaoTeChing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C32ED0FC13A29640D6FF4F4C434821BC /* Build configuration list for PBXNativeTarget "Pods-TaoTeChing" */;
+			buildPhases = (
+				7E36160FEAD656FBC132ADDBD818B72A /* Sources */,
+				D983127BA1A66483E58B21120C3C74A5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TaoTeChing";
+			productName = "Pods-TaoTeChing";
+			productReference = 6B773F96162F601878D5CD0703AE22CA /* libPods-TaoTeChing.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1595289E87608D73D859A1668636EEA8 /* Pods-TaoTeChing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E36160FEAD656FBC132ADDBD818B72A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E66957FEF3CC742161598A58B796D03 /* Pods-TaoTeChing-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9A37C7FB87CE3F3E749D8AE61DD08AF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A333BAE564369859AA5A75782CF8BC /* Pods-TaoTeChing.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D5107610BEA4AABFFBD1DD064201056E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D35797523054D1491CCF70D89D0DB87 /* Pods-TaoTeChing.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C32ED0FC13A29640D6FF4F4C434821BC /* Build configuration list for PBXNativeTarget "Pods-TaoTeChing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A37C7FB87CE3F3E749D8AE61DD08AF9 /* Debug */,
+				D5107610BEA4AABFFBD1DD064201056E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
