@@ -87,7 +87,13 @@
     cell.textLabel.font = [UIFont fontWithName:@"Avenir Next" size:18];
     NSInteger chapterNumber = [[NSString stringWithFormat:@"%@", [FavoritesManager favoritesManager].favorites[indexPath.row]]integerValue];
     NSString *previewText = [ModelController modelController].pageData[chapterNumber];
-    previewText = [previewText substringToIndex: MIN(19, [previewText length])];
+    // if app is ipad
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        previewText = [previewText substringToIndex: MIN(50, [previewText length])];
+    }
+    else {
+        previewText = [previewText substringToIndex: MIN(19, [previewText length])];
+    }
     if (chapterNumber == 0) {
         cell.textLabel.text = [NSString stringWithFormat:@"About: %@", previewText];
     }
